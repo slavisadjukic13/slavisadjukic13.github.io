@@ -1,0 +1,66 @@
+nav {
+  position: fixed;
+  left: 50%;
+  .translate(-50%;0);
+}
+
+.navbar-toggle {
+  position: absolute;
+  .size(50px,40px);
+  top: 20px;
+  right: 10px;
+  z-index: 110;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: @brand-color-1;
+
+  .icon-bar {
+    .size(30px,4px);
+    display: block;
+    position: absolute;
+    z-index: 5;
+    background-color: white !important;
+    top: 19px;
+    left: 50%;
+    margin: 0 0 0 -15px;
+    .transition(all 200ms ease-in-out);
+  }
+
+  .icon-bar-1 {
+    .translate(0;9px);
+
+    &.rotated {
+      .rotate(45deg);
+    }
+  }
+
+  .icon-bar-2.rotated {
+    .opacity(0);
+  }
+
+  .icon-bar-3 {
+    .translate(0;-9px);
+
+    &.rotated {
+      .rotate(-45deg);
+    }
+  }
+
+  .icon-bar + .icon-bar {
+    margin-top: 0;
+  }
+}
+
+
+.navbar-brand {
+  @media @xs {
+    padding: 0;
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+}

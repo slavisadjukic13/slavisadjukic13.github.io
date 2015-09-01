@@ -6791,11 +6791,14 @@ nav {
   transform: translate(-50%, 0);
   z-index: 100;
 }
+nav > .container {
+  position: relative;
+}
 .navbar-toggle {
   position: absolute;
   width: 50px;
   height: 40px;
-  top: 20px;
+  top: 10px;
   right: 10px;
   z-index: 110;
   cursor: pointer;

@@ -6876,7 +6876,6 @@ nav > .container-fluid {
 .navigation .main-menu ul li {
   background: blue;
   margin-bottom: 5px;
-  transition-duration: 500ms;
   transition-timing-function: ease-out;
   opacity: 0.8;
   filter: alpha(opacity=80);
@@ -6884,6 +6883,7 @@ nav > .container-fluid {
   -ms-transform: translate(500px, 0);
   -o-transform: translate(500px, 0);
   transform: translate(500px, 0);
+  transition-duration: 500ms;
 }
 .navigation .main-menu ul li:nth-of-type(1) {
   transition-delay: 100ms;

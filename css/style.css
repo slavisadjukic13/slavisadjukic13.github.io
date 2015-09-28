@@ -6815,6 +6815,10 @@ nav > .container-fluid {
   padding: 0;
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
   -webkit-transition: all 100ms ease-in-out;
   -o-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
@@ -6856,12 +6860,12 @@ nav > .container-fluid {
 @media (min-width: 1200px) {
   .navigation .main-menu {
     float: left;
-    width: 33.33333333%;
+    width: 16.66666667%;
   }
 }
 @media (min-width: 1200px) {
   .navigation .main-menu {
-    margin-left: 66.66666667%;
+    margin-left: 83.33333333%;
   }
 }
 .navigation .main-menu ul {
@@ -6882,25 +6886,28 @@ nav > .container-fluid {
   transform: translate(500px, 0);
 }
 .navigation .main-menu ul li:nth-of-type(1) {
-  transition-delay: 200ms;
+  transition-delay: 100ms;
 }
 .navigation .main-menu ul li:nth-of-type(2) {
-  transition-delay: 230ms;
+  transition-delay: 150ms;
 }
 .navigation .main-menu ul li:nth-of-type(3) {
-  transition-delay: 260ms;
+  transition-delay: 200ms;
 }
 .navigation .main-menu ul li:nth-of-type(4) {
-  transition-delay: 290ms;
+  transition-delay: 250ms;
 }
 .navigation .main-menu ul li:nth-of-type(5) {
-  transition-delay: 320ms;
+  transition-delay: 300ms;
 }
 .navigation .main-menu ul li:nth-of-type(6) {
   transition-delay: 350ms;
 }
 .navigation .main-menu ul li:nth-of-type(7) {
-  transition-delay: 380ms;
+  transition-delay: 400ms;
+}
+.navigation .main-menu ul li:nth-of-type(8) {
+  transition-delay: 450ms;
 }
 .navigation .main-menu ul li a {
   display: block;
@@ -6913,6 +6920,10 @@ nav > .container-fluid {
   text-decoration: none;
 }
 .navigation.active {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
   opacity: 1;
   filter: alpha(opacity=100);
   z-index: 99;

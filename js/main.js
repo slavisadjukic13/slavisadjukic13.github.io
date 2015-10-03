@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Menu toggle effect
     $('.navbar-toggle').on('click', function () {
         $(this).toggleClass('active');
-        $('.navigation').toggleClass('active');
+        $('.main-menu').toggleClass('active');
         $('.icon-bar').toggleClass('rotated');
     });
 

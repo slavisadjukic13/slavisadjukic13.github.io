@@ -18,8 +18,8 @@ nav {
 .navbar-toggle {
   position: absolute;
   .size(50px,40px);
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   z-index: 110;
   cursor: pointer;
   margin: 0;
@@ -102,20 +102,21 @@ nav {
 }
 .main-menu {
 
-  .make-lg-column(2);
-  .make-lg-column-offset(10);
-  .make-md-column(3);
-  .make-md-column-offset(9);
-  .make-sm-column(4);
-  .make-sm-column-offset(8);
-  .make-xs-column(12);
+  @media @lg { width: 300px; }
+  @media @md { width: 300px; }
+  @media @sm { width: 300px; }
+  @media @xs { width: 100%; }
 
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1;
 
-  padding-top: 60px;
+  padding-top: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+
   background: red;
   height: 100%;
   .translate(100%,0);
@@ -131,8 +132,15 @@ nav {
     margin: 0;
     padding: 0;
 
+    @media @xs {
+      .make-row(10px);
+
+      li {
+        .make-xs-column(4,10px);
+      }
+    }
+
     li {
-      background: blue;
       margin-bottom: 5px;
       transition-timing-function: ease-out;
       .opacity(0.8);
@@ -153,6 +161,7 @@ nav {
         text-align: center;
         padding: 20px 5px;
         color: white;
+        background: darken(red,20%);
 
         &:hover {
           color:red;
@@ -171,5 +180,65 @@ nav {
       .translate(0,0);
     }
 
+  }
+
+  .form-wrapper {
+    .make-xs-column(12);
+  }
+
+
+  .form-wrapper-innner {
+    .container;
+
+    > div {
+      .make-row;
+
+      article {
+        .make-lg-column(3);
+        .make-md-column(4);
+        .make-sm-column(6);
+        .make-xs-column(12);
+
+        font-family: 'Open Sans', sans-serif;
+        color: #101010;
+
+
+        @media @xs {
+          padding-top: 30px;
+          padding-bottom: 15px;
+
+          background: rgba(0,0,0,0.1);
+
+          font-size: 1em;
+        }
+
+        @media @sm {
+          padding-top: 50px;
+          padding-bottom: 30px;
+
+          background: rgba(0,0,0,0.2);
+
+          font-size: 1.2em;
+        }
+
+        @media @md {
+          padding-top: 60px;
+          padding-bottom: 40px;
+
+          background: rgba(0,0,0,0.3);
+
+          font-size: 1.5em;
+        }
+
+        @media @lg {
+          padding-top: 80px;
+          padding-bottom: 50px;
+
+          background: rgba(0,0,0,0.5);
+
+          font-size: 2em;
+        }
+      }
+    }
   }
 }

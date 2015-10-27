@@ -93,3 +93,255 @@ body, .onepage-wrapper, html {
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
 }
+
+.slide-1 {
+  background-image: url("../img/slide-1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .text1 {
+    padding-top: 170px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(-100%,0);
+  }
+
+  .text2 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    .transition(1s linear 500ms);
+    .translate(100%,0);
+  }
+
+  &.active {
+    .text1 {
+      .translate(0,0);
+    }
+    .text2 {
+      .translate(0,0);
+    }
+  }
+
+  .scroll {
+    position: absolute;
+    display: block;
+    left: 50%;
+    .translate(-50%,0);
+    bottom: 30px;
+    background: rgba(255,255,255,0.6);
+    padding: 10px;
+    color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+}
+
+.slide-2 {
+  background-image: url("../img/slide-2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .text1 {
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(-100%,0);
+  }
+
+  .text2 {
+    padding-top: 320px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(100%,0);
+  }
+
+  &.active {
+    .text1 {
+      .translate(0,0);
+    }
+    .text2 {
+      .translate(0,0);
+    }
+  }
+}
+
+.slide-3 {
+  background: black;
+
+  .text1 {
+    padding-top: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(-100%,0);
+  }
+
+  div {
+    padding-top: 20px;
+    text-align: center;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .text2 {
+    padding-top: 130px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(100%,0);
+  }
+
+  &.active {
+    .text1 {
+      .translate(0,0);
+    }
+    .text2 {
+      .translate(0,0);
+    }
+  }
+}
+
+.slide-4 {
+  background-image: url("../img/slide-4.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .text1 {
+    padding-top: 160px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(-100%,0);
+  }
+
+  .text2 {
+    padding-top: 60px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(100%,0);
+  }
+
+  &.active {
+    .text1 {
+      .translate(0,0);
+    }
+    .text2 {
+      .translate(0,0);
+    }
+  }
+}
+
+.slide-5 {
+  background-image: url("../img/slide-5.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .text1 {
+    padding-top: 160px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(-100%,0);
+  }
+
+  .text2 {
+    padding-top: 60px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(100%,0);
+  }
+
+  &.active {
+    .text1 {
+      .translate(0,0);
+    }
+    .text2 {
+      .translate(0,0);
+    }
+  }
+}
+
+.slide-6 {
+  background-image: url("../img/slide-6.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .text1 {
+    padding-top: 60px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(-100%,0);
+  }
+
+  .text2 {
+    padding-top: 200px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    .transition(1s linear 500ms);
+    .translate(100%,0);
+  }
+
+  &.active {
+    .text1 {
+      .translate(0,0);
+    }
+    .text2 {
+      .translate(0,0);
+    }
+  }
+}
+
+.onepage-pagination {
+  display: none;
+}

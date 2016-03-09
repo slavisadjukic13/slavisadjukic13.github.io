@@ -6283,9 +6283,7 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after,
-#onama:before,
-#onama:after {
+.modal-footer:after {
   content: " ";
   display: table;
 }
@@ -6303,8 +6301,7 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after,
-#onama:after {
+.modal-footer:after {
   clear: both;
 }
 .center-block {
@@ -6629,115 +6626,6 @@ body {
 .navbar-nav li:hover:after {
   background-color: #f60;
 }
-#onama {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: white;
-  background-image: url("../img/aboutus-bg.jpg");
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  padding: 60px 0 30px 0;
-}
-#onama > .navbar-header,
-#onama > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  #onama > .navbar-header,
-  #onama > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-#onama .row {
-  padding: 100px 0;
-}
-@media only screen and (max-width: 767px) {
-  #onama .row {
-    padding: 50px 0;
-  }
-}
-#onama .row .naslov {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: right;
-  text-shadow: 0 0 10px black;
-}
-@media (min-width: 768px) {
-  #onama .row .naslov {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 992px) {
-  #onama .row .naslov {
-    float: left;
-    width: 41.66666667%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #onama .row .naslov {
-    text-align: center;
-  }
-}
-#onama .row .naslov h1 {
-  position: relative;
-  display: inline-block;
-}
-#onama .row .logo {
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-#onama .row .logo .big-logo {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  max-width: 50%;
-}
-@media only screen and (max-width: 767px) {
-  #onama .row .logo .big-logo {
-    max-width: 80%;
-  }
-}
-#onama .row .tekst {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 5px;
-}
-@media (min-width: 768px) {
-  #onama .row .tekst {
-    float: left;
-    width: 75%;
-  }
-}
-@media (min-width: 992px) {
-  #onama .row .tekst {
-    float: left;
-    width: 41.66666667%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #onama .row .tekst {
-    margin: 0 10px;
-  }
-}
 #ponuda {
   padding: 60px 0 30px 0;
   background-image: -webkit-linear-gradient(top, #eeeeee 0%, #d5d5d5 100%);
@@ -6997,4 +6885,10 @@ body {
 }
 section {
   padding: 60px 0 30px 0;
+}
+section:nth-child(even) {
+  background: red;
+}
+section:nth-child(odd) {
+  background: blue;
 }

@@ -9,6 +9,7 @@
 @import "kontakt.less";
 @import "modal.less";
 
+
 .loader {
   .transition(opacity 1s linear);
   position: fixed;
@@ -46,6 +47,12 @@
 
 section {
   padding: @grid-gutter-width*2 0 @grid-gutter-width 0;
+ &:nth-child(even) {
+   background: red;
+ }
+  &:nth-child(odd) {
+    background: blue;
+  }
 }
 
 

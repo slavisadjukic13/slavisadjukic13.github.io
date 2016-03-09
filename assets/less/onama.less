@@ -1,0 +1,62 @@
+#onama {
+  .container-fluid;
+  color: white;
+
+
+  background-image: url("../img/aboutus-bg.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+
+  padding: @grid-gutter-width*2 0 @grid-gutter-width 0;
+
+  .row {
+    padding: 100px 0;
+    @media @xs { padding: 50px 0; }
+
+    .naslov {
+      .make-sm-column(3);
+      .make-md-column(5);
+      .text-right;
+      text-shadow: 0 0 10px black;
+
+      @media @xs {
+        .text-center;
+      }
+
+      h1 {
+        position: relative;
+        display: inline-block;
+      }
+
+    }
+
+    .logo {
+      .make-xs-column(12);
+      padding-bottom: 30px;
+      text-align: center;
+
+      .big-logo {
+        .img-responsive;
+        display: inline-block;
+        max-width: 50%;
+
+        @media @xs { max-width: 80%; }
+      }
+    }
+
+    .tekst {
+      .make-sm-column(9);
+      .make-md-column(5);
+
+      background-color: fade(black,60%);
+      padding: 10px;
+
+      border-radius: 5px;
+
+      @media @xs {
+        margin: 0 10px;
+      }
+    }
+  }
+}

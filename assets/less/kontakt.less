@@ -1,0 +1,71 @@
+#kontakt {
+  background-color: inherit;
+  color: @gray-lighter;
+  .text-center;
+
+  padding: @grid-gutter-width*2 0 @grid-gutter-width 0;
+
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.map-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: @grid-gutter-width*15;
+  @media @xs { height: @grid-gutter-width*8; }
+}
+
+#map-canvas {
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: @grid-gutter-width*15;
+  @media @xs { height: @grid-gutter-width*8; }
+
+  .firstHeading {
+    margin: 0 0 10px 0;
+
+    @media @xs { font-size: 16px; }
+  }
+
+  .gm-style {
+    .text-left;
+    color: @gray-dark;
+    p { margin-bottom: 5px; @media @xs { margin-bottom: 0; } }
+  }
+}
+
+.kontakt-info {
+  .make-xs-column(12);
+
+  p, .btn {
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 5px 10px 5px;
+
+    @media @xs {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .kontakt-info-ime {
+    margin-right: 10px;
+
+    @media @xs {
+      display: block;
+      margin-right: 0;
+    }
+  }
+}
+
+.mapa {
+  .make-xs-column(12);
+}

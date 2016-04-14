@@ -1,59 +1,84 @@
-@import "bootstrap.less";
-@import "variables.less";
-@import "mixins.less";
-@import "type.less";
+//bootstrap
+@import "bootstrap";
+@import "variables";
 
-@import "navbar.less";
-@import "onama.less";
-@import "ponuda.less";
-@import "kontakt.less";
-@import "modal.less";
+//bootstrap-select
+@import "../../bower_components/bootstrap-select/less/bootstrap-select";
+
+//bootstrap-datepicker
+@import "../../bower_components/bootstrap-datepicker/less/datepicker3";
+
+//custom mixins
+@import "mixins";
+
+//THEME'S COLORS AND MEASUREMENTS
+@import "themeVariables";
+
+//STYLES
+@import "background";
 
 
-.loader {
-  .transition(opacity 1s linear);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: @gray-darker;
-  z-index: 10000;
-  .opacity(1);
-  display: block;
+@border-color-outer: #4D91AF;
+@border-color-inner: #C3C3C3;
 
-  &.loaded {
-    .opacity(0);
-  }
+body, html {
+  min-height: 100%;
+  color: #fff;
+}
 
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    .translate(-50%;-50%);
-    .text-center;
-  }
+.wrapperOuter{
+  .container;
+  padding-top: 20px;
+}
 
-  i {
-    font-size: 5em;
-    color: #00b3ee;
-  }
+.wrapperInner {
+  .make-row();
+}
+
+.header {
+  .make-xs-column(12);
+  position: relative;
 
   h1 {
-    color: white;
-    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 10px 30px;
+
+    text-transform: uppercase;
+  }
+
+}
+
+.main {
+  .make-xs-column(12);
+  border: 1px solid @border-color-outer;
+  border-radius: 10px;
+
+  form {
+    option:first-of-type {
+      color:red;
+    }
   }
 }
 
-section {
-  padding: @grid-gutter-width*2 0 @grid-gutter-width 0;
- &:nth-child(even) {
-   background: red;
- }
-  &:nth-child(odd) {
-    background: blue;
-  }
+.leftColumn, .rightColumn {
+  .make-sm-column(6);
+  .make-xs-column(12);
 }
 
+.innerSection {
+  .make-xs-column(12);
+  border: 1px solid red;
+}
 
-
+.form-group:hover {
+  background: red;
+}

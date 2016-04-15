@@ -2533,7 +2533,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #555555;
+  color: #fff;
 }
 .form-control {
   display: block;
@@ -2542,10 +2542,10 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #555555;
-  background-color: #fff;
+  color: #fff;
+  background-color: #45607E;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid #45607E;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -3022,7 +3022,7 @@ select[multiple].input-lg {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333;
+  color: #fff;
   text-decoration: none;
 }
 .btn:active,
@@ -3046,27 +3046,27 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+  color: #fff;
+  background-color: #45607E;
+  border-color: #45607E;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
+  color: #fff;
+  background-color: #33475d;
+  border-color: #18212c;
 }
 .btn-default:hover {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #fff;
+  background-color: #33475d;
+  border-color: #2f4256;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #fff;
+  background-color: #33475d;
+  border-color: #2f4256;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3077,9 +3077,9 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #333;
-  background-color: #d4d4d4;
-  border-color: #8c8c8c;
+  color: #fff;
+  background-color: #263546;
+  border-color: #18212c;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3095,12 +3095,12 @@ fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
-  background-color: #fff;
-  border-color: #ccc;
+  background-color: #45607E;
+  border-color: #45607E;
 }
 .btn-default .badge {
-  color: #fff;
-  background-color: #333;
+  color: #45607E;
+  background-color: #fff;
 }
 .btn-primary {
   color: #fff;
@@ -3885,10 +3885,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #fff;
   text-align: center;
   background-color: #eeeeee;
-  border: 1px solid #ccc;
+  border: 1px solid #45607E;
   border-radius: 4px;
 }
 .input-group-addon.input-sm {
@@ -7823,12 +7823,21 @@ html {
   min-height: 100%;
   color: #fff;
 }
+.btn-main {
+  background: #22509E;
+  color: #fff;
+  border-color: #4D91AF;
+  padding: 5px 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
 .wrapperOuter {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @media (min-width: 768px) {
   .wrapperOuter {
@@ -7878,10 +7887,8 @@ html {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px 30px;
-  text-transform: uppercase;
 }
-.main {
+.content {
   position: relative;
   float: left;
   width: 100%;
@@ -7890,12 +7897,9 @@ html {
   padding-right: 15px;
   border: 1px solid #4D91AF;
   border-radius: 10px;
+  padding: 15px;
 }
-.main form option:first-of-type {
-  color: red;
-}
-.leftColumn,
-.rightColumn {
+.column {
   position: relative;
   float: left;
   width: 100%;
@@ -7904,21 +7908,100 @@ html {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  .leftColumn,
-  .rightColumn {
+  .column {
     float: left;
     width: 50%;
   }
 }
-.innerSection {
+.subSection {
   position: relative;
   float: left;
   width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid red;
+  border: 1px solid #C3C3C3;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-.form-group:hover {
-  background: red;
+.subSectionTitle {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.subSectionTitle p {
+  padding: 0;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+.repeatableItem {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+.repeatableItem:not(:first-of-type) {
+  margin-top: 15px;
+}
+.repeatableItem:not(:first-of-type)::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #C3C3C3;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  right: 15px;
+}
+.repeatableAddItem {
+  padding-top: 15px;
+}
+.repeatableAddItem .btn {
+  position: relative;
+  background: none;
+  border-radius: 50%;
+  border-width: 2px;
+  color: #337ab7;
+  line-height: 1;
+  width: 45px;
+  height: 45px;
+}
+.repeatableAddItem .btn::before {
+  content: "+";
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.repeatableAddItem .btn:focus {
+  outline: none;
+}
+.fullWidth {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.bootstrap-select .filter-option {
+  color: #999;
+}
+.datepicker table tr td,
+.datepicker table tr th {
+  color: #1C385F;
+}
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #999;
 }

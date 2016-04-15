@@ -144,9 +144,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-color:              @input_color;
+@btn-default-bg:                 @input_background;
+@btn-default-border:             @input_background;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -181,14 +181,14 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #fff;
+@input-bg:                       @input_background;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @gray;
+@input-color:                    @input_color;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   @input_background;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -203,7 +203,7 @@
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        #999;
+@input-color-placeholder:        @input_placeholder_color;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);

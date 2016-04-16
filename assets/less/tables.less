@@ -46,8 +46,42 @@
   }
 }
 
-
-
 .addNewItemLink {
   .pull-right;
+}
+
+//.table-responsive {
+//  position: relative;
+//
+//  &.more-to-see:before {
+//    content: "<sta>";
+//    width: 20px;
+//
+//    z-index: 1;
+//    position: absolute;
+//    top: 1px;
+//    bottom: -10px;
+//    right: 0;
+//
+//    background: red;
+//  }
+//}
+
+.tableMobile {
+  margin-bottom: 20px !important;
+
+    &:before {
+      content: "swipe to see whole table";
+      color: fade(white,50%);
+      //width: 20px;
+
+      text-align: center;
+
+      z-index: 1;
+      position: absolute;
+      //top: 1px;
+      bottom: -7px;
+      right: 0;
+      left: 0;
+    }
 }

@@ -7832,6 +7832,7 @@ body > .container > .row > section:first-of-type {
   border: 1px solid #4D91AF;
   border-radius: 10px;
   padding: 15px;
+  background: rgba(25, 49, 83, 0.7);
 }
 @media only screen and (max-width: 767px) {
   .content {
@@ -8217,6 +8218,19 @@ fieldset[disabled] .btn-select.focus {
 .addNewItemLink {
   float: right !important;
 }
+.tableMobile {
+  margin-bottom: 20px !important;
+}
+.tableMobile:before {
+  content: "swipe to see whole table";
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  bottom: -7px;
+  right: 0;
+  left: 0;
+}
 .pagination {
   float: right;
   margin: 0;
@@ -8227,6 +8241,10 @@ body {
   background-image: linear-gradient(to bottom, #1C385F 100%, #1C385E 0%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1c385f', endColorstr='#ff1c385e', GradientType=0);
+  background: url("../img/bg.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 body,
 html {

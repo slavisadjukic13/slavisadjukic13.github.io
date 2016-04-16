@@ -18,9 +18,10 @@
 </head>
 <body>
 
-<div class="wrapperOuter">
+<div class="container">
     <div class="row">
 
+        <!-- request inspection -->
         <section class="header">
             <h1>inspection request</h1>
             <button class="btn btn-primary btn-main">back</button>
@@ -29,10 +30,10 @@
         <section class="content">
             <form>
 
-                <div class="column">
+                <div class="halfWidth">
                     <div class="form-group">
                         <label for="projectName">Project Name:</label>
-                        <select class="form-control selectpicker" id="projectName" title="Select Project Name">
+                        <select class="form-control selectpicker" id="projectName" data-style="btn-select" title="Select Project Name">
                             <option value="1">1</option>
                             <option value="1">2</option>
                             <option value="1">3</option>
@@ -63,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="halfWidth">
                     <div class="form-group">
                         <label for="description">Description</label>
                         <input type="text" class="form-control" id="description" placeholder="Description">
@@ -94,118 +95,61 @@
                 <div class="subSection">
                     <div class="row">
 
-                        <div class="col-xs-10 col-md-11 repeatableWrapper">
+                        <!-- wrapper for repeatable items -->
+                        <div class="repeatableWrapper">
                             <div class="row">
 
                                 <!-- single inspection item -->
                                 <div class="repeatableItem">
                                     <div class="row">
-                                        <div class="col-xs-12 col-sm-3">
+
+                                        <!-- form items inside one of repeatable items -->
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <label for="inspectionItems">Inspection Items:</label>
                                                 <textarea class="form-control" id="inspectionItems" rows="2" placeholder="Description"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-3">
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <label for="area">Area:</label>
                                                 <textarea class="form-control" id="area" rows="2" placeholder="Area"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-3">
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <label for="zone">Zone</label>
                                                 <textarea class="form-control" id="zone" rows="2" placeholder="Zone"></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-3">
+                                        <div class="col-xs-12 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <label for="notes">Notes:</label>
                                                 <textarea class="form-control" id="notes" rows="2" placeholder="Notes"></textarea>
                                             </div>
                                         </div>
+                                        <!--/ form items inside one of repeatable items -->
+
                                     </div>
                                 </div>
-                                <!--endOf single inspection item -->
-
-                                <!-- single inspection item -->
-                                <div class="repeatableItem">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="inspectionItems">Inspection Items:</label>
-                                                <textarea class="form-control" id="inspectionItems" rows="2" placeholder="Description"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="area">Area:</label>
-                                                <textarea class="form-control" id="area" rows="2" placeholder="Area"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="zone">Zone</label>
-                                                <textarea class="form-control" id="zone" rows="2" placeholder="Zone"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="notes">Notes:</label>
-                                                <textarea class="form-control" id="notes" rows="2" placeholder="Notes"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--endOf single inspection item -->
-
-                                <!-- single inspection item -->
-                                <div class="repeatableItem">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="inspectionItems">Inspection Items:</label>
-                                                <textarea class="form-control" id="inspectionItems" rows="2" placeholder="Description"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="area">Area:</label>
-                                                <textarea class="form-control" id="area" rows="2" placeholder="Area"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="zone">Zone</label>
-                                                <textarea class="form-control" id="zone" rows="2" placeholder="Zone"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-3">
-                                            <div class="form-group">
-                                                <label for="notes">Notes:</label>
-                                                <textarea class="form-control" id="notes" rows="2" placeholder="Notes"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--endOf single inspection item -->
-
+                                <!--/ single inspection item -->
 
                             </div>
                         </div>
+                        <!--/ wrapper for repeatable items -->
 
                         <!-- button to add more inspection items -->
                         <div class="col-xs-1 pull-right repeatableAddItem">
-                            <button class="btn btn-primary pull-right"></button>
+                            <button class="btn btn-primary pull-right"><span class="sr-only">Add new</span></button>
                         </div>
-                        <!-- endOf button to add more inspection items -->
+                        <!--/ button to add more inspection items -->
 
                     </div>
                 </div>
-                <!-- endOf subsection of main content  -->
+                <!-- / subsection of main content  -->
 
 
-                <div class="column">
+                <div class="halfWidth">
                     <div class="form-group">
                         <label for="consultant">Consultant:</label>
                         <select class="form-control selectpicker" id="consultant" title="Select Consultant">
@@ -230,7 +174,7 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="halfWidth">
                     <div class="form-group">
                         <label for="contractor">Contractor:</label>
                         <select class="form-control selectpicker" id="contractor" title="Select Contractor">
@@ -252,6 +196,141 @@
                 </div>
             </form>
         </section>
+        <!--/ request inspection -->
+
+        <!-- inspections list -->
+        <section class="header">
+            <h1>inspections list</h1>
+            <button class="btn btn-primary btn-main">back</button>
+        </section>
+
+        <section class="content">
+
+            <div class="fullWidth">
+                <a href="#" class="addNewItemLink">Add New</a>
+            </div>
+            <div class="fullWidth bottomMargin">
+                <form class="form-inline">
+                    <div class="form-group pull-right">
+                        <label for="search">Search:</label>
+                        <input type="text" class="form-control" id="search" placeholder="">
+                    </div>
+                </form>
+            </div>
+
+            <div class="fullWidth bottomMargin">
+                <!-- table inside main content -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+
+                        <!-- table header -->
+                        <thead>
+                            <tr>
+                                <th>Inspection #</th>
+                                <th>Description</th>
+                                <th>Date</th>
+                                <th>Prepared By</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <!-- /table header -->
+
+                        <!-- table body -->
+                        <tbody>
+
+                            <!-- single inspection -->
+                            <tr>
+                                <!-- inspection # -->
+                                <td>003</td>
+
+                                <!-- inspection description -->
+                                <td>TEST SG 4 FEB - 2 update</td>
+
+                                <!-- inspection date -->
+                                <td>04-Feb-2016</td>
+
+                                <!-- inspection prepared by -->
+                                <td>Sindhu Gireesh</td>
+
+                                <!-- inspection action -->
+                                <td>
+                                    <a href="#" class="tableActionButton">View</a>
+                                    <a href="#" class="tableActionButton">Edit</a>
+                                    <a href="#" class="tableActionButton">Delete</a>
+                                </td>
+                            </tr>
+                            <!-- single inspection -->
+
+                            <!-- single inspection -->
+                            <tr>
+                                <!-- inspection # -->
+                                <td>003</td>
+
+                                <!-- inspection description -->
+                                <td>TEST SG 4 FEB - 2 update</td>
+
+                                <!-- inspection date -->
+                                <td>04-Feb-2016</td>
+
+                                <!-- inspection prepared by -->
+                                <td>Sindhu Gireesh</td>
+
+                                <!-- inspection action -->
+                                <td>
+                                    <a href="#" class="tableActionButton">View</a>
+                                    <a href="#" class="tableActionButton">Edit</a>
+                                    <a href="#" class="tableActionButton">Delete</a>
+                                </td>
+                            </tr>
+                            <!-- single inspection -->
+
+                            <!-- single inspection -->
+                            <tr>
+                                <!-- inspection # -->
+                                <td>003</td>
+
+                                <!-- inspection description -->
+                                <td>TEST SG 4 FEB - 2 update</td>
+
+                                <!-- inspection date -->
+                                <td>04-Feb-2016</td>
+
+                                <!-- inspection prepared by -->
+                                <td>Sindhu Gireesh</td>
+
+                                <!-- inspection action -->
+                                <td>
+                                    <a href="#" class="tableActionButton">View</a>
+                                    <a href="#" class="tableActionButton">Edit</a>
+                                    <a href="#" class="tableActionButton">Delete</a>
+                                </td>
+                            </tr>
+                            <!-- single inspection -->
+
+                        </tbody>
+                        <!-- /table body -->
+                    </table>
+                </div>
+
+
+                <!-- /table inside main content -->
+            </div>
+
+            <div class="fullWidth marginBottom">
+                <nav>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#" aria-label="Previous">Previous</a></li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li class="disabled"><a href="#" aria-label="Next">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+        </section>
+        <!--/ inspections list -->
 
     </div>
 </div>

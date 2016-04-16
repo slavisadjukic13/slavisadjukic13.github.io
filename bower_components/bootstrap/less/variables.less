@@ -31,9 +31,9 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            @text_color;
+@link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      @theme_color_light;
+@link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
 @link-hover-decoration: underline;
 
@@ -144,9 +144,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              @input_color;
-@btn-default-bg:                 @input_background;
-@btn-default-border:             @input_background;
+@btn-default-color:              #333;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ccc;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -181,14 +181,14 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       @input_background;
+@input-bg:                       #fff;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    @input_color;
+@input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   @input_background;
+@input-border:                   #ccc;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -203,7 +203,7 @@
 @input-border-focus:             #66afe9;
 
 //** Placeholder text color
-@input-color-placeholder:        @input_placeholder_color;
+@input-color-placeholder:        #999;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -447,21 +447,21 @@
 //
 //##
 
-@pagination-color:                     @pagination_color;
-@pagination-bg:                        @pagination_bg;
-@pagination-border:                    @pagination_border;
+@pagination-color:                     @link-color;
+@pagination-bg:                        #fff;
+@pagination-border:                    #ddd;
 
-@pagination-hover-color:               @pagination_hover-color;
-@pagination-hover-bg:                  @pagination_hover-bg;
-@pagination-hover-border:              @pagination_hover-border;
+@pagination-hover-color:               @link-hover-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
 
-@pagination-active-color:              @pagination_active-color;
-@pagination-active-bg:                 @pagination_active-bg;
-@pagination-active-border:             @pagination_active-border;
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;
 
-@pagination-disabled-color:            @pagination_disabled-color;
-@pagination-disabled-bg:               @pagination_disabled-bg;
-@pagination-disabled-border:           @pagination_disabled-border;
+@pagination-disabled-color:            @gray-light;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border:           #ddd;
 
 
 //== Pager

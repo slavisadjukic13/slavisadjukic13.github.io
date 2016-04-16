@@ -1,0 +1,53 @@
+label {
+  font-weight: 200;
+}
+
+.form-control {
+  font-weight: bold;
+  &::-moz-placeholder { font-weight: bold; }
+  &:-ms-input-placeholder { font-weight: bold; }
+  &::-webkit-input-placeholder  { font-weight: bold; }
+}
+
+
+// bootstrap-datepicker modifications
+.datepicker table tr td, .datepicker table tr th {color: @bgColor;}
+.datepicker table tr td.old, .datepicker table tr td.new {color: @input_placeholder_color;}
+
+
+// bootstrap-select modifications
+.bootstrap-select{
+  .filter-option {
+    color: @input_placeholder_color;
+    font-weight: bold;
+  }
+}
+
+.btn-select {
+  .button-variant(@input_background,@input_background,@input_background);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: @input_background;
+    border-color: @input_background;
+    .box-shadow("inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6)");
+  }
+}
+
+.btn-select:active, .btn-select.active, .open > .dropdown-toggle.btn-select {
+  background: @input_background;
+  border-color: @input_background;
+}
+
+.bootstrap-select .dropdown-toggle:hover {
+  //background: red;
+
+}
+
+.btn-select:active:hover, .btn-select.active:hover, .open > .dropdown-toggle.btn-select:hover, .btn-select:active:focus, .btn-select.active:focus, .open > .dropdown-toggle.btn-select:focus, .btn-select:active.focus, .btn-select.active.focus, .open > .dropdown-toggle.btn-select.focus {
+  background: @input_background;
+  outline: none;
+}

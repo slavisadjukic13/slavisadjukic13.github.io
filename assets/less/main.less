@@ -15,6 +15,12 @@
 @import "themeVariables";
 
 //STYLES
+@import "scaffolding";
+@import "ui";
+@import "header";
+@import "forms";
+@import "tables";
+@import "pagination";
 @import "background";
 
 body, html {
@@ -22,133 +28,7 @@ body, html {
   color: #fff;
 }
 
-.btn-main {
-  background: @mainActionButton_bg;
-  color: @mainActionButton_color;
-  border-color: @mainActionButton_border_color;
-  padding: 5px 50px;
-  text-transform: uppercase;
-  font-size: @mainActionButton_font_size;
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
 }
 
-.wrapperOuter{
-  .container;
-  padding-top: @grid-gutter-width;
-  padding-bottom: @grid-gutter-width;
-}
-
-.wrapperInner {
-  .make-row();
-}
-
-.header {
-  .make-xs-column(12);
-  position: relative;
-
-  h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-
-  .btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-}
-
-.content {
-  .make-xs-column(12);
-  border: 1px solid @content_border_color;
-  border-radius: 10px;
-  padding: @grid-gutter-width/2;
-}
-
-.column {
-  .make-sm-column(6);
-  .make-xs-column(12);
-  //padding-top: @grid-gutter-width;
-}
-
-.subSection {
-  .make-xs-column(12);
-  border: 1px solid @innerSection_border_color;
-  border-radius: 10px;
-  margin-bottom: @grid-gutter-width/2;
-}
-
-.subSectionTitle {
-  .make-xs-column(12);
-
-  p {
-    padding: 0;
-    font-weight: bold;
-    margin: 0 0 @grid-gutter-width/6 0;
-  }
-}
-
-.repeatableItem {
-  .make-xs-column(12);
-  padding-top: @grid-gutter-width/2;
-
-  &:not(:first-of-type) {
-    margin-top: @grid-gutter-width/2;
-
-    &::before {
-      content: "";
-      display: block;
-      height: 1px;
-      background: @repeatableItem_border_color;
-      position: absolute;
-      top: 0;
-      left: @grid-gutter-width/2;
-      right: @grid-gutter-width/2;
-
-  }
-
-  }
-}
-
-.repeatableAddItem {
-  padding-top: 15px;
-
-  .btn {
-    position: relative;
-    background: none;
-    border-radius: 50%;
-    border-width: 2px;
-    color: @brand-primary;
-    line-height: 1;
-    .square(45px);
-
-    &::before {
-      content: "+";
-      font-size: 60px;
-      position: absolute;
-      top:50%;
-      left: 50%;
-      .translate(-50%,-50%);
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-}
-
-.fullWidth {
-  .make-xs-column(12);
-}
-
-.bootstrap-select{
-  .filter-option {
-    color: @input_placeholder_color;
-  }
-}
-
-.datepicker table tr td, .datepicker table tr th {color: @bgColor;}
-
-.datepicker table tr td.old, .datepicker table tr td.new {color: @input_placeholder_color;}

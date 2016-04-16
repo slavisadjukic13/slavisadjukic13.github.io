@@ -36,6 +36,7 @@
     "commit": "a1b3d496e7ea13054451ddaa941fa217898b8ce4"
   },
   "_source": "https://github.com/silviomoreto/bootstrap-select.git",
-  "_target": "1.10.0",
-  "_originalSource": "bootstrap-select"
+  "_target": "^1.10.0",
+  "_originalSource": "bootstrap-select",
+  "_direct": true
 }

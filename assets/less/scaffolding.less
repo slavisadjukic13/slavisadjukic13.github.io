@@ -5,6 +5,19 @@ body > .container > .row > section {
   &:first-of-type {
     margin-top: @grid-gutter-width;
   }
+
+  @media @xs {
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+body > .container {
+  @media @xs {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .content {
@@ -12,6 +25,10 @@ body > .container > .row > section {
   border: 1px solid @content_border_color;
   border-radius: 10px;
   padding: @grid-gutter-width/2;
+  
+  @media @xs {
+    margin-top: 60px;
+  }
 }
 
 .halfWidth {
@@ -93,6 +110,11 @@ body > .container > .row > section {
 
 .fullWidth {
   .make-xs-column(12);
+
+  @media @xs {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
   &.bottomMargin {
     margin-bottom: 10px;

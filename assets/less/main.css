@@ -7811,6 +7811,17 @@ body > .container > .row > section:last-of-type {
 body > .container > .row > section:first-of-type {
   margin-top: 30px;
 }
+@media only screen and (max-width: 767px) {
+  body > .container > .row > section:first-of-type {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body > .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .content {
   position: relative;
   float: left;
@@ -7821,6 +7832,11 @@ body > .container > .row > section:first-of-type {
   border: 1px solid #4D91AF;
   border-radius: 10px;
   padding: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .content {
+    margin-top: 60px;
+  }
 }
 .halfWidth {
   position: relative;
@@ -7931,6 +7947,12 @@ body > .container > .row > section:first-of-type {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media only screen and (max-width: 767px) {
+  .fullWidth {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 .fullWidth.bottomMargin {
   margin-bottom: 10px;
 }
@@ -7994,6 +8016,12 @@ fieldset[disabled] .btn-main.focus {
   color: #22509E;
   background-color: #fff;
 }
+@media only screen and (max-width: 767px) {
+  .btn-main {
+    padding: 5px 30px;
+    font-size: 16px;
+  }
+}
 .header {
   float: left;
   width: 100%;
@@ -8007,10 +8035,36 @@ fieldset[disabled] .btn-main.focus {
   text-transform: uppercase;
   font-size: 20px;
 }
+@media only screen and (max-width: 767px) {
+  .header h1 {
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    line-height: 1;
+  }
+}
 .header .btn {
   position: absolute;
   top: 0;
   right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .header .btn {
+    top: 10px;
+    right: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: rgba(28, 56, 95, 0.8);
+  }
 }
 label {
   font-weight: 200;

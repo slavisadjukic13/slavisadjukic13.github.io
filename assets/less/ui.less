@@ -3,4 +3,10 @@
   text-transform: uppercase;
   font-size: @mainActionButton_font_size;
   .button-variant(@mainActionButton_color,@mainActionButton_bg,@mainActionButton_border_color);
+
+  @media @xs {
+    padding: 5px 30px;
+    font-size: @mainActionButton_font_size - 2;
+  }
+
 }

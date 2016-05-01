@@ -1,7 +1,0 @@
-Docs about used plugins
-
-bootstrap-select
-https://silviomoreto.github.io/bootstrap-select/
-
-bootstrap-datepicker
-https://bootstrap-datepicker.readthedocs.org/en/latest/

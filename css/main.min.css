@@ -229,6 +229,12 @@ img {
   vertical-align: middle;
 }
 
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -591,6 +597,29 @@ table td[class*="col-"],table th[class*="col-"] {
   background-color: #ebcccc;
 }
 
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+  }
+
+  .table-responsive > .table {
+    margin-bottom: 0;
+  }
+
+  .table-responsive > .table > thead > tr > th,  .table-responsive > .table > tbody > tr > th,  .table-responsive > .table > tfoot > tr > th,  .table-responsive > .table > thead > tr > td,  .table-responsive > .table > tbody > tr > td,  .table-responsive > .table > tfoot > tr > td {
+    white-space: nowrap;
+  }
+}
+
 input[type="search"] {
   box-sizing: border-box;
 }
@@ -728,6 +757,24 @@ input[type="radio"][disabled],input[type="checkbox"][disabled],input[type="radio
 
 .progress-bar-success {
   background-color: #5cb85c;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive iframe,.embed-responsive embed,.embed-responsive object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
 }
 
 .close {
@@ -915,8 +962,8 @@ button.close {
 .chatwindow {
   padding: 5px;
   border-radius: 10px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   color: #111;
   border: 1px solid #aaa;
 }
@@ -928,20 +975,38 @@ button.close {
 .chatwindow.nata {
   background: #fefefe;
   float: left;
-  width: 80%;
+  max-width: 80%;
 }
 
 .chatwindow.sla {
   background: #e0edff;
   float: right;
-  width: 80%;
+  max-width: 80%;
+}
+
+.dotted {
+  margin: 10px 0;
 }
 
 .dotted .dot {
   display: block;
   margin: 5px auto;
-  background: red;
+  background: #aaa;
   width: 10px;
   height: 10px;
   border-radius: 5px;
+}
+
+.image-wrapper {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 1;
+  top: 100%;
+  transition: all 0.8s linear;
+}
+
+.image-wrapper.on {
+  top: 0;
 }

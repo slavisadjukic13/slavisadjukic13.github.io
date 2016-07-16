@@ -12,8 +12,6 @@ html {
 }
 body {
   margin: 0;
-  padding-top: 400px;
-  padding-bottom: 500px;
 }
 article,
 aside,
@@ -8534,7 +8532,8 @@ button.close {
   max-height: 400px;
 }
 body > .container {
-  padding-top: 300px;
+  padding-top: 200px;
+  z-index: 100;
 }
 .delayed-intro-1 {
   animation-delay: 800ms;
@@ -8544,9 +8543,25 @@ body > .container {
   animation-delay: 1500ms;
   -webkit-animation-delay: 1500ms;
 }
+.delayed-1 {
+  animation-delay: 1200ms;
+  -webkit-animation-delay: 1200ms;
+}
+.delayed-2 {
+  animation-delay: 2200ms;
+  -webkit-animation-delay: 2200ms;
+}
+.delayed-3 {
+  animation-delay: 3200ms;
+  -webkit-animation-delay: 3200ms;
+}
+.delayed-4 {
+  animation-delay: 4200ms;
+  -webkit-animation-delay: 4200ms;
+}
 .intro {
   position: fixed;
-  background: #285679;
+  background: #4f7390;
   transition: all 0.8s linear;
   z-index: 1;
   width: 100%;
@@ -8567,15 +8582,20 @@ body > .container {
   left: 20px;
   right: 20px;
   transform: translate(0, -50%);
-  top: 50%;
+  top: 60%;
 }
 .chattitle {
   text-align: center;
   font-size: 18px;
   margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #285679;
+  box-shadow: 0px 1px 5px black;
 }
 .chattitle p {
   margin: 0;
+  color: white;
 }
 .chatwindow {
   padding: 5px;
@@ -8584,6 +8604,7 @@ body > .container {
   margin-top: 5px;
   color: #111;
   border: 1px solid #aaa;
+  box-shadow: 1px 1px 2px #aaa;
 }
 .chatwindow p {
   margin: 0;
@@ -8594,7 +8615,7 @@ body > .container {
   max-width: 80%;
 }
 .chatwindow.sla {
-  background: #e0edff;
+  background: #dfebf4;
   float: right;
   max-width: 80%;
 }
@@ -8604,10 +8625,19 @@ body > .container {
 .dotted .dot {
   display: block;
   margin: 5px auto;
-  background: #aaa;
+  background: #285679;
   width: 10px;
   height: 10px;
   border-radius: 5px;
+  box-shadow: 1px 1px 2px #aaa;
+}
+.dotted .dot:nth-of-type(2) {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.dotted .dot:nth-of-type(3) {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }
 .image-wrapper {
   height: 100%;
@@ -8621,6 +8651,40 @@ body > .container {
 }
 .image-wrapper.on {
   top: 0;
+}
+.image-wrapper-bg {
+  position: fixed;
+  z-index: 0;
+  height: 200px;
+  width: 3000px;
+  top: 200px;
+  left: 0;
+}
+.image-wrapper-bg .wrapper {
+  position: relative;
+}
+.image-wrapper-bg .wrapper:after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(233, 235, 238, 0.6);
+}
+.image-wrapper-bg img {
+  height: 200px;
+  display: inline;
+  position: relative;
+  margin: 0;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.image-wrapper-bg img:nth-child(even) {
+  transform: translate(0, -100px);
+}
+.notshown {
+  opacity: 0 !important;
 }
 .animated {
   animation-duration: 1s;
@@ -8691,4 +8755,139 @@ body > .container {
 }
 .zoomInUp {
   animation-name: zoomInUp;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%,
+  55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+.bounceOut {
+  animation-name: bounceOut;
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+.bounceIn {
+  animation-name: bounceIn;
+}
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.bounceInRight {
+  animation-name: bounceInRight;
 }

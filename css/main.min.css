@@ -12,6 +12,8 @@ html {
 }
 body {
   margin: 0;
+  padding-top: 400px;
+  padding-bottom: 500px;
 }
 article,
 aside,

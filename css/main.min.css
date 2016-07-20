@@ -980,6 +980,8 @@ button.close {
 .intro .imp {
   color: #cffff8;
   font-weight: bold;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
 }
 
 .intro .wrapper {
@@ -995,6 +997,14 @@ button.close {
   left: 50%;
   top: 80%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 0px 1px 5px black;
+  padding: 15px 20px;
+}
+
+.intro .button p {
+  margin: 0;
 }
 
 .delayed-intro-1 {
@@ -1321,6 +1331,37 @@ button.close {
   }
 }
 
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+
 .image-wrapper {
   height: 100%;
   width: 100%;
@@ -1362,7 +1403,7 @@ button.close {
   text-align: center;
   color: #285679;
   border-radius: 10px;
-  border: 5px solid #285679;
+  box-shadow: 0px 1px 5px black;
 }
 
 .end .col-xs-12 {
@@ -1396,8 +1437,43 @@ button.close {
   margin: 0 auto;
 }
 
+.thinking-of {
+  padding-top: 10px;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.distance {
+  padding-top: 10px;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.together {
+  padding-top: 10px;
+  width: 150px;
+  margin: 0 auto;
+}
+
 .chattitle.icon-section {
   margin-bottom: 70px;
+}
+
+.subtitle-holder {
+  position: relative;
+}
+
+.subtitle {
+  display: inline-block;
+  background: white;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 1px 5px black;
+  border-radius: 10px;
+}
+
+.subtitle p {
+  margin: 0;
+  font-size: 18px;
 }
 
 .kissing {
@@ -1574,23 +1650,6 @@ body > .container {
   background: #dfebf4;
   float: right;
   max-width: 80%;
-}
-
-.subtitle-holder {
-  position: relative;
-}
-
-.subtitle {
-  display: inline-block;
-  background: white;
-  padding: 5px 10px 5px 10px;
-  box-shadow: 0 1px 5px black;
-  border-radius: 10px;
-}
-
-.subtitle p {
-  margin: 0;
-  font-size: 18px;
 }
 
 .dotted {

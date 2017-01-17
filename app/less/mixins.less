@@ -1,0 +1,50 @@
+@lg: ~"only screen and (min-width: @{screen-lg})";
+@md: ~"only screen and (min-width: @{screen-md}) and (max-width: @{screen-md-max})";
+@sm: ~"only screen and (min-width: @{screen-sm}) and (max-width: @{screen-sm-max})";
+@xs: ~"only screen and (max-width: @{screen-xs-max})";
+@xxs: ~"only screen and (max-width: 374px)"; // Query for smallest screens, 374px because iPhone 6 == 375px.
+
+.transitions {
+  -webkit-transition: all 0.8s linear;
+  -moz-transition: all 0.8s linear;
+  -o-transition: all 0.8s linear;
+  transition: all 0.8s linear;
+}
+
+.transitions(@property) {
+  -webkit-transition: @property 0.4s linear;
+  -moz-transition: @property 0.4s linear;
+  -o-transition: @property 0.4s linear;
+  transition: @property 0.4s linear;
+}
+
+
+.transitions-slow {
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
+  transition: all 2s linear;
+}
+
+.panel-style(@border; @heading-text-color; @heading-bg-color; @heading-border) {
+  border-color: @border;
+
+  & > .panel-heading {
+    color: @heading-text-color;
+    background-color: @heading-bg-color;
+    border-color: @heading-border;
+
+    + .panel-collapse > .panel-body {
+      border-top-color: @border;
+    }
+    .badge {
+      color: @heading-bg-color;
+      background-color: @heading-text-color;
+    }
+  }
+  & > .panel-footer {
+    + .panel-collapse > .panel-body {
+      border-bottom-color: @border;
+    }
+  }
+}

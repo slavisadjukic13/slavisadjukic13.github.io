@@ -7025,7 +7025,7 @@ button.close {
 }
 #main-menu {
   position: fixed;
-  background: red;
+  background: #d40f0f;
   z-index: 1500;
   top: 0;
   left: 0;

@@ -6968,7 +6968,7 @@ button.close {
   padding-left: 15px;
   padding-right: 15px;
   background: red;
-  padding: 15px;
+  padding: 10px;
 }
 @media (min-width: 1200px) {
   .single-item {

@@ -6642,8 +6642,10 @@ button.close {
     display: none !important;
   }
 }
-.transitions {
-  transition: all 0.8s linear;
+.transitions,
+.nav-toggle,
+.nav-toggle .icon-bar {
+  transition: all 0.2s linear;
 }
 .transitions-slow {
   transition: all 2s linear;
@@ -6975,4 +6977,64 @@ button.close {
     float: left;
     width: 33.33333333%;
   }
+}
+.nav-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: #d40f0f;
+  z-index: 2000;
+  margin-top: 30px;
+}
+.nav-toggle .icon-bar {
+  width: 26px;
+  height: 4px;
+  border-radius: 1px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  margin: 0;
+  left: 7px;
+  top: 18px;
+}
+.nav-toggle .icon-bar-1 {
+  transform: translate(0, 9px);
+}
+.nav-toggle .icon-bar-1.rotated {
+  transform: rotate(-45deg);
+}
+.nav-toggle .icon-bar-2.rotated {
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+}
+.nav-toggle .icon-bar-3 {
+  transform: translate(0, -9px);
+}
+.nav-toggle .icon-bar-3.rotated {
+  transform: rotate(45deg);
+}
+.nav-toggle:focus {
+  outline: none;
+}
+#main-menu {
+  position: fixed;
+  background: red;
+  z-index: 1500;
+  top: 0;
+  left: 0;
+  max-height: 0;
+  width: 100%;
+  height: 400px;
+  transition: max-height 0.4s linear;
+  overflow: hidden;
+}
+#main-menu.active {
+  max-height: 400px;
 }

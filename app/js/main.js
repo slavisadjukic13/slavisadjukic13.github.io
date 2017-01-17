@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    $('.nav-toggle').on('click', function () {
+        $(this).toggleClass('active');
+        $('.icon-bar').toggleClass('rotated');
+        $('#main-menu').toggleClass('active');
+    });
 
     // $('.intro p').removeClass('notshown').addClass('fadeIn');
     // $('.button').removeClass('notshown').addClass('fadeIn');

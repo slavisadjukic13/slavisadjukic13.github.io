@@ -6,6 +6,11 @@ $(document).ready(function() {
         $('#main-menu').toggleClass('active');
     });
 
+
+    $('.your-class').slick({
+        centerMode : true
+    });
+
     // $('.intro p').removeClass('notshown').addClass('fadeIn');
     // $('.button').removeClass('notshown').addClass('fadeIn');
     //

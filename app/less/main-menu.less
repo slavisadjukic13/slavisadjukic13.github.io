@@ -1,0 +1,23 @@
+#main-menu {
+  position: fixed;
+  background: @primary-color;
+  z-index: 1500;
+  top: -500px;
+  left: 0;
+  //max-height: 0;
+  width: 100%;
+  //height: 400px;
+  .transitions(top);
+  overflow: hidden;
+
+  padding-top: 60px;
+
+  &.active {
+    top: 0;
+    //max-height: 400px;
+  }
+}
+
+.search-area {
+  .make-xs-column(12);
+}

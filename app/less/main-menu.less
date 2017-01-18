@@ -2,22 +2,44 @@
   position: fixed;
   background: @primary-color;
   z-index: 1500;
-  top: -500px;
+  top: 0;
   left: 0;
   //max-height: 0;
   width: 100%;
   //height: 400px;
-  .transitions(top);
+  .transitions(all);
   overflow: hidden;
 
-  padding-top: 60px;
+  padding-top: 90px;
+
+  @media @xs {
+    height: 100%;
+  }
+
 
   &.active {
     top: 0;
     //max-height: 400px;
   }
+
+  .search-area {
+    .delayed(300ms);
+  }
+
+  .links-area {
+    .delayed(400ms);
+  }
+
+
+  &.top {
+    padding-top: 100px;
+  }
 }
 
 .search-area {
+  .make-xs-column(12);
+}
+
+.links-area {
   .make-xs-column(12);
 }

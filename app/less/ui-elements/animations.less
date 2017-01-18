@@ -1,46 +1,15 @@
-.delayed-1 {
-  animation-delay: 1200ms;
-  -webkit-animation-delay: 1200ms;
+.delayed(@time) {
+  animation-delay: @time;
+  -webkit-animation-delay: @time;
 }
-
-.delayed-2 {
-  animation-delay: 2200ms;
-  -webkit-animation-delay: 2200ms;
-}
-
-.delayed-3 {
-  animation-delay: 3200ms;
-  -webkit-animation-delay: 3200ms;
-}
-
-.delayed-4 {
-  animation-delay: 4200ms;
-  -webkit-animation-delay: 4200ms;
-}
-
-.delayed-5 {
-  animation-delay: 5200ms;
-  -webkit-animation-delay: 5200ms;
-}
-
-.delayed-6 {
-  animation-delay: 6200ms;
-  -webkit-animation-delay: 6200ms;
-}
-
-.delayed-7 {
-  animation-delay: 7200ms;
-  -webkit-animation-delay: 7200ms;
-}
-
 
 .notshown {
   opacity: 0 !important;
 }
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -753,4 +722,34 @@
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
   animation-name: flipInX;
+}
+
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp;
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown;
 }

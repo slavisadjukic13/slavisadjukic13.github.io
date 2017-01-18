@@ -3,7 +3,15 @@ $(document).ready(function() {
     $('.nav-toggle').on('click', function () {
         $(this).toggleClass('active');
         $('.icon-bar').toggleClass('rotated');
-        $('#main-menu').toggleClass('active');
+        $('#main-menu').toggleClass('slideOutUp');
+        $('#main-menu').toggleClass('slideInDown');
+
+        $('.header .nav-toggle .opened').toggleClass('fadeInDown').toggleClass('fadeOut');
+        $('.header .nav-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
+
+        $('#main-menu .search-area').toggleClass('fadeInDown');
+        $('#main-menu .links-area').toggleClass('fadeInRight');
+
     });
 
 
@@ -11,6 +19,17 @@ $(document).ready(function() {
         centerMode : true
     });
 
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop()>100){
+            $('.header').removeClass('top');
+            $('#main-menu').removeClass('top');
+        }
+        else {
+            $('.header').addClass('top');
+            $('#main-menu').addClass('top');
+        }
+    });
     // $('.intro p').removeClass('notshown').addClass('fadeIn');
     // $('.button').removeClass('notshown').addClass('fadeIn');
     //

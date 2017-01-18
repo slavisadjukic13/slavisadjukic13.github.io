@@ -7545,9 +7545,22 @@ select.selectpicker {
     margin-left: 0;
   }
 }
+.header .left-side {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
+}
 .header.top {
   background: transparent;
-  padding: 30px;
+  padding: 10px;
 }
 .header.top .nav-toggle {
   background: rgba(0, 0, 0, 0.5);
@@ -7565,35 +7578,57 @@ select.selectpicker {
 .header.top .logo .fil2 {
   fill: #525151;
 }
-@media only screen and (min-width: 1200px) {
-  .header.top .logo {
-    top: 200px;
-  }
-}
 .header .logo {
   transition: all 0.2s ease-in-out;
-  width: 200px;
-  height: 50px;
   position: absolute;
 }
 @media only screen and (min-width: 1200px) {
   .header .logo {
-    top: 5px;
+    top: 10px;
+    width: 200px;
+    height: 76px;
   }
 }
-.header .logo .fil0,
-.header .logo .fil1,
+@media only screen and (max-width: 767px) {
+  .header .logo {
+    top: 5px;
+    width: 100px;
+    height: 35px;
+  }
+}
+.header .logo .fil0 {
+  fill: white;
+}
+.header .logo .fil1 {
+  fill: white;
+}
 .header .logo .fil2 {
+  fill: white;
+}
+.header .logo.top {
+  top: 5px;
+  width: 100px;
+  height: 35px;
+}
+.header .logo.top .fil0,
+.header .logo.top .fil1,
+.header .logo.top .fil2 {
   fill: white;
 }
 .logo-block {
   float: left;
-  width: 500px;
+  width: 200px;
   height: 84px;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+}
+@media only screen and (max-width: 767px) {
+  .logo-block {
+    width: 100px;
+    height: 35px;
+  }
 }
 #main-menu {
   position: fixed;
@@ -7744,4 +7779,7 @@ select.selectpicker {
     margin-right: 0;
     margin-left: 0;
   }
+}
+body {
+  overflow-x: hidden;
 }

@@ -1,8 +1,6 @@
 .header {
   position: fixed;
   z-index: 2000;
-
-
 }
 
 .header {
@@ -13,15 +11,22 @@
   padding: 20px;
   .transitions;
 
-  @media @lg {
-
+  .left-side {
+    .make-xs-column(3);
   }
 
-
+  @media @xs {
+    padding: 0;
+  }
+  
   &.top {
     background: transparent;
-    padding: 30px;
+    padding: 10px;
 
+    //@media @xs {
+    //  padding: 0;
+    //}
+    //
     .nav-toggle {
 
       background: rgba(0,0,0,0.5);
@@ -34,52 +39,63 @@
       width: 200px;
       height: 60px;
 
-      .fil0 {
-        fill: @primary-color;
-      }
-      .fil1 {
-        fill: @primary-color;
-      }
-      .fil2 {
-        fill: #525151;
-      }
-
-      @media @lg {
-        top: 200px;
-
-
-      }
+      .fil0 {fill:@primary-color;}
+      .fil1 {fill: @primary-color;}
+      .fil2 {fill: #525151;}
     }
   }
 
   .logo {
-    
+
+
+
     @media @lg {
+      top: 10px;
+      width: 200px;
+      height: 76px;
+
+    }
+
+    @media @xs {
       top: 5px;
-      //left: 100%;
-
+      width: 100px;
+      height: 35px;
     }
-
-    .fil0, .fil1, .fil2 {
-      fill: white;
-    }
-
+    
+    .fil0 {fill: white;}
+    .fil1 {fill: white;}
+    .fil2 {fill: white;}
 
     .transitions;
-    width: 200px;
-    height: 50px;
     position: absolute;
+
+    &.top {
+      top: 5px;
+      width: 100px;
+      height: 35px;
+
+      .fil0, .fil1, .fil2 {
+        fill: white;
+      }
+    }
   }
 
 }
 
 .logo-block {
   float: left;
-  width: 500px;
+  width: 200px;
   height: 84px;
   //display: block;
   position: absolute;
   top: 0;
   left: 50%;
   .translate(-50%,0);
+  
+  
+  @media @xs {
+    width: 100px;
+    height: 35px;
+  }
 }
+

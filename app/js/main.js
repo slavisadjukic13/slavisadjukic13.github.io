@@ -9,6 +9,8 @@ $(document).ready(function() {
         $('.header .nav-toggle .opened').toggleClass('fadeInDown').toggleClass('fadeOut');
         $('.header .nav-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
 
+        $('.logo').toggleClass('top');
+
         $('#main-menu .search-area').toggleClass('fadeInDown');
         $('#main-menu .links-area').toggleClass('fadeInRight');
 

@@ -6894,13 +6894,6 @@ button.close {
   margin-left: -15px;
   margin-right: -15px;
 }
-.btn-lg,
-.btn-group-lg > .btn {
-  border-width: 5px;
-}
-.form-control {
-  border-width: 5px;
-}
 /*! =========================================================
  * bootstrap-slider.js
  *
@@ -7763,6 +7756,18 @@ select.selectpicker {
 .slideInDown {
   animation-name: slideInDown;
 }
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.fadeOutUp {
+  animation-name: fadeOutUp;
+}
 .single-item {
   position: relative;
   float: left;
@@ -7832,6 +7837,15 @@ select.selectpicker {
   padding-left: 15px;
   padding-right: 15px;
 }
+.header .right-side {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right !important;
+}
 @media only screen and (max-width: 767px) {
   .header {
     padding: 0;
@@ -7840,35 +7854,6 @@ select.selectpicker {
 .header.top {
   background: transparent;
   padding: 10px;
-}
-.header.top .nav-toggle {
-  background: rgba(0, 0, 0, 0.5);
-}
-@media only screen and (max-width: 767px) {
-  .header.top .logo {
-    width: 200px;
-    height: 60px;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-}
-.header.top .logo .fil0 {
-  fill: #d40f0f;
-}
-.header.top .logo .fil1 {
-  fill: #d40f0f;
-}
-.header.top .logo .fil2 {
-  fill: #525151;
-}
-@media only screen and (max-width: 767px) {
-  .header.top .logo-block {
-    top: 80px;
-    width: 100%;
-  }
-}
-.header.top .logo-block .text-holder {
-  padding: 80px 15px 0;
 }
 .header .logo {
   transition: all 0.2s ease-in-out;
@@ -7897,43 +7882,19 @@ select.selectpicker {
 .header .logo .fil2 {
   fill: white;
 }
-.header .logo.top {
-  top: 5px;
-  width: 100px;
-  height: 35px;
-}
-.header .logo.top .fil0,
-.header .logo.top .fil1,
-.header .logo.top .fil2 {
-  fill: white;
-}
 .logo-block {
   transition: all 0.2s ease-in-out;
   float: left;
-  width: 200px;
-  height: 84px;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-}
-.logo-block.top {
-  top: 5px !important;
 }
 @media only screen and (max-width: 767px) {
   .logo-block {
     width: 100px;
     height: 35px;
   }
-}
-.text-holder {
-  transition: all 0.2s ease-in-out;
-  color: white;
-  max-height: 0;
-  overflow: hidden;
-}
-.text-holder.top {
-  max-height: 200px;
 }
 #main-menu {
   position: fixed;
@@ -7942,8 +7903,8 @@ select.selectpicker {
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.4s linear;
-  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
   padding-top: 90px;
 }
 @media only screen and (max-width: 767px) {
@@ -7984,11 +7945,16 @@ select.selectpicker {
 .nav-toggle {
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 110px;
   height: 40px;
   border: 0;
   background: #d40f0f;
   z-index: 2000;
+}
+@media only screen and (max-width: 767px) {
+  .nav-toggle {
+    width: 40px;
+  }
 }
 .nav-toggle .icon-bar {
   width: 26px;
@@ -8030,6 +7996,11 @@ select.selectpicker {
   top: 0;
   left: 50px;
 }
+@media only screen and (max-width: 767px) {
+  .nav-toggle .text {
+    display: none;
+  }
+}
 .nav-toggle:focus {
   outline: none;
 }
@@ -8041,17 +8012,80 @@ select.selectpicker {
 }
 @media only screen and (min-width: 1200px) {
   .hero {
-    padding-top: 500px;
+    padding-top: 200px;
   }
 }
 @media only screen and (max-width: 767px) {
   .hero {
-    padding-top: 500px;
+    padding-top: 100px;
   }
 }
-.hero .search-area {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 15px 0;
+.hero .hero-search-area {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .hero .hero-search-area {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero .hero-search-area > button {
+    display: none !important;
+  }
+}
+.hero .hero-search-area > button:not(.collapsed) {
+  display: none;
+}
+.hero .hero-search-area .form-holder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 1200px) {
+  .hero .hero-search-area .form-holder {
+    display: block;
+  }
+}
+.hero .hero-area {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .hero .hero-area {
+    float: left;
+    width: 50%;
+  }
+}
+.hero .hero-area .hero-logo {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.hero .hero-area .hero-text {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .hero .hero-area .hero-text {
+    text-align: center;
+  }
 }
 .hero .form-group {
   margin: 0;

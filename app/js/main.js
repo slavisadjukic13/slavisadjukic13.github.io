@@ -9,31 +9,36 @@ $(document).ready(function() {
         $('.header .nav-toggle .opened').toggleClass('fadeInDown').toggleClass('fadeOut');
         $('.header .nav-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
 
-        $('.logo').toggleClass('top');
-        $('.logo-block').toggleClass('top');
-        $('.text-holder').toggleClass('top');
 
         $('#main-menu .search-area').toggleClass('fadeInDown');
         $('#main-menu .links-area').toggleClass('fadeInRight');
 
     });
 
+    $('#hero-search-area').on('show.bs.collapse', function () {
 
-    $('.your-class').slick({
-        centerMode : true
-    });
+        $('html, body').animate({
+            scrollTop: $(".hero-search-area").position().top - 60
+        }, 400);
+    })
+
 
 
     $(window).scroll(function() {
+
+
+        // console.log($(".hero-search-area").position().top);
+
         if ($(window).scrollTop()>100){
             $('.header').removeClass('top');
             $('#main-menu').removeClass('top');
-            $('.text-holder').removeClass('top');
+            $('.logo').removeClass('fadeOutUp').addClass('fadeInDown');
+
         }
         else {
             $('.header').addClass('top');
             $('#main-menu').addClass('top');
-            $('.text-holder').addClass('top');
+            $('.logo').removeClass('fadeInDown').addClass('fadeOutUp');
         }
     });
     // $('.intro p').removeClass('notshown').addClass('fadeIn');

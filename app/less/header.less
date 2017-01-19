@@ -14,6 +14,10 @@
   .left-side {
     .make-xs-column(3);
   }
+  .right-side {
+    .make-xs-column(3);
+    .pull-right;
+  }
 
   @media @xs {
     padding: 0;
@@ -22,74 +26,25 @@
   &.top {
     background: transparent;
     padding: 10px;
-
-    .nav-toggle {
-      background: rgba(0,0,0,0.5);
-    }
-
-    .logo {
-      
-      @media @xs {
-        width: 200px;
-        height: 60px;
-        left: 50%;
-        .translate(-50%,0);
-      }
-      
-
-
-      .fil0 {fill:@primary-color;}
-      .fil1 {fill: @primary-color;}
-      .fil2 {fill: #525151;}
-    }
-
-    .logo-block {
-
-      @media @xs {
-        top: 80px;
-        width: 100%;
-      }
-
-    .text-holder {
-      padding: 80px 15px 0;
-    }
-
-    }
   }
 
   .logo {
-
-
-
     @media @lg {
       top: 10px;
       width: 200px;
       height: 76px;
-
     }
-
     @media @xs {
       top: 5px;
       width: 100px;
       height: 35px;
     }
-    
+
     .fil0 {fill: white;}
     .fil1 {fill: white;}
     .fil2 {fill: white;}
-
     .transitions;
     position: absolute;
-
-    &.top {
-      top: 5px;
-      width: 100px;
-      height: 35px;
-
-      .fil0, .fil1, .fil2 {
-        fill: white;
-      }
-    }
   }
 
 }
@@ -97,33 +52,14 @@
 .logo-block {
   .transitions;
   float: left;
-  width: 200px;
-  height: 84px;
-  //display: block;
   position: absolute;
   top: 0;
   left: 50%;
   .translate(-50%,0);
 
-  &.top {
-    top: 5px !important;
-  }
-
   @media @xs {
     width: 100px;
     height: 35px;
   }
-}
-
-.text-holder {
-  .transitions;
-  color: white;
-  max-height: 0;
-  overflow: hidden;
-
-  &.top {
-    max-height: 200px;
-  }
-
 }
 

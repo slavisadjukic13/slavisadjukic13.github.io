@@ -8,22 +8,57 @@
   //height: 600px;
 
   @media @lg {
-    padding-top: 500px;
+    padding-top: 200px;
 
   }
 
   @media @xs {
-    padding-top: 500px;
+    padding-top: 100px;
 
   }
 
-  .search-area {
-    background: rgba(0,0,0,0.2);
-    padding: 15px 0;
+  .hero-search-area {
+    .make-xs-column(12);
+    .make-lg-column(6);
 
-    .form-group {
-      //padding: 5px;
+    > button {
+      .hidden-lg;
+
+      &:not(.collapsed) {
+        display: none;
+      }
     }
+
+    .form-holder {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background: rgba(0,0,0,0.5);
+
+      @media @lg {
+        display: block;
+      }
+    }
+
+  }
+
+  .hero-area {
+    .make-xs-column(12);
+    .make-lg-column(6);
+
+
+    .hero-logo {
+      .make-xs-column(12);
+    }
+
+    .hero-text {
+      .make-xs-column(12);
+
+      @media @xs {
+        .text-center;
+      }
+
+    }
+
   }
 
   .form-group {

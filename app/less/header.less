@@ -23,25 +23,37 @@
     background: transparent;
     padding: 10px;
 
-    //@media @xs {
-    //  padding: 0;
-    //}
-    //
     .nav-toggle {
-
       background: rgba(0,0,0,0.5);
-      .icon-bar {
-        //background-color: @primary-color;
-      }
     }
 
     .logo {
-      width: 200px;
-      height: 60px;
+      
+      @media @xs {
+        width: 200px;
+        height: 60px;
+        left: 50%;
+        .translate(-50%,0);
+      }
+      
+
 
       .fil0 {fill:@primary-color;}
       .fil1 {fill: @primary-color;}
       .fil2 {fill: #525151;}
+    }
+
+    .logo-block {
+
+      @media @xs {
+        top: 80px;
+        width: 100%;
+      }
+
+    .text-holder {
+      padding: 80px 15px 0;
+    }
+
     }
   }
 
@@ -83,6 +95,7 @@
 }
 
 .logo-block {
+  .transitions;
   float: left;
   width: 200px;
   height: 84px;
@@ -91,11 +104,26 @@
   top: 0;
   left: 50%;
   .translate(-50%,0);
-  
-  
+
+  &.top {
+    top: 5px !important;
+  }
+
   @media @xs {
     width: 100px;
     height: 35px;
   }
+}
+
+.text-holder {
+  .transitions;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+
+  &.top {
+    max-height: 200px;
+  }
+
 }
 

@@ -20,7 +20,8 @@
     "bootstrap": "3.3.6",
     "jquery": "2.2.3",
     "animate.css": "^3.5.2",
-    "bootstrap-select": "^1.12.1"
+    "bootstrap-select": "^1.12.1",
+    "seiyria-bootstrap-slider": "^9.7.0"
   },
   "devDependencies": {
     "font-awesome": "4.6.1",

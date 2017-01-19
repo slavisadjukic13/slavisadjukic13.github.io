@@ -10,6 +10,8 @@ $(document).ready(function() {
         $('.header .nav-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
 
         $('.logo').toggleClass('top');
+        $('.logo-block').toggleClass('top');
+        $('.text-holder').toggleClass('top');
 
         $('#main-menu .search-area').toggleClass('fadeInDown');
         $('#main-menu .links-area').toggleClass('fadeInRight');
@@ -26,10 +28,12 @@ $(document).ready(function() {
         if ($(window).scrollTop()>100){
             $('.header').removeClass('top');
             $('#main-menu').removeClass('top');
+            $('.text-holder').removeClass('top');
         }
         else {
             $('.header').addClass('top');
             $('#main-menu').addClass('top');
+            $('.text-holder').addClass('top');
         }
     });
     // $('.intro p').removeClass('notshown').addClass('fadeIn');

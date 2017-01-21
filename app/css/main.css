@@ -9643,6 +9643,22 @@ select.selectpicker {
   overflow: visible;
   clip: auto;
 }
+.form-group {
+  position: relative;
+}
+.form-group label {
+  position: absolute;
+  pointer-events: none;
+  left: 30px;
+  top: 8px;
+  transition: all 200ms linear;
+  font-size: 1.5em;
+}
+.form-group .form-control:focus + label {
+  color: white;
+  top: -18px;
+  font-size: 1em;
+}
 .btn .fa {
   margin-right: 15px;
 }
@@ -9650,7 +9666,7 @@ select.selectpicker {
   font-family: FontAwesome;
   font-size: inherit;
   margin-right: 10px;
-  content: "\f044";
+  content: "\f040";
 }
 .notshown {
   opacity: 0 !important;
@@ -10074,7 +10090,28 @@ select.selectpicker {
 @media only screen and (max-width: 767px) {
   .header .logo {
     top: 5px;
-    width: 100px;
+    width: 80px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header .logo {
+    top: 5px;
+    width: 80px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .header .logo {
+    top: 5px;
+    width: 80px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header .logo {
+    top: 5px;
+    width: 80px;
     height: 35px;
   }
 }
@@ -10096,6 +10133,24 @@ select.selectpicker {
   transform: translate(-50%, 0);
 }
 @media only screen and (max-width: 767px) {
+  .logo-block {
+    width: 100px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .logo-block {
+    width: 100px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .logo-block {
+    width: 100px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   .logo-block {
     width: 100px;
     height: 35px;
@@ -10300,7 +10355,9 @@ select.selectpicker {
   padding: 15px 0;
   background: black;
 }
-.cta .message {
+.cta .cta-message {
+  animation-delay: 1000ms;
+  -webkit-animation-delay: 1000ms;
   margin-bottom: 15px;
   float: left;
   width: 100%;
@@ -10309,22 +10366,24 @@ select.selectpicker {
   padding-left: 15px;
   padding-right: 15px;
 }
-.cta .message p {
+.cta .cta-message p {
   color: white;
   margin: 0;
 }
 @media only screen and (max-width: 767px) {
-  .cta .message p {
+  .cta .cta-message p {
     text-align: center;
   }
 }
 @media (min-width: 768px) {
-  .cta .message {
+  .cta .cta-message {
     float: left;
     width: 50%;
   }
 }
 .cta .cta-btn {
+  animation-delay: 1200ms;
+  -webkit-animation-delay: 1200ms;
   float: left;
   width: 100%;
   position: relative;
@@ -10517,6 +10576,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
 }
 .footer {
   background: black;
+  height: 700px;
 }
 .footer .left-side {
   position: relative;

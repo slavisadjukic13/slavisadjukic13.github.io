@@ -15,6 +15,10 @@ $(document).ready(function() {
 
     });
 
+    $('.cta-message').removeClass('fadeOut').addClass('fadeInLeft');
+    $('.cta-btn').removeClass('fadeOut').addClass('fadeInRight');
+    //cta-message
+
     $('.partners-list').slick({
         // setting-name: setting-value
         autoplay: true,

@@ -107,7 +107,7 @@ clean css for dist
 
 gulp.task('cleancss', function(){
     return gulp.src('css/main.min.css')
-        .pipe(purify(['js/*.js', '*.html']))
+        .pipe(purify(['*.html']))
         .pipe(gulp.dest('css'))
 });
 

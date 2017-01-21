@@ -1,0 +1,37 @@
+.cta {
+  padding: @grid-gutter-width/2 0;
+  background: @cta-bg;
+
+  .message {
+    margin-bottom: @grid-gutter-width/2;
+    p {
+      color: @cta-message-color;
+      margin: 0;
+
+      @media @xs {
+        .text-center;
+      }
+
+    }
+    .make-xs-column(12);
+    .make-sm-column(6);
+
+  }
+
+  .cta-btn {
+    .make-xs-column(12);
+    .make-sm-column(6);
+
+    a {
+      .btn;
+      .btn-primary;
+      .btn-lg;
+      color: white;
+    }
+
+    @media @xs {
+      text-align: center;
+    }
+  }
+
+}

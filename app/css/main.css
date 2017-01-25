@@ -10262,7 +10262,8 @@ h4 {
   left: 0;
   width: 100%;
   transition: all 0.2s ease-in-out;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-top: 90px;
 }
 @media only screen and (max-width: 767px) {

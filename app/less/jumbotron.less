@@ -1,5 +1,5 @@
 .hero {
-  background: url("/images/jumbotron-bg.jpg");
+  background: url("/images/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -18,32 +18,58 @@
 
   .hero-search-area {
     .make-xs-column(12);
-    .make-lg-column(6);
+    //.make-lg-column(6);
 
-    > button {
+    .open-search-btn {
       .hidden-lg;
 
+      text-align: left;
+
+      .fa-plus {
+        .transitions;
+        font-size: 24px;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+      }
+
       &:not(.collapsed) {
-        display: none;
+        .fa-plus {
+          transform: rotate(45deg);
+        }
       }
     }
 
     .form-holder {
+      margin: 0;
       padding-top: 10px;
       padding-bottom: 10px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
+
+      @media @xs {
+        background: @primary-color;
+      }
 
       @media @lg {
         display: block;
       }
     }
 
+    .search-btn {
+      .btn-primary;
+
+      @media @xs {
+        .btn-invert;
+
+      }
+    }
+
   }
+
 
   .hero-area {
     .make-xs-column(12);
     .make-lg-column(6);
-
 
     .hero-logo {
       .make-xs-column(12);
@@ -61,6 +87,6 @@
   }
 
   .form-group {
-    margin: 0;
+    //margin: 0;
   }
 }

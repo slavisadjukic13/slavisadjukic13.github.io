@@ -1,6 +1,6 @@
 
 .cta {
-  padding: @grid-gutter-width/2 0;
+  padding: @grid-gutter-width 0;
   background: @cta-bg;
 
   .cta-message {
@@ -11,13 +11,25 @@
       color: @cta-message-color;
       margin: 0;
 
-      @media @xs {
-        .text-center;
-      }
-
+      @media @xs { .text-center; }
+      @media @lg { font-size: @font-size-h4;}
     }
     .make-xs-column(12);
     .make-sm-column(6);
+    .make-md-column(8);
+    //.make-md-column-offset(1);
+    .make-lg-column-offset(1);
+
+    @media @md {
+      .text-right;
+      padding-top: 10px;
+    }
+
+    @media @lg {
+      padding-top: 7px;
+      width: auto;
+      display: inline-block;
+    }
 
   }
 
@@ -26,6 +38,7 @@
 
     .make-xs-column(12);
     .make-sm-column(6);
+    .make-md-column(2);
 
     a {
       .btn;
@@ -37,6 +50,12 @@
     @media @xs {
       text-align: center;
     }
+
+    @media @lg {
+      display: inline-block;
+      width: auto;
+    }
+
   }
 
 }

@@ -32,7 +32,7 @@ $(document).ready(function() {
                 breakpoint: 1200,
                 settings: {
                     autoplaySpeed: 1000,
-                    slidesToShow: 5,
+                    slidesToShow: 4,
                     slidesToScroll: 1
                 }
             },

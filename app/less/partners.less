@@ -3,9 +3,13 @@
 
   .image-wrapper {
     @media @xs { padding: 10px; }
-    @media @sm { padding: 20px 10px 0; }
-    @media @md { padding: 10px; }
+    @media @sm { padding: 20px 10px; }
+    @media @md { padding: 20px 10px; }
     @media @lg { padding: 20px 10px; }
+  }
+
+  .slick-slider {
+    margin-bottom: 0;
   }
 
 }
@@ -15,6 +19,11 @@
   .make-sm-column(4);
   .make-md-column(4);
   .make-lg-column(3);
+
+  color: @primary-color;
+
+  @media @md { padding-top: 10px; }
+  @media @lg { padding-top: 30px; }
 }
 
 .partners-list {

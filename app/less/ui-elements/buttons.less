@@ -3,16 +3,28 @@
     margin-right: @grid-gutter-width/2;
   }
 
+  border-width: 3px;
+
 }
 
 .btn-edit {
-  //.btn;
-  //.btn-primary;
-
-  &:before {
+  &:after {
     font-family: FontAwesome;
     font-size: inherit;
-    margin-right: 10px;
+    margin-left: 10px;
     content: @fa-var-pencil;
   }
+}
+
+.btn-search {
+  &:after {
+    font-family: FontAwesome;
+    font-size: inherit;
+    margin-left: 10px;
+    content: @fa-var-search;
+  }
+}
+
+.btn-invert {
+  .button-variant(white, transparent, white);
 }

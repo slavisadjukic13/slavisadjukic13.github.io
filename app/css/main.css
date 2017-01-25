@@ -10062,6 +10062,18 @@ fieldset[disabled] .btn-invert.focus {
 .fadeOutUp {
   animation-name: fadeOutUp;
 }
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInRight {
+  animation-name: slideInRight;
+}
 h1,
 h2,
 h3,
@@ -10520,7 +10532,7 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
 }
 @media only screen and (min-width: 1200px) {
   .hero {
-    padding-top: 200px;
+    padding-top: 100px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -10529,12 +10541,26 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   }
 }
 .hero .hero-search-area {
-  position: relative;
+  animation-delay: 1500ms;
+  -webkit-animation-delay: 1500ms;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
   float: left;
   width: 100%;
+  position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+.hero .hero-search-area label {
+  color: white;
+}
+@media (min-width: 1200px) {
+  .hero .hero-search-area {
+    float: left;
+    width: 33.33333333%;
+  }
 }
 .hero .hero-search-area .open-search-btn {
   text-align: left;
@@ -10697,16 +10723,44 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
 @media (min-width: 1200px) {
   .hero .hero-area {
     float: left;
-    width: 50%;
+    width: 66.66666667%;
   }
 }
 .hero .hero-area .hero-logo {
-  position: relative;
   float: left;
   width: 100%;
+  position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .hero .hero-area .hero-logo {
+    float: left;
+    width: 50%;
+  }
+}
+.hero .hero-area .hero-logo .fil1 {
+  animation-delay: 1100ms;
+  -webkit-animation-delay: 1100ms;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+}
+.hero .hero-area .hero-logo .fil2 {
+  fill: white;
+  animation-delay: 900ms;
+  -webkit-animation-delay: 900ms;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+}
+.hero .hero-area .hero-logo .fil0 {
+  animation-delay: 1000ms;
+  -webkit-animation-delay: 1000ms;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
 }
 .hero .hero-area .hero-text {
   position: relative;

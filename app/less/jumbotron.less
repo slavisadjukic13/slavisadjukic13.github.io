@@ -7,7 +7,7 @@
   padding-bottom: @grid-gutter-width;
 
   @media @lg {
-    padding-top: 200px;
+    padding-top: 100px;
 
   }
 
@@ -17,8 +17,14 @@
   }
 
   .hero-search-area {
+    .delayed(1500ms);
+    .animated;
+    .fadeInRight;
+
+    label { color: white; }
+
     .make-xs-column(12);
-    //.make-lg-column(6);
+    .make-lg-column(4);
 
     .open-search-btn {
       .hidden-lg;
@@ -69,10 +75,34 @@
 
   .hero-area {
     .make-xs-column(12);
-    .make-lg-column(6);
+    .make-lg-column(8);
 
     .hero-logo {
       .make-xs-column(12);
+      .make-lg-column(6);
+
+      //.fil0 {fill: white;}
+
+      .fil1 {
+        //fill: white;
+        .delayed(1100ms);
+        .animated;
+        .fadeInLeft
+      }
+      .fil2 {
+        fill: white;
+        .delayed(900ms);
+        .animated;
+        .fadeInRight;
+
+      }
+
+      .fil0 {
+        .delayed(1000ms);
+        .animated;
+        .fadeIn;
+      }
+
     }
 
     .hero-text {

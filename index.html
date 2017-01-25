@@ -221,7 +221,8 @@
                 <div class="collapse form-holder wrapper" id="hero-search-area">
                     <form>
                         <div class="form-group col-xs-12">
-                            <select class="form-control input-lg">
+                            <label class="control-label" for="ad-type">Vrsta oglasa</label>
+                            <select id="ad-type" class="form-control input-lg">
                                 <option>Izaberite vrstu oglasa</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -230,7 +231,8 @@
                             </select>
                         </div>
                         <div class="form-group col-xs-12">
-                            <select class="form-control input-lg">
+                            <label class="control-label" for="object-type">Vrsta objekta</label>
+                            <select id="object-type" class="form-control input-lg">
                                 <option>Izaberite vrstu objekta</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -239,7 +241,8 @@
                             </select>
                         </div>
                         <div class="form-group col-xs-12">
-                            <select class="form-control input-lg">
+                            <label class="control-label" for="city">Grad</label>
+                            <select id="city" class="form-control input-lg">
                                 <option>Izaberite grad</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -247,25 +250,28 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <div class="form-group col-xs-12">
-                            <select class="form-control input-lg">
-                                <option>Izaberite grad</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
+                        <!--<div class="form-group col-xs-12">-->
+                            <!--<select class="form-control input-lg">-->
+                                <!--<option>Izaberite grad</option>-->
+                                <!--<option>2</option>-->
+                                <!--<option>3</option>-->
+                                <!--<option>4</option>-->
+                                <!--<option>5</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
                         <div class="form-group col-xs-6">
+                            <label class="control-label" for="object-type">Vrsta objekta</label>
                             <div class="input-group">
-                                <span class="input-group-addon">cijena od:</span>
+                                <span class="input-group-addon">od:</span>
                                 <input type="text" class="form-control input-lg" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                                <div class="input-group-addon">KM</div>
                             </div>
                         </div>
                         <div class="form-group col-xs-6">
                             <div class="input-group">
                                 <span class="input-group-addon">do:</span>
                                 <input type="text" class="form-control input-lg" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                                <div class="input-group-addon">KM</div>
                             </div>
                         </div>
 
@@ -349,7 +355,7 @@
 </section>
 
 <section class="featured">
-    <div class="wrapper-outer">
+    <div class="wrapper-outer-wide">
         <div class="wrapper">
             <div class="featured-title">
                 <h1>Izdvojeni oglasi</h1>

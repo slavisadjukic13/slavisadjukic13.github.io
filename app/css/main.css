@@ -6385,6 +6385,8 @@ button.close {
 .wrapper:after,
 .wrapper-outer:before,
 .wrapper-outer:after,
+.wrapper-outer-wide:before,
+.wrapper-outer-wide:after,
 .header:before,
 .header:after {
   content: " ";
@@ -6408,6 +6410,7 @@ button.close {
 .modal-footer:after,
 .wrapper:after,
 .wrapper-outer:after,
+.wrapper-outer-wide:after,
 .header:after {
   clear: both;
 }
@@ -6925,6 +6928,24 @@ button.close {
 @media (min-width: 768px) {
   .wrapper-outer > .navbar-header,
   .wrapper-outer > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.wrapper-outer-wide {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wrapper-outer-wide > .navbar-header,
+.wrapper-outer-wide > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .wrapper-outer-wide > .navbar-header,
+  .wrapper-outer-wide > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
@@ -9646,22 +9667,6 @@ select.selectpicker {
   overflow: visible;
   clip: auto;
 }
-.form-group {
-  position: relative;
-}
-.form-group label {
-  position: absolute;
-  pointer-events: none;
-  left: 30px;
-  top: 8px;
-  transition: all 200ms linear;
-  font-size: 1.5em;
-}
-.form-group .form-control:focus + label {
-  color: white;
-  top: -18px;
-  font-size: 1em;
-}
 .btn {
   border-width: 3px;
 }
@@ -11037,7 +11042,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-right: 15px;
 }
 .featured {
-  background: lightgray;
+  background: red;
 }
 .featured-title {
   position: relative;

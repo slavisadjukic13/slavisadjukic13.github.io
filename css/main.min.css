@@ -5,6 +5,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:700&subset=latin-ext');
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1068,7 +1071,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -5897,7 +5900,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6015,7 +6018,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -9988,6 +9991,20 @@ select.selectpicker {
 .fadeOutUp {
   animation-name: fadeOutUp;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+}
+.btn {
+  font-family: 'Ubuntu', sans-serif;
+}
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 26px;
+  }
+}
 .single-item {
   position: relative;
   float: left;
@@ -10021,7 +10038,6 @@ select.selectpicker {
   padding-right: 15px;
   background: #d40f0f;
   z-index: 2000;
-  padding: 20px;
   transition: all 0.2s ease-in-out;
 }
 .header .navbar-collapse {
@@ -10072,11 +10088,27 @@ select.selectpicker {
     padding: 0;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .header {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header {
+    padding: 10px;
+  }
+}
 .header.top {
   background: transparent;
   padding: 10px;
 }
 .header .logo {
+  height: auto;
   transition: all 0.2s ease-in-out;
   position: absolute;
 }
@@ -10097,8 +10129,8 @@ select.selectpicker {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header .logo {
     top: 5px;
-    width: 80px;
-    height: 35px;
+    width: 120px;
+    height: auto;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -10140,8 +10172,8 @@ select.selectpicker {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .logo-block {
-    width: 100px;
-    height: 35px;
+    width: 120px;
+    height: 55px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -10195,6 +10227,148 @@ select.selectpicker {
   padding-right: 15px;
 }
 .links-area {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.main-menu-tab {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .main-menu-tab {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.main-menu-tab-selector a {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 0px;
+  color: #fff;
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.main-menu-tab-selector a:focus,
+.main-menu-tab-selector a:active:focus,
+.main-menu-tab-selector a.active:focus,
+.main-menu-tab-selector a.focus,
+.main-menu-tab-selector a:active.focus,
+.main-menu-tab-selector a.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.main-menu-tab-selector a:hover,
+.main-menu-tab-selector a:focus,
+.main-menu-tab-selector a.focus {
+  color: #333;
+  text-decoration: none;
+}
+.main-menu-tab-selector a:active,
+.main-menu-tab-selector a.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.main-menu-tab-selector a.disabled,
+.main-menu-tab-selector a[disabled],
+fieldset[disabled] .main-menu-tab-selector a {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.main-menu-tab-selector a.disabled,
+fieldset[disabled] a.main-menu-tab-selector a {
+  pointer-events: none;
+}
+.main-menu-tab-selector a .fa {
+  margin-right: 15px;
+}
+.main-menu-tab-selector a:focus,
+.main-menu-tab-selector a.focus {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #5d0707;
+}
+.main-menu-tab-selector a:hover {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.main-menu-tab-selector a:active,
+.main-menu-tab-selector a.active,
+.open > .dropdown-toggle.main-menu-tab-selector a {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.main-menu-tab-selector a:active:hover,
+.main-menu-tab-selector a.active:hover,
+.open > .dropdown-toggle.main-menu-tab-selector a:hover,
+.main-menu-tab-selector a:active:focus,
+.main-menu-tab-selector a.active:focus,
+.open > .dropdown-toggle.main-menu-tab-selector a:focus,
+.main-menu-tab-selector a:active.focus,
+.main-menu-tab-selector a.active.focus,
+.open > .dropdown-toggle.main-menu-tab-selector a.focus {
+  color: #fff;
+  background-color: #830909;
+  border-color: #5d0707;
+}
+.main-menu-tab-selector a:active,
+.main-menu-tab-selector a.active,
+.open > .dropdown-toggle.main-menu-tab-selector a {
+  background-image: none;
+}
+.main-menu-tab-selector a.disabled:hover,
+.main-menu-tab-selector a[disabled]:hover,
+fieldset[disabled] .main-menu-tab-selector a:hover,
+.main-menu-tab-selector a.disabled:focus,
+.main-menu-tab-selector a[disabled]:focus,
+fieldset[disabled] .main-menu-tab-selector a:focus,
+.main-menu-tab-selector a.disabled.focus,
+.main-menu-tab-selector a[disabled].focus,
+fieldset[disabled] .main-menu-tab-selector a.focus {
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.main-menu-tab-selector a .badge {
+  color: #d40f0f;
+  background-color: #fff;
+}
+.main-menu-tab-selector a:not(.collapsed) {
+  background: red;
+}
+.accordion {
   position: relative;
   float: left;
   width: 100%;
@@ -10416,6 +10590,7 @@ select.selectpicker {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: 'Ubuntu', sans-serif;
   color: #fff;
   background-color: #d40f0f;
   border-color: #d40f0f;
@@ -10520,7 +10695,27 @@ fieldset[disabled] .cta .cta-btn a.focus {
   }
 }
 .partners {
-  background: grey;
+  background: white;
+}
+@media only screen and (max-width: 767px) {
+  .partners .image-wrapper {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .partners .image-wrapper {
+    padding: 20px 10px 0;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .partners .image-wrapper {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .partners .image-wrapper {
+    padding: 20px 10px;
+  }
 }
 .partners-title {
   float: left;
@@ -10545,7 +10740,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
 @media (min-width: 1200px) {
   .partners-title {
     float: left;
-    width: 33.33333333%;
+    width: 25%;
   }
 }
 .partners-list {
@@ -10571,7 +10766,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
 @media (min-width: 1200px) {
   .partners-list {
     float: left;
-    width: 66.66666667%;
+    width: 75%;
   }
 }
 .footer {
@@ -10598,6 +10793,17 @@ fieldset[disabled] .cta .cta-btn a.focus {
   background: lightgray;
 }
 .featured-title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.new {
+  background: lightgray;
+}
+.new-title {
   position: relative;
   float: left;
   width: 100%;

@@ -41,3 +41,28 @@
 .links-area {
   .make-xs-column(12);
 }
+
+.main-menu-tab {
+  .make-xs-column(12);
+  .make-sm-column(4);
+
+  @media @xs {
+  }
+}
+
+.main-menu-tab-selector {
+  a {
+    .btn;
+    .btn-lg;
+    .btn-primary;
+    //color: white;
+
+    &:not(.collapsed) {
+      background: red;
+    }
+  }
+}
+
+.accordion {
+  .make-xs-column(12);
+}

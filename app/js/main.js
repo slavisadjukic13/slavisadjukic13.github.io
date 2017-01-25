@@ -32,7 +32,7 @@ $(document).ready(function() {
                 breakpoint: 1200,
                 settings: {
                     autoplaySpeed: 1000,
-                    slidesToShow: 6,
+                    slidesToShow: 5,
                     slidesToScroll: 1
                 }
             },
@@ -56,8 +56,8 @@ $(document).ready(function() {
             {
                 breakpoint: 0,
                 settings: {
-                    autoplaySpeed: 3000,
-                    slidesToShow: 1,
+                    autoplaySpeed: 2000,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             }

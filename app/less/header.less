@@ -8,7 +8,6 @@
   .container-fluid;
   background: @primary-color;
   z-index: 2000;
-  padding: 20px;
   .transitions;
 
   .left-side {
@@ -22,6 +21,19 @@
   @media @xs {
     padding: 0;
   }
+
+  @media @sm {
+    padding: 10px;
+  }
+
+  @media @md {
+    padding: 10px;
+  }
+
+  @media @lg {
+    padding: 10px;
+  }
+
   
   &.top {
     background: transparent;
@@ -29,6 +41,8 @@
   }
 
   .logo {
+    height: auto;
+
     @media @lg {
       top: 10px;
       width: 200px;
@@ -42,8 +56,8 @@
     }
     @media @sm {
       top: 5px;
-      width: 80px;
-      height: 35px;
+      width: 120px;
+      height: auto;
     }
     @media @md {
       top: 5px;
@@ -79,8 +93,8 @@
     height: 35px;
   }
   @media @sm {
-    width: 100px;
-    height: 35px;
+    width: 120px;
+    height: 55px;
   }
   @media @md {
     width: 100px;

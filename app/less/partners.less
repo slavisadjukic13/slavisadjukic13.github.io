@@ -1,5 +1,12 @@
 .partners {
-  background: grey;
+  background: white;
+
+  .image-wrapper {
+    @media @xs { padding: 10px; }
+    @media @sm { padding: 20px 10px 0; }
+    @media @md { padding: 10px; }
+    @media @lg { padding: 20px 10px; }
+  }
 
 }
 
@@ -7,12 +14,12 @@
   .make-xs-column(12);
   .make-sm-column(4);
   .make-md-column(4);
-  .make-lg-column(4);
+  .make-lg-column(3);
 }
 
 .partners-list {
   .make-xs-column(12);
   .make-sm-column(8);
   .make-md-column(8);
-  .make-lg-column(8);
+  .make-lg-column(9);
 }

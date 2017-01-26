@@ -1,6 +1,6 @@
 .btn {
   .fa {
-    margin-right: @grid-gutter-width/2;
+    //margin-right: @grid-gutter-width/2;
   }
 
   border-width: 3px;
@@ -27,4 +27,24 @@
 
 .btn-invert {
   .button-variant(white, transparent, white);
+
+  &.active {
+    .btn-primary-invert;
+    box-shadow: none;
+
+    //&.active, &:active, &:focus {
+    //  .btn-primary-invert;
+    //  box-shadow: none;
+    //}
+  }
+
+  &:active, &:focus {
+    box-shadow: none;
+    //.btn-primary-invert;
+  }
+}
+
+.btn-primary-invert {
+  .button-variant(@primary-color, white, white);
+  .text-center;
 }

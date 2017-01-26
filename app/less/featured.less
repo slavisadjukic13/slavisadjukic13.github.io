@@ -1,11 +1,45 @@
 .featured {
-  background: red;
+  background: @primary-color-dark;
+
+  .wrapper {position: relative;}
 }
 
 .featured-title {
+  color: white;
   .make-xs-column(12);
 }
 
 .featured-list {
+  .make-xs-column(12);
 
+  //.slick-slide {
+  //  //background-attachment: fixed;
+  //  //background-position: center center;
+  //  //background-size: cover;
+  //}
+
+  .featured-list-item {
+    .transitions;
+
+    &.grid {
+      .make-xs-column(4);
+    }
+
+    &.gridlg {
+      .make-xs-column(6);
+    }
+
+    &.list {
+      .make-xs-column(12);
+    }
+  }
+
+
+}
+
+.featured-controls {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: @grid-gutter-width/2;
 }

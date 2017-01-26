@@ -24,10 +24,17 @@
     label { color: white; }
 
     .make-xs-column(12);
-    .make-lg-column(4);
+    .make-lg-column(5);
 
     .open-search-btn {
       .hidden-lg;
+
+      &:focus, &:active {
+        background: @primary-color;
+        border-color: @primary-color;
+        box-shadow: none;
+        outline: none;
+      }
 
       text-align: left;
 
@@ -35,7 +42,7 @@
         .transitions;
         font-size: 24px;
         position: absolute;
-        right: 16px;
+        right: 30px;
         top: 12px;
       }
 
@@ -75,11 +82,11 @@
 
   .hero-area {
     .make-xs-column(12);
-    .make-lg-column(8);
+    .make-lg-column(7);
 
     .hero-logo {
       .make-xs-column(12);
-      .make-lg-column(6);
+      .make-lg-column(12);
 
       //.fil0 {fill: white;}
 

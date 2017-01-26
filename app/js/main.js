@@ -10,7 +10,7 @@ $(document).ready(function() {
         $('.header .nav-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
 
 
-        $('#main-menu .search-area').toggleClass('fadeInDown');
+        $('#main-menu .main-menu-search-area').toggleClass('fadeInDown');
         $('#main-menu .links-area').toggleClass('fadeInRight');
 
     });
@@ -65,7 +65,89 @@ $(document).ready(function() {
             // settings: "unslick"
             // instead of a settings object
         ]
-});
+    });
+
+
+    $('.featured-controls a').click(function (e) {
+
+
+        var setViewMode = $(this).attr("data-controls");
+
+        // $('.featured-controls a.active').removeClass('active');
+        // $(this).addClass('active');
+
+        // $('.featured-list-item').addClass(setViewMode);
+        // $('.featured-list-item').removeClass('grid').removeClass('gridlg').removeClass('list').addClass(setViewMode);
+
+        // $('.featured-list').slick('unslick');
+        // $('.featured-list').slick('unslick');
+        // $('.featured-list').slick('slickSetOption',"autoplaySpeed: 3000,autoplay: true,arrows: false,dots: false,infinite: true,mobileFirst: this,pauseOnHover: true,slidesToShow: 2,slidesToScroll: 1");
+        // $('.featured-list').slick('slickSetOption',"autoplaySpeed","100","rows","3","slidesPerRow","2");
+        $('.featured-list').slick('slickSetOption',"slidesToShow","3");
+        // $('.featured-list').slick('slickSetOption',"slidesPerRow","2");
+        // $('.featured-list').slick('slickSetOption',"refresh",true);s
+
+        console.log(
+            $(this).attr("data-controls")
+        );
+
+        e.preventDefault();
+        }
+    );
+
+
+    $('.featured-list').slick({
+        // setting-name: setting-value
+        autoplaySpeed: 1000,
+        autoplay: true,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        mobileFirst: this,
+        pauseOnHover: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+        // responsive: [
+        //     {
+        //         breakpoint: 1200,
+        //         settings: {
+        //             autoplaySpeed: 1000,
+        //             slidesToShow: 4,
+        //             slidesToScroll: 1
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 992,
+        //         settings: {
+        //             autoplaySpeed: 2000,
+        //             slidesToShow: 4,
+        //             slidesToScroll: 1
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 768,
+        //         settings: {
+        //             autoplaySpeed: 3000,
+        //             slidesToShow: 2,
+        //             slidesToScroll: 2
+        //         }
+        //     },
+        //
+        //     {
+        //         breakpoint: 0,
+        //         settings: {
+        //             autoplaySpeed: 2000,
+        //             slidesToShow: 2,
+        //             slidesToScroll: 1
+        //         }
+        //     }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        // ]
+    });
+
+
 
     $('#hero-search-area').on('show.bs.collapse', function () {
 

@@ -27,21 +27,67 @@
     <div class="container">
         <div class="row">
 
-
-
-            <div class="search-area animated">
-                <div class="wrapper">
+            <div class="main-menu-search-area">
+                <button class="open-search-btn btn btn-primary btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#main-menu-search-area" aria-expanded="false" aria-controls="collapseExample">
+                    Pretraga nekretnina
+                    <span class="fa fa-plus"></span>
+                </button>
+                <div class="collapse form-holder wrapper" id="main-menu-search-area">
                     <form>
-                        <div class="form-group col-lg-4">
-                            <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="">
-                            <label for="exampleInputEmail1">Email address</label>
+                        <div class="form-group col-xs-12">
+                            <label class="control-label" for="ad-type">Vrsta oglasa</label>
+                            <select id="ad-type" class="form-control input-lg">
+                                <option>Izaberite vrstu oglasa</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
-                        <div class="form-group col-lg-4">
-                            <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="">
-                            <label for="exampleInputPassword1">Password</label>
+                        <div class="form-group col-xs-12">
+                            <label class="control-label" for="object-type">Vrsta objekta</label>
+                            <select id="object-type" class="form-control input-lg">
+                                <option>Izaberite vrstu objekta</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
-                        <div class="form-group col-lg-4">
-                            <button type="submit" class="btn btn-primary btn-lg">Pretraži</button>
+                        <div class="form-group col-xs-12">
+                            <label class="control-label" for="city">Grad</label>
+                            <select id="city" class="form-control input-lg">
+                                <option>Izaberite grad</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-12">
+                            <label class="control-label" for="">Cijena</label>
+                            <div class="wrapper">
+                                <div class="form-group col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">od:</span>
+                                        <input type="text" class="form-control input-lg" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                                        <div class="input-group-addon">KM</div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">do:</span>
+                                        <input type="text" class="form-control input-lg" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                                        <div class="input-group-addon">KM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn search-btn btn-lg btn-search">Pretraži</button>
                         </div>
                     </form>
                 </div>
@@ -353,12 +399,51 @@
 </section>
 
 <section class="featured">
-    <div class="wrapper-outer-wide">
+    <div class="wrapper-outer">
         <div class="wrapper">
             <div class="featured-title">
                 <h1>Izdvojeni oglasi</h1>
             </div>
+            <div class="featured-controls">
+                <div class="btn-group">
+                    <a href="#" data-controls="grid" class="btn btn-invert btn-lg active"><span class="fa fa-th"></span></a>
+                    <a href="#" data-controls="gridlg" class="btn btn-invert btn-lg"><span class="fa fa-th-large"></span></a>
+                    <a href="#" data-controls="list" class="btn btn-invert btn-lg"><span class="fa fa-th-list"></span></a>
+
+                </div>
+            </div>
             <div class="featured-list">
+                <!--<div class="wrapper">-->
+
+                    <div class="featured-list-item grid">
+                        <img class="img-responsive" src="images/featured/1-1.jpg">
+                    </div>
+                    <div class="featured-list-item grid">
+                        <img class="img-responsive" src="images/featured/1-1.jpg">
+                    </div>
+                    <div class="featured-list-item grid">
+                        <img class="img-responsive" src="images/featured/1-1.jpg">
+                    </div>
+                    <div class="featured-list-item grid">
+                        <img class="img-responsive" src="images/featured/1-1.jpg">
+                    </div>
+                <!--</div>-->
+
+                <!--<div class="wrapper">-->
+
+                    <!--<div class="featured-list-item grid">-->
+                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
+                    <!--</div>-->
+                    <!--<div class="featured-list-item grid">-->
+                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
+                    <!--</div>-->
+                    <!--<div class="featured-list-item grid">-->
+                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
+                    <!--</div>-->
+                    <!--<div class="featured-list-item grid">-->
+                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
+                    <!--</div>-->
+                <!--</div>-->
 
             </div>
         </div>

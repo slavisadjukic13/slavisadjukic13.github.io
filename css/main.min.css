@@ -10880,6 +10880,7 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  position: relative;
   padding-bottom: 30px;
 }
 @media only screen and (min-width: 1200px) {
@@ -10898,6 +10899,7 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   animation-duration: 300ms;
   animation-fill-mode: both;
   animation-name: fadeInRight;
+  background: rgba(0, 0, 0, 0.5);
   float: left;
   width: 100%;
   position: relative;
@@ -10943,7 +10945,6 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 767px) {
   .hero .hero-search-area .form-holder {
@@ -10954,6 +10955,9 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   .hero .hero-search-area .form-holder {
     display: block;
   }
+}
+.hero .hero-search-area .form-group {
+  margin-bottom: 10px;
 }
 .hero .hero-search-area .search-btn {
   color: #fff;
@@ -11134,6 +11138,20 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
     box-shadow: none;
   }
 }
+.hero .hero-search-area-title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .hero .hero-search-area-title {
+    display: none !important;
+  }
+}
 .hero .hero-area {
   float: left;
   width: 100%;
@@ -11146,6 +11164,11 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   .hero .hero-area {
     float: left;
     width: 58.33333333%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero .hero-area {
+    margin-top: 60px;
   }
 }
 .hero .hero-area .hero-logo {
@@ -11196,6 +11219,14 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   .hero .hero-area .hero-text {
     text-align: center;
   }
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .cta {
   padding: 30px 0;

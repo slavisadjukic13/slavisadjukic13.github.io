@@ -4,6 +4,8 @@
   background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
+
+  position: relative;
   padding-bottom: @grid-gutter-width;
 
   @media @lg {
@@ -20,6 +22,7 @@
     .delayed(1500ms);
     .animated;
     .fadeInRight;
+    background: @hero-search-area-bg;
 
     label { color: white; }
 
@@ -57,7 +60,7 @@
       margin: 0;
       padding-top: 10px;
       padding-bottom: 10px;
-      background: rgba(0, 0, 0, 0.5);
+      //background: rgba(0, 0, 0, 0.5);
 
       @media @xs {
         background: @primary-color;
@@ -66,6 +69,10 @@
       @media @lg {
         display: block;
       }
+    }
+
+    .form-group {
+      margin-bottom: 10px;
     }
 
     .search-btn {
@@ -79,10 +86,19 @@
 
   }
 
+  .hero-search-area-title {
+    .hidden-xs;
+    .make-xs-column(12);
+    color: white;
+  }
 
   .hero-area {
     .make-xs-column(12);
     .make-lg-column(7);
+
+    @media @lg {margin-top: 60px;}
+
+    //background: rgba(0, 0, 0, 0.5);
 
     .hero-logo {
       .make-xs-column(12);
@@ -126,4 +142,13 @@
   .form-group {
     //margin: 0;
   }
+}
+
+.hero-overlay {
+  background: @hero-overlay;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

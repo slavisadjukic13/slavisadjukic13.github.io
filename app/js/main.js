@@ -76,9 +76,11 @@ $(document).ready(function() {
             {
                 breakpoint: 0,
                 settings: {
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 5000,
                     slidesToShow: 2,
                     slidesToScroll: 1
+                    // centerMode: true,
+                    // centerPadding: '10px'
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -118,53 +120,52 @@ $(document).ready(function() {
 
     $('.featured-list').slick({
         // setting-name: setting-value
-        autoplaySpeed: 3000,
-        autoplay: true,
+        // autoplaySpeed: 1000,
+        // autoplay: true,
         arrows: false,
         dots: true,
         infinite: true,
         mobileFirst: this,
-        pauseOnHover: true,
+        // pauseOnHover: true,
         slidesToShow: 1,
-        slidesToScroll: 1
-        // responsive: [
-        //     {
-        //         breakpoint: 1200,
-        //         settings: {
-        //             autoplaySpeed: 1000,
-        //             slidesToShow: 4,
-        //             slidesToScroll: 1
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 992,
-        //         settings: {
-        //             autoplaySpeed: 2000,
-        //             slidesToShow: 4,
-        //             slidesToScroll: 1
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 768,
-        //         settings: {
-        //             autoplaySpeed: 3000,
-        //             slidesToShow: 2,
-        //             slidesToScroll: 2
-        //         }
-        //     },
-        //
-        //     {
-        //         breakpoint: 0,
-        //         settings: {
-        //             autoplaySpeed: 2000,
-        //             slidesToShow: 2,
-        //             slidesToScroll: 1
-        //         }
-        //     }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        // ]
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    // autoplaySpeed: 5000,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                    // centerMode: true,
+                    // centerPadding: '100px'
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    autoplaySpeed: 2000,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    autoplaySpeed: 3000,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+
+            {
+                breakpoint: 0,
+                settings: {
+                    autoplaySpeed: 2000,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
 

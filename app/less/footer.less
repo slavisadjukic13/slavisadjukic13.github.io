@@ -1,13 +1,144 @@
 .footer {
-  background: black;
-  height: 700px;
+  position: relative;
+  background: @footer-bg;
+  background: url("/images/jumbotron-bg-2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
 
-  .left-side {
+  @media @lg {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media @xs {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  h4 {
+    color: @footer-title-color;
+  }
+
+  a {
+    .transitions;
+    &:hover { text-decoration: none;}
+  }
+
+  .overlay {
+    background: @footer-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .logo {
+    .hidden-xs;
+
+    .make-lg-column(3);
+
+    svg {
+      .img-responsive;
+      width: 100%;
+    }
+  }
+
+  .social-links {
     .make-xs-column(12);
+    .make-lg-column(2);
+
+    .link-facebook {
+      color: @footer-social-fb;
+      
+      &:hover {
+        color: @footer-social-fb-hover;
+      }
+      
+    }
+    .link-instagram {
+      color: @footer-social-insta;
+
+      &:hover {
+        color: @footer-social-insta-hover;
+      }
+
+    }
+
+    a + a {
+      margin-left: 15px;
+    }
+
   }
 
-  .right-side {
-    .make-xs-column(12)
+  .contact-links {
+    .make-xs-column(12);
+    .make-lg-column(3);
+
+
+    .phone {
+      position: relative;
+      padding: 0 0 0 30px;
+      list-style-type: none;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        font-family: FontAwesome;
+        font-size: 20px;
+        color: @footer-contact-icon;
+        content: @fa-var-phone-square;
+      }
+    }
+
+    .mail {
+      position: relative;
+      padding: 0 0 0 30px;
+      list-style-type: none;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        font-family: FontAwesome;
+        font-size: 20px;
+        color: @footer-contact-icon;
+        content: @fa-var-phone-square;
+      }
+    }
+
   }
 
+  .general-links {
+    .make-xs-column(12);
+    .make-lg-column(3);
+    .make-lg-column-offset(2.2);
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    a {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 20px;
+    }
+
+  }
+
+  .contact-links a, .general-links a {
+    color: @footer-link-color;
+
+    &:hover {
+      color: @footer-link-color-hover;
+    }
+  }
 }

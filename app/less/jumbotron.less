@@ -10,11 +10,10 @@
 
   @media @lg {
     padding-top: 100px;
-
   }
 
   @media @xs {
-    padding-top: 100px;
+    padding-top: 80px;
 
   }
 
@@ -27,10 +26,13 @@
     label { color: white; }
 
     .make-xs-column(12);
-    .make-lg-column(5);
+    .make-md-column(4);
+    .make-lg-column(4);
+    //.make-lg-column(5);
 
     .open-search-btn {
       .hidden-lg;
+      .hidden-md;
 
       &:focus, &:active {
         background: @primary-color;
@@ -66,6 +68,10 @@
         background: @primary-color;
       }
 
+      @media @md {
+        display: block;
+      }
+
       @media @lg {
         display: block;
       }
@@ -94,6 +100,7 @@
 
   .hero-area {
     .make-xs-column(12);
+    .make-md-column(7);
     .make-lg-column(7);
 
     @media @lg {margin-top: 120px;}
@@ -101,11 +108,16 @@
     //background: rgba(0, 0, 0, 0.5);
 
     .hero-logo {
-      .make-xs-column(12);
+      .make-xs-column(10);
+      .make-xs-column-offset(1);
       .make-md-column(6);
       .make-md-column-offset(3);
       .make-lg-column(6);
       .make-lg-column-offset(3);
+
+      @media @xs {
+        padding-bottom: @grid-gutter-width;
+      }
 
       //.fil0 {fill: white;}
 
@@ -151,6 +163,66 @@
 
   .form-group {
     //margin: 0;
+  }
+
+  .form-ad-type {
+    .make-xs-column(12);
+    .make-lg-column(12);
+
+    //@media @lg {
+    //  padding-left: 15px;
+    //  padding-right: 5px;
+    //}
+  }
+
+  .form-object-type {
+    .make-xs-column(12);
+    .make-lg-column(12);
+
+    //@media @lg {
+    //  //select {.input-lg;}
+    //  //.input-lg;
+    //  padding-left: 5px;
+    //  padding-right: 5px;
+    //}
+  }
+
+  .form-city {
+    .make-xs-column(12);
+    .make-lg-column(12);
+
+    //@media @lg {
+    //  padding-left: 5px;
+    //  padding-right: 5px;
+    //}
+  }
+  .form-price {
+    .make-xs-column(12);
+    .make-lg-column(12);
+
+    //@media @lg {
+    //  padding-left: 10px;
+    //  padding-right: 10px;
+    //}
+  }
+  .form-area {
+    .make-xs-column(12);
+    .make-lg-column(12);
+
+    //@media @lg {
+    //  padding-left: 5px;
+    //  padding-right: 5px;
+    //}
+  }
+
+  .form-submit {
+    .make-xs-column(12);
+    .make-lg-column(12);
+
+    //@media @lg {
+    //  padding-left: 5px;
+    //  padding-right: 5px;
+    //}
   }
 }
 

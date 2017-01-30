@@ -1,5 +1,21 @@
 .featured {
   background: @primary-color-dark;
+  position: relative;
+
+  background: url("/images/jumbotron-bg-2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .overlay {
+    background: @featured-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
   .wrapper {position: relative;}
 
@@ -36,17 +52,28 @@
   .featured-list-item {
     .transitions;
 
-    &.grid {
-      .make-xs-column(4);
+    img {
+      //box-shadow: 0px 3px 10px black;
     }
 
-    &.gridlg {
-      .make-xs-column(6);
+    padding: 15px;
+
+    > div {
+      background: white;
+      //margin: 0 10px;
     }
 
-    &.list {
-      .make-xs-column(12);
-    }
+    //&.grid {
+    //  .make-xs-column(4);
+    //}
+    //
+    //&.gridlg {
+    //  .make-xs-column(6);
+    //}
+    //
+    //&.list {
+    //  .make-xs-column(12);
+    //}
   }
 
 }

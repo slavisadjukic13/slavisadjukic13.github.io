@@ -161,7 +161,7 @@ $(document).ready(function() {
                 breakpoint: 0,
                 settings: {
                     autoplaySpeed: 2000,
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }

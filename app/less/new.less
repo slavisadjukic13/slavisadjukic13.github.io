@@ -1,6 +1,22 @@
 .new {
   background: lightgray;
+  position: relative;
   height: 300px;
+
+  background: url("/images/jumbotron-bg-2.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .overlay {
+    background: @new-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .new-title {

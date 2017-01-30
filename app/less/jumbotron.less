@@ -96,13 +96,16 @@
     .make-xs-column(12);
     .make-lg-column(7);
 
-    @media @lg {margin-top: 60px;}
+    @media @lg {margin-top: 120px;}
 
     //background: rgba(0, 0, 0, 0.5);
 
     .hero-logo {
       .make-xs-column(12);
-      .make-lg-column(12);
+      .make-md-column(6);
+      .make-md-column-offset(3);
+      .make-lg-column(6);
+      .make-lg-column-offset(3);
 
       //.fil0 {fill: white;}
 
@@ -130,9 +133,16 @@
 
     .hero-text {
       .make-xs-column(12);
+      .make-lg-column(6);
+      .make-lg-column-offset(3);
+      .text-center;
+      color: white;
+      //font-family: 'Pacifico', cursive;
+      font-family: 'Ubuntu', sans-serif;
 
-      @media @xs {
-        .text-center;
+      @media @lg {
+        padding-top: 30px;
+        font-size: 20px;
       }
 
     }

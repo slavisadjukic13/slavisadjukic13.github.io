@@ -21,7 +21,8 @@
     "jquery": "2.2.3",
     "animate.css": "^3.5.2",
     "bootstrap-select": "^1.12.1",
-    "seiyria-bootstrap-slider": "^9.7.0"
+    "seiyria-bootstrap-slider": "^9.7.0",
+    "ion.rangeSlider": "ionrangeslider#^2.1.6"
   },
   "devDependencies": {
     "font-awesome": "4.6.1",

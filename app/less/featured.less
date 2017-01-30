@@ -2,6 +2,17 @@
   background: @primary-color-dark;
 
   .wrapper {position: relative;}
+
+
+  .slick-dots {
+    @media @xs {
+
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
 .featured-title {
@@ -11,6 +22,10 @@
 
 .featured-list {
   .make-xs-column(12);
+
+  @media @xs {
+    margin-bottom: 60px;
+  }
 
   //.slick-slide {
   //  //background-attachment: fixed;
@@ -33,7 +48,6 @@
       .make-xs-column(12);
     }
   }
-
 
 }
 

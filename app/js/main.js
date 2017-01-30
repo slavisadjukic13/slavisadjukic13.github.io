@@ -19,6 +19,26 @@ $(document).ready(function() {
     $('.cta-btn').removeClass('fadeOut').addClass('fadeInRight');
     //cta-message
 
+    $("#hero-price").ionRangeSlider({
+        type: "double",
+        min: 100,
+        max: 500000,
+        from: 25000,
+        to: 240000,
+        postfix: " KM"
+    });
+    $("#hero-area").ionRangeSlider({
+        type: "double",
+        min: 20,
+        max: 1000,
+        from: 20,
+        to: 500,
+        postfix: " m&sup2"
+    });
+
+
+
+
     $('.partners-list').slick({
         // setting-name: setting-value
         autoplay: true,
@@ -68,40 +88,40 @@ $(document).ready(function() {
     });
 
 
-    $('.featured-controls a').click(function (e) {
-
-
-        var setViewMode = $(this).attr("data-controls");
-
-        // $('.featured-controls a.active').removeClass('active');
-        // $(this).addClass('active');
-
-        // $('.featured-list-item').addClass(setViewMode);
-        // $('.featured-list-item').removeClass('grid').removeClass('gridlg').removeClass('list').addClass(setViewMode);
-
-        // $('.featured-list').slick('unslick');
-        // $('.featured-list').slick('unslick');
-        // $('.featured-list').slick('slickSetOption',"autoplaySpeed: 3000,autoplay: true,arrows: false,dots: false,infinite: true,mobileFirst: this,pauseOnHover: true,slidesToShow: 2,slidesToScroll: 1");
-        // $('.featured-list').slick('slickSetOption',"autoplaySpeed","100","rows","3","slidesPerRow","2");
-        $('.featured-list').slick('slickSetOption',"slidesToShow","3");
-        // $('.featured-list').slick('slickSetOption',"slidesPerRow","2");
-        // $('.featured-list').slick('slickSetOption',"refresh",true);s
-
-        console.log(
-            $(this).attr("data-controls")
-        );
-
-        e.preventDefault();
-        }
-    );
+    // $('.featured-controls a').click(function (e) {
+    //
+    //
+    //     var setViewMode = $(this).attr("data-controls");
+    //
+    //     // $('.featured-controls a.active').removeClass('active');
+    //     // $(this).addClass('active');
+    //
+    //     // $('.featured-list-item').addClass(setViewMode);
+    //     // $('.featured-list-item').removeClass('grid').removeClass('gridlg').removeClass('list').addClass(setViewMode);
+    //
+    //     // $('.featured-list').slick('unslick');
+    //     // $('.featured-list').slick('unslick');
+    //     // $('.featured-list').slick('slickSetOption',"autoplaySpeed: 3000,autoplay: true,arrows: false,dots: false,infinite: true,mobileFirst: this,pauseOnHover: true,slidesToShow: 2,slidesToScroll: 1");
+    //     // $('.featured-list').slick('slickSetOption',"autoplaySpeed","100","rows","3","slidesPerRow","2");
+    //     $('.featured-list').slick('slickSetOption',"slidesToShow","3");
+    //     // $('.featured-list').slick('slickSetOption',"slidesPerRow","2");
+    //     // $('.featured-list').slick('slickSetOption',"refresh",true);s
+    //
+    //     console.log(
+    //         $(this).attr("data-controls")
+    //     );
+    //
+    //     e.preventDefault();
+    //     }
+    // );
 
 
     $('.featured-list').slick({
         // setting-name: setting-value
-        autoplaySpeed: 1000,
+        autoplaySpeed: 3000,
         autoplay: true,
         arrows: false,
-        dots: false,
+        dots: true,
         infinite: true,
         mobileFirst: this,
         pauseOnHover: true,

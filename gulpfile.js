@@ -8,10 +8,6 @@ var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
 
-// gulp.task('hello', function() {
-//     console.log('Hello Zell');
-// });
-
 gulp.task('less', function(){
     return gulp.src('app/less/main.less')
         .pipe(less())
@@ -49,11 +45,9 @@ gulp.task('browserSync', function() {
  */
 
 gulp.task('images', function(){
-    return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
-        .pipe(gulp.dest('images'))
+    return gulp.src('app/img/**/*.+(png|jpg|gif|svg)')
+        .pipe(gulp.dest('img'))
 });
-
-
 
 
 /*

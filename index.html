@@ -5,7 +5,7 @@
     <title>dom.ba</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-
+    <!-- FAV icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/images/fav/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/fav/favicon-16x16.png" sizes="16x16">
@@ -21,6 +21,10 @@
 </head>
 <body>
 
+<!--    Main menu
+        section variables: less/my-variables.less
+        variables prefix: @main-menu-
+-->
 <nav id="main-menu" class="animated slideOutUp top">
     <div class="container">
         <div class="row">
@@ -165,7 +169,10 @@
     </div>
 </nav>
 
-
+<!--    Header
+        section variables: less/my-variables.less
+        variables prefix: @header-
+-->
 <header class="header container-fluid top">
     <div class="wrapper">
         <div class="left-side">
@@ -228,6 +235,10 @@
 
 </header>
 
+<!--    Hero section
+        section variables: less/my-variables.less
+        variables prefix: @hero-
+-->
 <section class="hero">
     <div class="hero-overlay"></div>
     <div class="wrapper-outer">
@@ -391,6 +402,7 @@
     </div>
 </section>
 
+<!-- Call to action section -->
 <section class="cta">
     <div class="wrapper-outer">
         <div class="wrapper">
@@ -406,6 +418,7 @@
 
 </section>
 
+<!-- Partners section -->
 <section class="partners">
     <div class="wrapper-outer">
         <div class="wrapper">
@@ -459,6 +472,7 @@
 
 </section>
 
+<!-- Featured ads section -->
 <section class="featured">
     <div class="overlay"></div>
     <div class="wrapper-outer">
@@ -466,58 +480,40 @@
             <div class="featured-title">
                 <h1>Izdvojeni oglasi</h1>
             </div>
-            <!--<div class="featured-controls">-->
-                <!--<div class="btn-group">-->
-                    <!--<a href="#" data-controls="grid" class="btn btn-invert btn-lg active"><span class="fa fa-th"></span></a>-->
-                    <!--<a href="#" data-controls="gridlg" class="btn btn-invert btn-lg"><span class="fa fa-th-large"></span></a>-->
-                    <!--<a href="#" data-controls="list" class="btn btn-invert btn-lg"><span class="fa fa-th-list"></span></a>-->
-
-                <!--</div>-->
-            <!--</div>-->
             <div class="featured-list">
-                <!--<div class="wrapper">-->
 
-                    <div class="featured-list-item">
-                        <img class="img-responsive" src="images/featured/1-1.jpg">
-                        <div class="panel-body">
-                            <p>
-                                sad
-                            </p>
-                        </div>
-
+                <!-- Featured ads - single ad -->
+                <article class="featured-list-item">
+                    <img class="img-responsive" src="images/featured/1-1.jpg">
+                    <div class="panel-body">
+                        <p>
+                            sad
+                        </p>
                     </div>
-                    <div class="featured-list-item">
-                        <img class="img-responsive" src="images/featured/1-1.jpg">
-                    </div>
-                    <div class="featured-list-item">
-                        <img class="img-responsive" src="images/featured/1-1.jpg">
-                    </div>
-                    <div class="featured-list-item">
-                        <img class="img-responsive" src="images/featured/1-1.jpg">
-                    </div>
-                <!--</div>-->
+                </article>
 
-                <!--<div class="wrapper">-->
-
-                    <!--<div class="featured-list-item grid">-->
-                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
-                    <!--</div>-->
-                    <!--<div class="featured-list-item grid">-->
-                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
-                    <!--</div>-->
-                    <!--<div class="featured-list-item grid">-->
-                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
-                    <!--</div>-->
-                    <!--<div class="featured-list-item grid">-->
-                        <!--<img class="img-responsive" src="images/featured/1-1.jpg">-->
-                    <!--</div>-->
-                <!--</div>-->
-
+                <article class="featured-list-item">
+                    <img class="img-responsive" src="images/featured/1-1.jpg">
+                    <div class="panel-body">
+                        <p>
+                            sad
+                        </p>
+                    </div>
+                </article>
+                <article class="featured-list-item">
+                    <img class="img-responsive" src="images/featured/1-1.jpg">
+                    <div class="panel-body">
+                        <p>
+                            sad
+                        </p>
+                    </div>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
+<!-- New ads section -->
 <section class="new">
     <div class="overlay"></div>
     <div class="wrapper-outer">
@@ -577,6 +573,7 @@
     </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
     <div class="overlay"></div>
     <div class="wrapper-outer">

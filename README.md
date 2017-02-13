@@ -23,9 +23,9 @@ Potrebno je da su na lokajnoj mašini instalirani:
 ## Instalacija na lokal
 **U sličaju da je korisniku potrebna samo kompajlirana verzija ovi koraci nisu potrebni**
 Poslije kloniranja projekta na lokalnu mašinu potrebno je uraditi sledeće korake:
-`npm install`
+- `npm install`
 instalacija gulp\-a i bower\-a (omogućava daljnu modifikaciju)
-`bower install`
+- `bower install`
 instalacija bootstrap\-a, jquery\-a,...
 
 ## Daljna modifikacija
@@ -33,5 +33,9 @@ instalacija bootstrap\-a, jquery\-a,...
 - **izmjene vršiti u app folderu**
 - Osnovni parametri(boje...) css\-a se nalaze u app/less/my-variables.less
 - Svaka sekcija stranice posjeduje vlastite parametre i vlastiti less fajl radi lakšeg snalaženja
+
 ### Komande za modifikaciju:
 - `gulp watch` \- pokreće lokalni server na kojem servira radnu verziju, uživo prikazuje izmjene na html, js i css\(less\) fajlovima
+- `gulp useref` \- kompajlira HTML, CSS i JS fajlove iz app foldera u root
+- `gulp images` \- kopira slike iz radnog foldera \(app\) u folder images \(na root\-u\)
+- `gulp less` \- kompajlira less u css \(sve unutar radnog foldera\)

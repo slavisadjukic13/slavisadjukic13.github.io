@@ -17,14 +17,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "3.3.6",
     "jquery": "2.2.3",
+    "bootstrap": "3.3.7",
     "animate.css": "^3.5.2",
-    "bootstrap-select": "^1.12.1",
-    "seiyria-bootstrap-slider": "^9.7.0",
-    "ion.rangeSlider": "ionrangeslider#^2.1.6"
-  },
-  "devDependencies": {
+    "ion.rangeSlider": "ionrangeslider#^2.1.6",
     "font-awesome": "4.6.1",
     "slick-carousel": "git://github.com/kenwheeler/slick#1.5.9"
   }

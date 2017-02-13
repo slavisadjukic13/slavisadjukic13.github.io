@@ -110,7 +110,3 @@ gulp.task('cleancss', function(){
         .pipe(purify(['*.html']))
         .pipe(gulp.dest('css'))
 });
-
-/*
-build dist
- */

@@ -6,7 +6,7 @@ Repository sa prijedlogom za novi izgled za potral [dom.ba](http://dom.ba/)
 - Kompajlirana verzija se nalazi u root\-u projekta i uključuje foldere: css, fonts, images, js.
 
 ## Prije instalacije
-Potrebno je da je su na lokajnoj mašini instalirani:
+Potrebno je da su na lokajnoj mašini instalirani:
 - [Git](https://git-scm.com/)
 - [NodeJS](https://nodejs.org/en/)
 - [GulpJS](http://gulpjs.com/)
@@ -21,3 +21,17 @@ Potrebno je da je su na lokajnoj mašini instalirani:
 - [Slick-carousel](http://kenwheeler.github.io/slick/) 1.5.9
 
 ## Instalacija na lokal
+**U sličaju da je korisniku potrebna samo kompajlirana verzija ovi koraci nisu potrebni**
+Poslije kloniranja projekta na lokalnu mašinu potrebno je uraditi sledeće korake:
+`npm install`
+instalacija gulp\-a i bower\-a (omogućava daljnu modifikaciju)
+`bower install`
+instalacija bootstrap\-a, jquery\-a,...
+
+## Daljna modifikacija
+### Preporuke:
+- **izmjene vršiti u app folderu**
+- Osnovni parametri(boje...) css\-a se nalaze u app/less/my-variables.less
+- Svaka sekcija stranice posjeduje vlastite parametre i vlastiti less fajl radi lakšeg snalaženja
+### Komande za modifikaciju:
+- `gulp watch` \- pokreće lokalni server na kojem servira radnu verziju, uživo prikazuje izmjene na html, js i css\(less\) fajlovima

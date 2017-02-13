@@ -6890,7 +6890,8 @@ button.close {
 }
 .transitions,
 .nav-toggle,
-.nav-toggle .icon-bar {
+.nav-toggle .icon-bar,
+.login-toggle {
   transition: all 0.2s ease-in-out;
 }
 .transitions-slow {
@@ -10625,8 +10626,44 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
 .nav-toggle:focus {
   outline: none;
 }
+.login-toggle {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  border: 0;
+  background: #d40f0f;
+  z-index: 2000;
+  float: right !important;
+  float: right;
+}
+.login-toggle i {
+  font-size: 32px;
+  color: white;
+}
+@media only screen and (max-width: 767px) {
+  .login-toggle {
+    width: 40px;
+  }
+}
+.login-toggle .text {
+  font-size: 19.2px;
+  color: white;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .login-toggle .text {
+    display: none;
+  }
+}
+.login-toggle:focus {
+  outline: none;
+}
 .hero {
-  background: url("/images/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -11467,7 +11504,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
 .footer {
   position: relative;
   background: black;
-  background: url("/images/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -11501,30 +11538,35 @@ fieldset[disabled] .cta .cta-btn a.focus {
   right: 0;
   bottom: 0;
 }
-.footer .logo {
+.footer .footer-logo {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (max-width: 767px) {
-  .footer .logo {
+  .footer .footer-logo {
     display: none !important;
   }
 }
 @media (min-width: 1200px) {
-  .footer .logo {
+  .footer .footer-logo {
     float: left;
     width: 25%;
   }
 }
-.footer .logo svg {
+.footer .footer-logo svg {
   display: block;
   max-width: 100%;
   height: auto;
   width: 100%;
 }
-.footer .social-links {
+.footer .footer-logo p {
+  margin-top: 10px;
+  color: white;
+  font-size: 12px;
+}
+.footer .footer-social-links {
   float: left;
   width: 100%;
   position: relative;
@@ -11533,27 +11575,27 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .footer .social-links {
+  .footer .footer-social-links {
     float: left;
     width: 16.66666667%;
   }
 }
-.footer .social-links .link-facebook {
+.footer .footer-social-links .link-facebook {
   color: white;
 }
-.footer .social-links .link-facebook:hover {
+.footer .footer-social-links .link-facebook:hover {
   color: #4080ff;
 }
-.footer .social-links .link-instagram {
+.footer .footer-social-links .link-instagram {
   color: white;
 }
-.footer .social-links .link-instagram:hover {
+.footer .footer-social-links .link-instagram:hover {
   color: #f48b38;
 }
-.footer .social-links a + a {
+.footer .footer-social-links a + a {
   margin-left: 15px;
 }
-.footer .contact-links {
+.footer .footer-contact-links {
   float: left;
   width: 100%;
   position: relative;
@@ -11562,17 +11604,17 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .footer .contact-links {
+  .footer .footer-contact-links {
     float: left;
     width: 25%;
   }
 }
-.footer .contact-links .phone {
+.footer .footer-contact-links .phone {
   position: relative;
   padding: 0 0 0 30px;
   list-style-type: none;
 }
-.footer .contact-links .phone:before {
+.footer .footer-contact-links .phone:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -11581,21 +11623,21 @@ fieldset[disabled] .cta .cta-btn a.focus {
   color: darkgrey;
   content: "\f098";
 }
-.footer .contact-links .mail {
+.footer .footer-contact-links .mail {
   position: relative;
   padding: 0 0 0 30px;
   list-style-type: none;
 }
-.footer .contact-links .mail:before {
+.footer .footer-contact-links .mail:before {
   position: absolute;
   top: 0;
   left: 0;
   font-family: FontAwesome;
   font-size: 20px;
   color: darkgrey;
-  content: "\f098";
+  content: "\f199";
 }
-.footer .general-links {
+.footer .footer-general-links {
   float: left;
   width: 100%;
   position: relative;
@@ -11604,39 +11646,39 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-right: 15px;
 }
 @media (min-width: 1200px) {
-  .footer .general-links {
+  .footer .footer-general-links {
     float: left;
     width: 25%;
   }
 }
 @media (min-width: 1200px) {
-  .footer .general-links {
-    margin-left: 18.33333333%;
+  .footer .footer-general-links {
+    margin-left: 8.33333333%;
   }
 }
-.footer .general-links ul {
+.footer .footer-general-links ul {
   padding: 0;
   list-style-type: none;
 }
-.footer .general-links ul li {
+.footer .footer-general-links ul li {
   margin-bottom: 10px;
 }
-.footer .general-links a {
+.footer .footer-general-links a {
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
 }
-.footer .contact-links a,
-.footer .general-links a {
+.footer .footer-contact-links a,
+.footer .footer-general-links a {
   color: white;
 }
-.footer .contact-links a:hover,
-.footer .general-links a:hover {
+.footer .footer-contact-links a:hover,
+.footer .footer-general-links a:hover {
   color: #d40f0f;
 }
 .featured {
   background: #a40c0c;
   position: relative;
-  background: url("/images/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -11698,8 +11740,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
 .new {
   background: lightgray;
   position: relative;
-  height: 300px;
-  background: url("/images/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -11708,7 +11749,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
   position: relative;
 }
 .new .overlay {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 0;
   left: 0;

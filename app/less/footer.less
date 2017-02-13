@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   background: @footer-bg;
-  background: url("/images/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -35,7 +35,7 @@
     bottom: 0;
   }
 
-  .logo {
+  .footer-logo {
     .hidden-xs;
 
     .make-lg-column(3);
@@ -44,14 +44,19 @@
       .img-responsive;
       width: 100%;
     }
+    p {
+      margin-top: 10px;
+      color: @footer-color;
+      font-size: 12px;
+    }
   }
 
-  .social-links {
+  .footer-social-links {
     .make-xs-column(12);
     .make-lg-column(2);
 
     .link-facebook {
-      color: @footer-social-fb;
+      color: @footer-color;
       
       &:hover {
         color: @footer-social-fb-hover;
@@ -59,12 +64,11 @@
       
     }
     .link-instagram {
-      color: @footer-social-insta;
+      color: @footer-color;
 
       &:hover {
         color: @footer-social-insta-hover;
       }
-
     }
 
     a + a {
@@ -73,7 +77,7 @@
 
   }
 
-  .contact-links {
+  .footer-contact-links {
     .make-xs-column(12);
     .make-lg-column(3);
 
@@ -108,16 +112,16 @@
         font-family: FontAwesome;
         font-size: 20px;
         color: @footer-contact-icon;
-        content: @fa-var-phone-square;
+        content: @fa-var-envelope-square;
       }
     }
 
   }
 
-  .general-links {
+  .footer-general-links {
     .make-xs-column(12);
     .make-lg-column(3);
-    .make-lg-column-offset(2.2);
+    .make-lg-column-offset(1);
 
     ul {
       padding: 0;
@@ -134,7 +138,7 @@
 
   }
 
-  .contact-links a, .general-links a {
+  .footer-contact-links a, .footer-general-links a {
     color: @footer-link-color;
 
     &:hover {

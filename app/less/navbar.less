@@ -93,5 +93,52 @@
 
 }
 
+.login-toggle {
+  &:extend(.transitions);
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  border: 0;
+  background: @primary-color;
+  z-index: 2000;
+  .pull-right;
+
+  i {
+    font-size: 32px;
+    color: white;
+  }
+
+  @media @xs {
+    width: 40px;
+  }
+
+  .text {
+    font-size: @font-size-base * 1.2;
+    color: white;
+    line-height: 40px;
 
 
+    position: absolute;
+    top: 0;
+    left: 50px;
+
+    @media @xs {
+      display: none;
+    }
+
+  }
+
+  .opened {
+
+  }
+
+  .closed {
+
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}

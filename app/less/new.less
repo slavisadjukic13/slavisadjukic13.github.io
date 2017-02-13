@@ -3,6 +3,8 @@
   position: relative;
   height: 300px;
 
+  .wrapper {position: relative;}
+
   background: url("/images/jumbotron-bg-2.jpg");
   background-position: center;
   background-attachment: fixed;
@@ -17,8 +19,22 @@
     right: 0;
     bottom: 0;
   }
+
+  .proba {
+    background: red;
+    margin-bottom: 30px;
+
+
+  }
 }
 
 .new-title {
   .make-xs-column(12);
+}
+
+.new-controls {
+  color: black;
+  position: absolute;
+  top: 20px;
+  right: @grid-gutter-width/2;
 }

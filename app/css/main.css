@@ -11189,12 +11189,13 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
 }
 @media only screen and (min-width: 1200px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 }
 @media only screen and (max-width: 767px) {
   .hero {
-    padding-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 15px;
   }
 }
 .hero .hero-search-area {
@@ -11472,6 +11473,11 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
     display: none !important;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .hero .hero-search-area-title h3 {
+    margin-top: 0;
+  }
+}
 .hero .hero-area {
   float: left;
   width: 100%;
@@ -11489,12 +11495,12 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
 @media (min-width: 1200px) {
   .hero .hero-area {
     float: left;
-    width: 58.33333333%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .hero .hero-area {
-    margin-top: 120px;
+    margin-bottom: 30px;
   }
 }
 .hero .hero-area .hero-logo {
@@ -11520,17 +11526,19 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
 @media (min-width: 1200px) {
   .hero .hero-area .hero-logo {
     float: left;
-    width: 50%;
+    width: 16.66666667%;
   }
 }
 @media (min-width: 1200px) {
   .hero .hero-area .hero-logo {
-    margin-left: 25%;
+    margin-left: 16.66666667%;
   }
 }
 @media only screen and (max-width: 767px) {
   .hero .hero-area .hero-logo {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 .hero .hero-area .hero-logo .fil1 {
@@ -11569,18 +11577,46 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
 @media (min-width: 1200px) {
   .hero .hero-area .hero-text {
     float: left;
-    width: 50%;
+    width: 58.33333333%;
   }
 }
 @media (min-width: 1200px) {
   .hero .hero-area .hero-text {
-    margin-left: 25%;
+    margin-left: 0%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .hero .hero-area .hero-text {
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: 20px;
+  }
+}
+.hero .hero-ad-area {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .hero .hero-ad-area {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hero .hero-ad-area {
+    margin-top: 15px;
+  }
+}
+.hero .hero-ad-area .ad {
+  background: rgba(255, 255, 255, 0.5);
+  height: 500px;
+}
+@media only screen and (max-width: 767px) {
+  .hero .hero-ad-area .ad {
+    height: 200px;
   }
 }
 .hero .form-ad-type {
@@ -12222,6 +12258,9 @@ fieldset[disabled] .cta .cta-btn a.focus {
   background-attachment: fixed;
   background-size: cover;
 }
+.new .wrapper {
+  position: relative;
+}
 .new .overlay {
   background: rgba(255, 255, 255, 0.9);
   position: absolute;
@@ -12230,6 +12269,10 @@ fieldset[disabled] .cta .cta-btn a.focus {
   right: 0;
   bottom: 0;
 }
+.new .proba {
+  background: red;
+  margin-bottom: 30px;
+}
 .new-title {
   position: relative;
   float: left;
@@ -12237,6 +12280,12 @@ fieldset[disabled] .cta .cta-btn a.focus {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+.new-controls {
+  color: black;
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }
 body {
   overflow-x: hidden;

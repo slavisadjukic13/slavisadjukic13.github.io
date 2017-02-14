@@ -45,16 +45,18 @@
     <div class="container">
         <div class="row">
 
-            <div class="main-menu-search-area">
-                <button class="open-search-btn btn btn-primary btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#main-menu-search-area" aria-expanded="false" aria-controls="collapseExample">
+            <div class="main-menu-search-section animated">
+                <h3>Pretraga oglasa</h3>
+
+                <button class="btn btn-invert btn-block collapsed" type="button" data-toggle="collapse" data-target="#main-menu-search-form" aria-expanded="false" aria-controls="main-menu-search-form">
                     Pretraga nekretnina
                     <span class="fa fa-plus"></span>
                 </button>
-                <div class="collapse form-holder wrapper" id="main-menu-search-area">
+                <div class="collapse form-holder wrapper" id="main-menu-search-form">
                     <form>
-                        <div class="form-group col-xs-12">
-                            <label class="control-label" for="ad-type">Vrsta oglasa</label>
-                            <select id="ad-type" class="form-control">
+                        <div class="form-group form-ad-type">
+                            <label class="control-label" for="main-menu-search-ad-type">Vrsta oglasa</label>
+                            <select id="main-menu-search-ad-type" class="form-control">
                                 <option>Izaberite vrstu oglasa</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -62,9 +64,9 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <div class="form-group col-xs-12">
-                            <label class="control-label" for="object-type">Vrsta objekta</label>
-                            <select id="object-type" class="form-control">
+                        <div class="form-group form-object-type">
+                            <label class="control-label" for="main-menu-search-object-type">Vrsta objekta</label>
+                            <select id="main-menu-search-object-type" class="form-control">
                                 <option>Izaberite vrstu objekta</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -72,9 +74,9 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <div class="form-group col-xs-12">
-                            <label class="control-label" for="city">Grad</label>
-                            <select id="city" class="form-control">
+                        <div class="form-group form-city">
+                            <label class="control-label" for="main-menu-search-city">Grad</label>
+                            <select id="main-menu-search-city" class="form-control">
                                 <option>Izaberite grad</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -82,105 +84,53 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <div class="col-xs-12">
-                            <label class="control-label" for="">Cijena</label>
-                            <div class="wrapper">
-                                <div class="form-group col-xs-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">od:</span>
-                                        <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                                        <div class="input-group-addon">KM</div>
-                                    </div>
-                                </div>
-                                <div class="form-group col-xs-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">do:</span>
-                                        <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                                        <div class="input-group-addon">KM</div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-group form-price">
+                            <label class="control-label" for="main-menu-search-price">Cijena</label>
+                            <input class="" type="text" id="main-menu-search-price" name="price" value="" />
                         </div>
 
-                        <div class="col-xs-12">
-                            <label class="control-label" for="">Velicina</label>
-                            <div class="wrapper">
-                                <div class="form-group col-xs-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">od:</span>
-                                        <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                                        <div class="input-group-addon">m&sup2</div>
-                                    </div>
-                                </div>
-                                <div class="form-group col-xs-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">do:</span>
-                                        <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                                        <div class="input-group-addon">m&sup2</div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-group form-area">
+                            <label class="control-label" for="main-menu-search-area">Površina</label>
+                            <input class="" type="text" id="main-menu-search-area" name="area" value="" />
                         </div>
 
-                        <div class="form-group col-xs-12">
-                            <button type="submit" class="btn search-btn btn-lg btn-search">Pretraži</button>
+
+                        <div class="form-group form-submit">
+                            <button type="submit" class="btn btn-search">Pretraži</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <div class="links-area animated">
-                <div class="wrapper">
-                    <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="wrapper">
-                            <div class="main-menu-tab">
-                                <div class="main-menu-tab-selector" role="tab" id="headingOne">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Collapsible Group Item #1
-                                    </a>
-                                </div>
-                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-menu-tab">
-                                <div class="" role="tab" id="headingTwo">
-                                    <h4 class="">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Collapsible Group Item #2
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-menu-tab">
-                                <div class="" role="tab" id="headingThree">
-                                    <h4 class="">
-                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Kontakt
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="main-menu-links-section animated">
+                <ul>
+                    <li><a href="#">O nama</a></li>
+                    <li><a href="#">Agenti</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Uslovi korištenja</a></li>
+                </ul>
             </div>
 
+            <div class="main-menu-social-section animated">
+                <h3>Pratite nas</h3>
+                <a class="link-facebook" href="#"><span class="fa fa-3x fa-facebook"></span></a>
+                <a class="link-instagram" href="#"><span class="fa fa-3x fa-instagram"></span></a>
+            </div>
 
+            <div class="main-menu-contact-section animated">
+                <h3>Kontaktirajte nas</h3>
+                <ul>
+                    <li>
+                        <a class="phone-link" href="tel:000">6523465
+                            <span>- Dragan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="mail-link" href="mailto:office365dom@gmail.com">office365dom@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
@@ -194,7 +144,7 @@
     <div class="container">
         <div class="wrapper">
 
-            <!-- login -->
+            <!--IF USER FALSE - login/register -->
             <div class="account-menu-title">
                 <h2>
                     Prijavite se ili napravite novi nalog
@@ -291,6 +241,49 @@
 
             </div>
 
+            <!--IF USER TRUE - login/register -->
+            <!--<div class="account-menu-title">-->
+                <!--<h2>-->
+                    <!--Pregled Vašeg naloga - podešavanja-->
+                <!--</h2>-->
+                <!--<p>-->
+                    <!--Ovdje imate uvid u Vaše oglase, podešavanja Vašeg profila, takođe možete se odjaviti sa trenutnog naloga.-->
+                <!--</p>-->
+            <!--</div>-->
+            <!--<div class="account-menu-links">-->
+                <!--<div class="wrapper">-->
+                    <!--<div class="account-menu-link animated">-->
+                        <!--&lt;!&ndash; Link to list of user's ads &ndash;&gt;-->
+                        <!--<a class="btn btn-invert btn-block" href="#">-->
+                            <!--Moji oglasi-->
+                            <!--<i class="fa fa-home" aria-hidden="true"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="account-menu-link animated">-->
+                        <!--&lt;!&ndash; Link to "add new ad" &ndash;&gt;-->
+                        <!--<a class="btn btn-invert btn-block" href="#">-->
+                            <!--Objavi novi oglas-->
+                            <!--<i class="fa fa-pencil" aria-hidden="true"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="account-menu-link animated">-->
+                        <!--&lt;!&ndash; Link to user settings &ndash;&gt;-->
+                        <!--<a class="btn btn-invert btn-block" href="#">-->
+                            <!--Podešavanja naloga-->
+                            <!--<i class="fa fa-wrench" aria-hidden="true"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="account-menu-link animated">-->
+                        <!--&lt;!&ndash; log out button &ndash;&gt;-->
+                        <!--<a class="btn btn-invert btn-block" href="#">-->
+                            <!--Odjavite se-->
+                            <!--<i class="fa fa-sign-out" aria-hidden="true"></i>-->
+                        <!--</a>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            <!--</div>-->
 
         </div>
     </div>
@@ -315,10 +308,10 @@
         </div>
 
         <div class="logo-block">
-                <a href="index.html">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <!--<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">-->
-                    <svg class="logo animated fadeOutUp" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 3474 1219"
+            <a href="index.html">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <!--<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">-->
+                <svg class="logo animated fadeOutUp" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 3474 1219"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
                  <defs>
                   <style type="text/css">
@@ -351,7 +344,7 @@
                   <path class="fil2" d="M936 87c-1,2 -3,4 -5,6l-207 303 104 0c16,0 38,-13 50,-29l137 -202 -79 -78z"/>
                  </g>
                 </svg>
-                </a>
+            </a>
         </div>
 
         <div class="right-side">
@@ -365,7 +358,7 @@
                 <!--<i class="fa fa-user" aria-hidden="true"></i>-->
                 <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
 
-                 <!--IF user NOT logged in -->
+                <!--IF user NOT logged in -->
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
                 <span class="closed text animated fadeInDown">Prijavi se</span>
             </button>
@@ -492,13 +485,8 @@
             </div>
 
             <div class="hero-ad-area">
-                <a href="#">
-                    <div class="ad">
-                        <p class="text-center">
-                            mjesto za reklamu
-                            750x500 290x200
-                        </p>
-                    </div>
+                <a href="#" target="_blank">
+                    <img src="img/main-banner.jpeg" alt="">
                 </a>
             </div>
         </div>
@@ -547,42 +535,58 @@
             <div class="partners-list">
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-1.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-1.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-2.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-2.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-3.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-3.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-4.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-4.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-1.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-1.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-2.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-2.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-3.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-3.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div>
                     <div class="image-wrapper">
-                        <img class="img-responsive" src="img/partners/partner-4.jpg" alt="">
+                        <a href="#" target="_blank">
+                            <img class="img-responsive" src="img/partners/partner-4.jpg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -607,76 +611,142 @@
 
                 <!-- Featured ads - single ad -->
                 <article class="featured-list-item">
-                    <div class="add-image">
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                    </div>
-                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                    <div class="ad-details">
-                        <div class="wrapper">
-                            <div class="col-xs-6">asd</div>
-                            <div class="col-xs-6">asd</div>
-                        </div>
-                    </div>
-                    <div class="ad-short-description">
-                        <p>
-                            Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                        </p>
-                    </div>
-                    <span class="ad-type rent">Izdaje se</span>
                     <a href="#">
-
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
                     </a>
                 </article>
 
                 <article class="featured-list-item">
-                    <div class="add-image">
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                    </div>
-                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                    <div class="ad-details">
-                        <div class="wrapper">
-                            <div class="col-xs-6">asd</div>
-                            <div class="col-xs-6">asd</div>
-                        </div>
-                    </div>
-                    <div class="ad-description"></div>
-                    <span class="ad-type rent">Izdaje se</span>
                     <a href="#">
-
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
                     </a>
                 </article>
-                <article class="featured-list-item">
-                    <div class="add-image">
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                    </div>
-                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                    <div class="ad-details">
-                        <div class="wrapper">
-                            <div class="col-xs-6">asd</div>
-                            <div class="col-xs-6">asd</div>
-                        </div>
-                    </div>
-                    <div class="ad-description"></div>
-                    <span class="ad-type for-sell">Prodaje se</span>
-                    <a href="#">
 
+                <article class="featured-list-item">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
                     </a>
                 </article>
-                <article class="featured-list-item">
-                    <div class="add-image">
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                    </div>
-                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                    <div class="ad-details">
-                        <div class="wrapper">
-                            <div class="col-xs-6">asd</div>
-                            <div class="col-xs-6">asd</div>
-                        </div>
-                    </div>
-                    <div class="ad-description"></div>
-                    <span class="ad-type rent">Izdaje se</span>
-                    <a href="#">
 
+                <article class="featured-list-item">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="featured-list-item">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
                     </a>
                 </article>
 
@@ -697,51 +767,192 @@
             <div class="new-title">
                 <h1>Najnoviji oglasi</h1>
             </div>
-            <div class="new-controls">
-                <div class="btn-group">
-                <a href="#" data-controls="grid" class="btn btn-invert btn-lg active"><span class="fa fa-th"></span></a>
-                <a href="#" data-controls="gridlg" class="btn btn-primary btn-lg"><span class="fa fa-th-large"></span></a>
-                <a href="#" data-controls="list" class="btn btn-primary btn-lg"><span class="fa fa-th-list"></span></a>
-                </div>
+
+            <!-- TODO: grid controls -->
+            <!--<div class="new-controls">-->
+            <!--<div class="btn-group">-->
+            <!--<a href="#" data-controls="grid" class="btn btn-primary btn-lg active"><span class="fa fa-th-large"></span></a>-->
+            <!--<a href="#" data-controls="list" class="btn btn-primary btn-lg"><span class="fa fa-th-list"></span></a>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <div class="new-list">
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <!--<span class="ad-type rent">Izdaje se</span>-->
+                        <span class="ad-type for-sell">Prodaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdaje se</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
             </div>
 
-            <div class="col-xs-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Panel heading without title</div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-
-                <div class="proba">
-                    asd
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="proba">
-                    asd
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="proba">
-                    asd
-                </div>
-            </div>
-
-            <div class="col-xs-12">
-                <div class="proba">
-                    asd
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="proba">
-                    asd
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="proba">
-                    asd
-                </div>
+            <div class="new-load-more">
+                <a href="#">
+                    Prikaži još oglasa
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </a>
             </div>
 
 
@@ -799,12 +1010,12 @@
                     <div>
 
                     </div>
-                <div class="footer-short-text-holder">
-                    <p>
-                        DOM.ba je regionalni Internet portal za oglašavanje nekretnina na području Bosne i Hercegovine. Osnovan je 2015.
-                        godine s vizijom da olakša povezivanje prodavaca i najmodavaca, te kupaca i najmoprimaca nekretnina u regionu.
-                    </p>
-                </div>
+                    <div class="footer-short-text-holder">
+                        <p>
+                            DOM.ba je regionalni Internet portal za oglašavanje nekretnina na području Bosne i Hercegovine. Osnovan je 2015.
+                            godine s vizijom da olakša povezivanje prodavaca i najmodavaca, te kupaca i najmoprimaca nekretnina u regionu.
+                        </p>
+                    </div>
 
             </section>
             <section class="footer-general-links">
@@ -820,7 +1031,7 @@
                 <ul>
                     <li>
                         <a class="phone-link" href="tel:000">6523465
-                        <span>- Savo</span>
+                            <span>- Savo</span>
                         </a>
                     </li>
                     <li>
@@ -872,7 +1083,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
-            <a href="index.html" class="btn">početna stranica kad korisnik nije prijavljen</a>
+            <a href="index-no-user.html" class="text-center">početna kad korisnik nije prijavljen</a>
         </div>
     </div>
 </div>

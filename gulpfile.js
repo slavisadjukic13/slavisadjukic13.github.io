@@ -25,7 +25,7 @@ gulp.task('less', function(){
 });
 
 gulp.task('useref', function(){
-    return gulp.src('app/index.html')
+    return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest(''))

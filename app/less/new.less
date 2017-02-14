@@ -2,6 +2,11 @@
   background: lightgray;
   position: relative;
 
+  padding: @grid-gutter-width*2 0;
+  @media @xs {
+    padding: @grid-gutter-width/2 0;
+  }
+
   .wrapper {position: relative;}
 
   background: @new-background;
@@ -18,24 +23,20 @@
     right: 0;
     bottom: 0;
   }
-
-  .proba {
-    background: red;
-    margin-bottom: 30px;
-
-
-  }
 }
 
 .new-title {
   .make-xs-column(12);
-  
+  margin-bottom: 50px;
+
   @media @xs {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 
 .new-controls {
+  .hidden-xs;
+
   color: black;
   position: absolute;
   top: 20px;
@@ -43,5 +44,428 @@
   
   @media @xs {
     font-size: 10px;
+  }
+}
+
+.new-list {
+  .make-xs-column(12);
+}
+
+.new-list-item {
+  overflow: hidden;
+  position: relative;
+
+  &.grid {
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(4);
+    .make-md-column(4);
+    margin-bottom: 20px;
+
+    .ad-type {
+      position: absolute;
+      top: 0;
+      left: 0;
+      //background: red;
+      padding: 5px 15px;
+      z-index: 1;
+
+
+      &.rent {
+        background: @ad-type-rent-bg;
+        color: @ad-type-rent-color;
+      }
+
+      &.for-sell {
+        background: @ad-type-for-sale-bg;
+        color: @ad-type-for-sale-color;
+      }
+
+    }
+
+    .ad-title {
+      position: relative;
+
+      h4 {
+        padding: 15px;
+        margin: 0;
+        background: @ad-title-bg;
+        color: @ad-title-color;
+      }
+
+      @media @xs {
+        left: 0;
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+
+
+      @media @lg {
+        position: absolute;
+        top: 165px;
+        left: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @md {
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @sm {
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .ad-details {
+      background: @ad-details-bg;
+      color: @ad-details-color;
+
+      padding: 10px 0;
+
+      >.wrapper {
+        margin: 0;
+
+        > div {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+
+      .fa {
+        color: @ad-details-icon;
+        margin-right: 5px;
+      }
+
+
+    }
+
+    .ad-short-description {
+      .transitions;
+
+      .opacity(0);
+      position: absolute;
+      top: -200px;
+      left: 15px;
+      right: 15px;
+
+      padding: 25px 15px 15px 15px;
+
+      background: @ad-details-bg;
+      color: @ad-details-color;
+
+      @media @lg {
+        height: 197px;
+      }
+      @media @sm {
+        height: 185px;
+      }
+
+    }
+
+    .ad-location {
+      .make-xs-column(12);
+      font-size: 18px;
+      @media @xs {
+        font-size: 16px;
+      }
+    }
+
+    .ad-surface {
+      font-size: 18px;
+      .make-xs-column(12);
+      @media @xs {
+        font-size: 16px;
+      }
+    }
+
+    .ad-price {
+      position: relative;
+
+      h4 {
+        padding: 15px;
+        margin: 0;
+        background: @ad-price-bg;
+        color: @ad-price-color;
+      }
+
+      @media @xs {
+        left: 0;
+
+        h4 {
+          background: @ad-price-bg-mobile;
+          color: @ad-price-color-mobile;
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+
+
+      @media @lg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @sm {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @md {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+
+  &.list {
+    .make-xs-column(12);
+    margin-bottom: 20px;
+
+    .ad-type {
+      //position: absolute;
+      top: 0;
+      left: 0;
+      //background: red;
+      padding: 5px 15px;
+      //z-index: 1;
+
+
+      &.rent {
+        background: @ad-type-rent-bg;
+        color: @ad-type-rent-color;
+      }
+
+      &.for-sell {
+        background: @ad-type-for-sale-bg;
+        color: @ad-type-for-sale-color;
+      }
+
+    }
+
+    .ad-title {
+      position: relative;
+
+      h4 {
+        padding: 15px;
+        margin: 0;
+        background: @ad-title-bg;
+        color: @ad-title-color;
+      }
+
+      @media @xs {
+        left: 0;
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+
+
+      @media @lg {
+        //position: absolute;
+        top: 165px;
+        left: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @md {
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @sm {
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .ad-details {
+      background: @ad-details-bg;
+      color: @ad-details-color;
+
+      padding: 10px 0;
+
+      >.wrapper {
+        margin: 0;
+
+        > div {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+
+      .fa {
+        color: @ad-details-icon;
+        margin-right: 5px;
+      }
+
+
+    }
+
+    .ad-short-description {
+      .transitions;
+
+      .opacity(0);
+      position: absolute;
+      top: -200px;
+      left: 15px;
+      right: 15px;
+
+      padding: 25px 15px 15px 15px;
+
+      background: @ad-details-bg;
+      color: @ad-details-color;
+
+      @media @lg {
+        height: 197px;
+      }
+      @media @sm {
+        height: 185px;
+      }
+
+    }
+
+    .ad-location {
+      .make-xs-column(12);
+      font-size: 18px;
+      @media @xs {
+        font-size: 16px;
+      }
+    }
+
+    .ad-surface {
+      font-size: 18px;
+      .make-xs-column(12);
+      @media @xs {
+        font-size: 16px;
+      }
+    }
+
+    .ad-price {
+      position: relative;
+
+      h4 {
+        padding: 15px;
+        margin: 0;
+        background: @ad-price-bg;
+        color: @ad-price-color;
+      }
+
+      @media @xs {
+        left: 0;
+
+        h4 {
+          background: @ad-price-bg-mobile;
+          color: @ad-price-color-mobile;
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+
+
+      @media @lg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @sm {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+      @media @md {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  > a {
+    overflow: hidden;
+    display: block;
+  }
+
+  &:hover {
+    .ad-short-description {
+      top: 15px;
+      .opacity(1);
+    }
+  }
+
+  .transitions;
+  padding: 15px;
+
+
+}
+
+.new-load-more {
+  .make-xs-column(12);
+  .text-center;
+  padding-top: 15px;
+
+  @media @xs {
+    padding-top: 0;
+  }
+
+  a {
+    .btn;
+    .btn-primary;
   }
 }

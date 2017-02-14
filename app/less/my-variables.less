@@ -1,9 +1,17 @@
 //Main theme variables
 @primary-color: #d40f0f;
 @primary-color-dark: darken(@primary-color, 10%);
+@primary-color-darker: darken(@primary-color, 30%);
 
 @main-background: url("/img/jumbotron-bg-2.jpg");
 @main-background-blur: url("/img/jumbotron-bg-2-blur.jpg");
+
+//MAIN-MENU
+@main-menu-bg: @primary-color;
+@main-menu-title-color: white;
+@main-menu-contact-icon: white;
+@main-menu-contact-color: white;
+@main-menu-contact-hover-color: white;
 
 
 //HERO
@@ -12,8 +20,8 @@
 @hero-background: @main-background;
 
 //CTA
-@cta-message-color: black;
-@cta-bg: lightgrey;
+@cta-message-color: #4a4a4a;
+@cta-bg: #e1e1e1;
 @cta-time-delay-offset: 1000ms;
 
 //FEATURED
@@ -22,11 +30,13 @@
 @featured-background: @main-background-blur;
 
 //NEW
-@new-overlay: rgba(255, 255, 255, 0.5);
+@new-overlay: rgba(255, 255, 255, 0.4);
 @new-background: @main-background-blur;
 
 //PARTNERS
 @partners-bg: white;
+@partners-title-color: #48484a;
+
 
 //FOOTER
 @footer-bg: black;
@@ -48,8 +58,19 @@
 @ad-type-for-sale-bg: #1d4077;
 @ad-type-for-sale-color: white;
 
-@ad-title-bg: #1d4077;
-@ad-title-color: #f6f7ff;
+@ad-details-bg: white;
+@ad-details-color: black;
+@ad-details-icon: #a30c0c;
+
+@ad-title-bg: lightgrey;
+@ad-title-color: #202123;
+@ad-title-bg-mobile: lightgrey;
+@ad-title-color-mobile: #202123;
+
+@ad-price-bg: lightgrey;
+@ad-price-color: #202123;
+@ad-price-bg-mobile: lightgrey;
+@ad-price-color-mobile: #202123;
 
 //MODAL
 
@@ -60,8 +81,6 @@
 //ACCOUNT MENU
 @account-menu-bg: @primary-color;
 @account-menu-color: white;
-//@account-menu-bg: white;
-//@account-menu-color: gray;
 
 //third part colors
 @fb-color: #4267b2;

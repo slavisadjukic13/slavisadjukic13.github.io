@@ -1,6 +1,9 @@
 .featured {
-  background: @primary-color-dark;
   position: relative;
+  padding: @grid-gutter-width 0;
+  @media @xs {
+    padding: @grid-gutter-width/2 0;
+  }
 
   background: @featured-background;
   background-position: center;
@@ -16,24 +19,17 @@
     right: 0;
     bottom: 0;
   }
-
   .wrapper {position: relative;}
-
-
-  .slick-dots {
-    @media @xs {
-
-      position: absolute;
-      bottom: -50px;
-      left: 0;
-      right: 0;
-    }
-  }
 }
 
 .featured-title {
   color: white;
   .make-xs-column(12);
+
+  margin-bottom: @grid-gutter-width;
+  @media @xs {
+    margin-bottom: @grid-gutter-width/2;
+  }
 }
 
 .featured-list {
@@ -43,132 +39,216 @@
   @media @xs {
     margin-bottom: 60px;
   }
-
-  //.slick-slide {
-  //  //background-attachment: fixed;
-  //  //background-position: center center;
-  //  //background-size: cover;
-  //}
-
 }
-
-//.featured-controls {
-//  color: white;
-//  position: absolute;
-//  top: 20px;
-//  right: @grid-gutter-width/2;
-//}
 
 .featured-list-item {
-  .transitions;
-
-  .make-xs-column(12);
-
-  .ad-details {
-    .make-xs-column(12);
-
-  }
-
-  img {
-    //box-shadow: 0px 3px 10px black;
-  }
-
-  padding: 15px;
-
-  > div {
-    background: white;
-    //margin: 0 10px;
-  }
-
-  //&.grid {
-  //  .make-xs-column(4);
-  //}
-  //
-  //&.gridlg {
-  //  .make-xs-column(6);
-  //}
-  //
-  //&.list {
-  //  .make-xs-column(12);
-  //}
-}
-
-.ad-type {
-  position: absolute;
-  top: 0;
-  left: 0;
-  //background: red;
-  padding: 5px 15px;
-
-
-  &.rent {
-    background: @ad-type-rent-bg;
-    color: @ad-type-rent-color;
-  }
-
-  &.for-sell {
-    background: @ad-type-for-sale-bg;
-    color: @ad-type-for-sale-color;
-  }
-
-}
-
-.ad-title {
+  overflow: hidden;
   position: relative;
 
-  h4 {
-    padding: 15px;
-    margin: 0;
-    background: @ad-title-bg;
-    color: @ad-title-color;
+  > a {
+    overflow: hidden;
+    display: block;
   }
 
-  @media @xs {
-    //position: absolute;
-    //margin-top: -15px;
-    //top: 50px;
-    left: 0;
-
-    h4 {
-      margin-top: -30px;
-      padding: 10px 15px;
-      font-size: 14px;
-      //color: red;
-      //background: transparent;
+  &:hover {
+    .ad-short-description {
+      top: 15px;
+      .opacity(1);
     }
   }
 
+  .transitions;
+  padding: 15px;
 
-  @media @lg {
+  .make-xs-column(12);
+  .make-sm-column(12);
+  .make-md-column(12);
+
+  .ad-type {
     position: absolute;
-    top: 165px;
+    top: 0;
     left: 0;
+    //background: red;
+    padding: 5px 15px;
+    z-index: 1;
+
+
+    &.rent {
+      background: @ad-type-rent-bg;
+      color: @ad-type-rent-color;
+    }
+
+    &.for-sell {
+      background: @ad-type-for-sale-bg;
+      color: @ad-type-for-sale-color;
+    }
+
+  }
+
+  .ad-title {
+    position: relative;
 
     h4 {
-      padding: 10px 15px;
+      padding: 15px;
+      margin: 0;
+      background: @ad-title-bg;
+      color: @ad-title-color;
+    }
+
+    @media @xs {
+      left: 0;
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
+
+
+    @media @lg {
+      position: absolute;
+      top: 165px;
+      left: 0;
+      z-index: 1;
+
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
+    @media @md {
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
+    @media @sm {
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .ad-details {
+    background: @ad-details-bg;
+    color: @ad-details-color;
+
+    padding: 10px 0;
+
+    >.wrapper {
+      margin: 0;
+
+      > div {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+
+    .fa {
+      color: @ad-details-icon;
+      margin-right: 5px;
+    }
+
+
+  }
+
+  .ad-short-description {
+    .transitions;
+
+    .opacity(0);
+    position: absolute;
+    top: -200px;
+    left: 15px;
+    right: 15px;
+
+    padding: 25px 15px 15px 15px;
+
+    background: @ad-details-bg;
+    color: @ad-details-color;
+
+    @media @lg {
+      height: 197px;
+    }
+    @media @sm {
+      height: 185px;
+    }
+
+  }
+
+  .ad-location {
+    .make-xs-column(12);
+    font-size: 18px;
+    @media @xs {
       font-size: 16px;
     }
   }
-  //top: 0;
-  //left: 0;
-  //padding: 5px 15px;
+  .ad-surface {
+    font-size: 18px;
+    .make-xs-column(12);
+    @media @xs {
+      font-size: 16px;
+    }
+  }
+
+  .ad-price {
+    position: relative;
+
+    h4 {
+      padding: 15px;
+      margin: 0;
+      background: @ad-price-bg;
+      color: @ad-price-color;
+    }
+
+    @media @xs {
+      left: 0;
+
+      h4 {
+        background: @ad-price-bg-mobile;
+        color: @ad-price-color-mobile;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
 
 
-}
+    @media @lg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
 
-.ad-details {
-  @media @xs {
-    background: transparent;
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
+    @media @sm {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
+    @media @md {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+
+      h4 {
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+    }
   }
 }
 
-.ad-short-description {
-  .make-xs-column(12);
-  .transitions;
 
-  display: none;
-
-}
 
 .slick-active {
   position: relative;

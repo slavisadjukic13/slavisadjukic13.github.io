@@ -10,74 +10,22 @@
   z-index: 2000;
   .transitions;
 
-  .left-side {
-    .make-xs-column(3);
-  }
+  .left-side {.make-xs-column(3);}
+
   .right-side {
     .make-xs-column(3);
     .pull-right;
   }
 
-  @media @xs {
-    padding: 0;
-  }
+  @media @xs {padding: 0;}
+  @media @sm {padding: 10px;}
+  @media @md {padding: 10px;}
+  @media @lg {padding: 10px;}
 
-  @media @sm {
-    padding: 10px;
-  }
-
-  @media @md {
-    padding: 10px;
-  }
-
-  @media @lg {
-    padding: 10px;
-  }
-
-  
   &.top {
     background: transparent;
     padding: 10px;
   }
-
-  .logo {
-    height: auto;
-
-    @media @lg {
-      top: 10px;
-      width: 200px;
-      height: 76px;
-    }
-
-    @media @xs {
-      top: 5px;
-      width: 80px;
-      height: 35px;
-    }
-    @media @sm {
-      top: 5px;
-      width: 120px;
-      height: auto;
-    }
-    @media @md {
-      top: 5px;
-      width: 80px;
-      height: 35px;
-    }
-    @media @lg {
-      top: 5px;
-      width: 80px;
-      height: 35px;
-    }
-
-
-    .fil0 {fill: white;}
-    .fil1 {fill: white;}
-    .fil2 {fill: white;}
-    .transitions;
-    position: absolute;
-  }
-
 }
 
 .logo-block {
@@ -91,18 +39,32 @@
   @media @xs {
     width: 100px;
     height: 35px;
+    top: 5px;
   }
   @media @sm {
-    width: 120px;
-    height: 55px;
+    top: 10px;
+    width: 110px;
+    height: 45px;
   }
   @media @md {
-    width: 100px;
-    height: 35px;
+    top: 10px;
+    width: 110px;
+    height: 45px;
   }
   @media @lg {
-    width: 100px;
-    height: 35px;
+    top: 10px;
+    width: 110px;
+    height: 45px;
+  }
+
+  .logo {
+    height: auto;
+    width: 100%;
+    .fil0 {fill: white;}
+    .fil1 {fill: white;}
+    .fil2 {fill: white;}
+    .transitions;
+    position: absolute;
   }
 }
 

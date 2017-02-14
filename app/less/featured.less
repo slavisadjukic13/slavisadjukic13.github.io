@@ -2,7 +2,7 @@
   background: @primary-color-dark;
   position: relative;
 
-  background: url("/img/jumbotron-bg-2.jpg");
+  background: @featured-background;
   background-position: center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -37,6 +37,7 @@
 }
 
 .featured-list {
+  position: relative;
   .make-xs-column(12);
 
   @media @xs {
@@ -49,38 +50,129 @@
   //  //background-size: cover;
   //}
 
-  .featured-list-item {
-    .transitions;
+}
 
-    img {
-      //box-shadow: 0px 3px 10px black;
-    }
+//.featured-controls {
+//  color: white;
+//  position: absolute;
+//  top: 20px;
+//  right: @grid-gutter-width/2;
+//}
 
-    padding: 15px;
+.featured-list-item {
+  .transitions;
 
-    > div {
-      background: white;
-      //margin: 0 10px;
-    }
+  .make-xs-column(12);
 
-    //&.grid {
-    //  .make-xs-column(4);
-    //}
-    //
-    //&.gridlg {
-    //  .make-xs-column(6);
-    //}
-    //
-    //&.list {
-    //  .make-xs-column(12);
-    //}
+  .ad-details {
+    .make-xs-column(12);
+
+  }
+
+  img {
+    //box-shadow: 0px 3px 10px black;
+  }
+
+  padding: 15px;
+
+  > div {
+    background: white;
+    //margin: 0 10px;
+  }
+
+  //&.grid {
+  //  .make-xs-column(4);
+  //}
+  //
+  //&.gridlg {
+  //  .make-xs-column(6);
+  //}
+  //
+  //&.list {
+  //  .make-xs-column(12);
+  //}
+}
+
+.ad-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  //background: red;
+  padding: 5px 15px;
+
+
+  &.rent {
+    background: @ad-type-rent-bg;
+    color: @ad-type-rent-color;
+  }
+
+  &.for-sell {
+    background: @ad-type-for-sale-bg;
+    color: @ad-type-for-sale-color;
   }
 
 }
 
-.featured-controls {
-  color: white;
-  position: absolute;
-  top: 20px;
-  right: @grid-gutter-width/2;
+.ad-title {
+  position: relative;
+
+  h4 {
+    padding: 15px;
+    margin: 0;
+    background: @ad-title-bg;
+    color: @ad-title-color;
+  }
+
+  @media @xs {
+    //position: absolute;
+    //margin-top: -15px;
+    //top: 50px;
+    left: 0;
+
+    h4 {
+      margin-top: -30px;
+      padding: 10px 15px;
+      font-size: 14px;
+      //color: red;
+      //background: transparent;
+    }
+  }
+
+
+  @media @lg {
+    position: absolute;
+    top: 165px;
+    left: 0;
+
+    h4 {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  }
+  //top: 0;
+  //left: 0;
+  //padding: 5px 15px;
+
+
+}
+
+.ad-details {
+  @media @xs {
+    background: transparent;
+  }
+}
+
+.ad-short-description {
+  .make-xs-column(12);
+  .transitions;
+
+  display: none;
+
+}
+
+.slick-active {
+  position: relative;
+}
+.slick-slide {
+  position: relative;
 }

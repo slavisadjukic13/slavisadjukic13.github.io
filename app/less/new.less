@@ -4,7 +4,7 @@
 
   .wrapper {position: relative;}
 
-  background: url("/img/jumbotron-bg-2.jpg");
+  background: @new-background;
   background-position: center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -29,6 +29,10 @@
 
 .new-title {
   .make-xs-column(12);
+  
+  @media @xs {
+    margin-bottom: 50px;
+  }
 }
 
 .new-controls {
@@ -36,4 +40,8 @@
   position: absolute;
   top: 20px;
   right: @grid-gutter-width/2;
+  
+  @media @xs {
+    font-size: 10px;
+  }
 }

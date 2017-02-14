@@ -185,6 +185,117 @@
     </div>
 </nav>
 
+<!--    Account menu (login/my account)
+        section variables: less/my-variables.less
+        variables prefix: @account-menu-
+        section style: less/account-menu.less
+-->
+<section id="account-menu" class="animated slideOutUp top">
+    <div class="container">
+        <div class="wrapper">
+
+            <!-- login -->
+            <div class="account-menu-title">
+                <h2>
+                    Prijavite se ili napravite novi nalog
+                </h2>
+                <p>
+                    Možete se prijaviti na Vaš postojeći dom.ba nalog sa Vašim korisničkim imenom/lozinkom ili uz pomoć Vašeg facebook naloga
+                </p>
+                <p>
+                    Novi ste ovdje? Onda <u>besplatno</u> možete napraviti Vaš dom.ba nalog uz pomoć Vaše email adrese ili facebook naloga.
+                </p>
+            </div>
+
+            <div class="account-menu-login-wrapper">
+                <button class="collapsed" type="button" data-toggle="collapse" data-target="#account-menu-login" aria-expanded="false" aria-controls="collapseExample">
+                    Prijavite se
+                    <span class="fa fa-sign-in"></span>
+                </button>
+                <h3>Prijavite se</h3>
+                <div class="account-menu-login collapse" id="account-menu-login">
+                    <form>
+                        <div class="form-group">
+                            <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
+                            <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="login-password">Vaša lozinka</label>
+                            <input type="password" class="form-control" id="login-password" placeholder="Lozinka">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Zapamtite me
+                            </label>
+                        </div>
+
+                        <div class="form-group form-submit">
+                            <a class="btn" href="#">Zaboravili ste Vašu lozinku?</a>
+                            <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
+                        </div>
+                    </form>
+                    <button class="btn btn-block btn-fb" onclick="loginWithFacebook()">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        Prijavite se pomoću Facebook-a
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="account-menu-register-wrapper">
+                <h3>
+                    Napravite novi nalog
+                </h3>
+                <button class="btn btn-invert btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#account-menu-register" aria-expanded="false" aria-controls="collapseExample">
+                    Pretraga nekretnina
+                    <span class="fa fa-user-plus"></span>
+                </button>
+                <div class="account-menu-register collapse" id="account-menu-register">
+                    <form>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-username">Vaše korisničko ime</label>
+                            <input type="text" class="form-control" id="register-username" placeholder="Korisničko ime">
+                        </div>
+                        <div class="form-group user-type">
+                            <label class="control-label sr-only" for="user-type">Vrsta naloga</label>
+                            <select id="user-type" class="form-control">
+                                <option>Izaberite vrstu Naloga</option>
+                                <option>Javni korisnik</option>
+                                <option>Agent</option>
+                                <option>Notar</option>
+                                <option>Banka</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-email">Vaša e-mail adresa</label>
+                            <input type="email" class="form-control" id="register-email" placeholder="E-mail adresa">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-password">Vaša lozinka</label>
+                            <input type="password" class="form-control" id="register-password" placeholder="Lozinka">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-password-check">Potvrda lozinke</label>
+                            <input type="password" class="form-control" id="register-password-check" placeholder="Potvrda lozinke">
+                        </div>
+
+                        <div class="form-group form-submit">
+                            <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
+                        </div>
+                    </form>
+                    <button class="btn btn-block btn-fb" onclick="loginWithFacebook()">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        Registruj se pomoću Facebook-a
+                    </button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
 <!--    Header
         section variables: less/my-variables.less
         variables prefix: @header-
@@ -244,10 +355,19 @@
         </div>
 
         <div class="right-side">
-            <!--<span>asd</span>-->
-            <button type="button" class="login-toggle" aria-expanded="false">
+            <button id="account-menu-toggle" type="button" class="account-menu-toggle" aria-expanded="false">
                 <span class="sr-only">Toggle login/register</span>
+                <span class="icon-bar icon-bar-1"></span>
+                <span class="icon-bar icon-bar-2"></span>
+                <span class="opened text animated fadeOut">Zatvori</span>
+
+                <!-- IF user logged in -->
+                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
+                <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
+
+                 <!--IF user NOT logged in -->
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
+                <span class="closed text animated fadeInDown">Prijavi se</span>
             </button>
         </div>
 
@@ -353,45 +473,6 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <!--<div class="col-xs-12">-->
-                            <!--<label class="control-label" for="">Cijena</label>-->
-                            <!--<div class="wrapper">-->
-                                <!--<div class="form-group col-xs-6">-->
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon">od:</span>-->
-                                        <!--<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">-->
-                                        <!--<div class="input-group-addon">KM</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="form-group col-xs-6">-->
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon">do:</span>-->
-                                        <!--<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">-->
-                                        <!--<div class="input-group-addon">KM</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="col-xs-12">-->
-                            <!--<label class="control-label" for="">Velicina</label>-->
-                            <!--<div class="wrapper">-->
-                                <!--<div class="form-group col-xs-6">-->
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon">od:</span>-->
-                                        <!--<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">-->
-                                        <!--<div class="input-group-addon">m&sup2</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="form-group col-xs-6">-->
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon">do:</span>-->
-                                        <!--<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">-->
-                                        <!--<div class="input-group-addon">m&sup2</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
                         <div class="form-group form-price">
                             <label class="control-label" for="hero-price">Cijena</label>
                             <input class="" type="text" id="hero-price" name="price" value="" />
@@ -437,7 +518,15 @@
             </div>
             <div class="cta-btn animated fadeOut">
 
-                <a href="#" class="btn-edit"></span>Objavite oglas</a>
+                <!--    IF user logged in
+                        redirects to "new ad" page -->
+                <!--<a href="#" class="btn-edit-big"></span>Objavite oglas</a>-->
+                <!-- END IF user logged in -->
+
+                <!--    IF user NOT logged in
+                        triggers modal about user status: "Not logged modal" -->
+                <button type="button" class="btn-edit-big" data-toggle="modal" data-target="#myModal">Objavite oglas</button>
+                <!-- END IF user NOT logged in -->
             </div>
         </div>
     </div>
@@ -518,30 +607,79 @@
 
                 <!-- Featured ads - single ad -->
                 <article class="featured-list-item">
-                    <img class="img-responsive" src="img/featured/1-1.jpg">
-                    <div class="panel-body">
+                    <div class="add-image">
+                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                    </div>
+                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                    <div class="ad-details">
+                        <div class="wrapper">
+                            <div class="col-xs-6">asd</div>
+                            <div class="col-xs-6">asd</div>
+                        </div>
+                    </div>
+                    <div class="ad-short-description">
                         <p>
-                            sad
+                            Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
                         </p>
                     </div>
+                    <span class="ad-type rent">Izdaje se</span>
+                    <a href="#">
+
+                    </a>
                 </article>
 
                 <article class="featured-list-item">
-                    <img class="img-responsive" src="img/featured/1-1.jpg">
-                    <div class="panel-body">
-                        <p>
-                            sad
-                        </p>
+                    <div class="add-image">
+                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                     </div>
+                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                    <div class="ad-details">
+                        <div class="wrapper">
+                            <div class="col-xs-6">asd</div>
+                            <div class="col-xs-6">asd</div>
+                        </div>
+                    </div>
+                    <div class="ad-description"></div>
+                    <span class="ad-type rent">Izdaje se</span>
+                    <a href="#">
+
+                    </a>
                 </article>
                 <article class="featured-list-item">
-                    <img class="img-responsive" src="img/featured/1-1.jpg">
-                    <div class="panel-body">
-                        <p>
-                            sad
-                        </p>
+                    <div class="add-image">
+                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                     </div>
+                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                    <div class="ad-details">
+                        <div class="wrapper">
+                            <div class="col-xs-6">asd</div>
+                            <div class="col-xs-6">asd</div>
+                        </div>
+                    </div>
+                    <div class="ad-description"></div>
+                    <span class="ad-type for-sell">Prodaje se</span>
+                    <a href="#">
+
+                    </a>
                 </article>
+                <article class="featured-list-item">
+                    <div class="add-image">
+                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                    </div>
+                    <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                    <div class="ad-details">
+                        <div class="wrapper">
+                            <div class="col-xs-6">asd</div>
+                            <div class="col-xs-6">asd</div>
+                        </div>
+                    </div>
+                    <div class="ad-description"></div>
+                    <span class="ad-type rent">Izdaje se</span>
+                    <a href="#">
+
+                    </a>
+                </article>
+
             </div>
         </div>
     </div>
@@ -562,8 +700,8 @@
             <div class="new-controls">
                 <div class="btn-group">
                 <a href="#" data-controls="grid" class="btn btn-invert btn-lg active"><span class="fa fa-th"></span></a>
-                <a href="#" data-controls="gridlg" class="btn btn-invert btn-lg"><span class="fa fa-th-large"></span></a>
-                <a href="#" data-controls="list" class="btn btn-invert btn-lg"><span class="fa fa-th-list"></span></a>
+                <a href="#" data-controls="gridlg" class="btn btn-primary btn-lg"><span class="fa fa-th-large"></span></a>
+                <a href="#" data-controls="list" class="btn btn-primary btn-lg"><span class="fa fa-th-list"></span></a>
                 </div>
             </div>
 
@@ -620,8 +758,11 @@
     <div class="overlay"></div>
     <div class="wrapper-outer">
         <div class="wrapper">
-            <section class="footer-logo">
-                <svg class="logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 3474 1219"
+            <section class="footer-intro">
+                <div class="wrapper">
+                    <div class="footer-logo-holder">
+                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 3474 1219"
+
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                          <defs>
                           <style type="text/css">
@@ -654,10 +795,17 @@
                           <path class="fil2" d="M936 87c-1,2 -3,4 -5,6l-207 303 104 0c16,0 38,-13 50,-29l137 -202 -79 -78z"/>
                          </g>
                         </svg>
-                <p>
-                    DOM.ba je regionalni Internet portal za oglašavanje nekretnina na području Bosne i Hercegovine. Osnovan je 2015.
-                    godine s vizijom da olakša povezivanje prodavaca i najmodavaca, te kupaca i najmoprimaca nekretnina u regionu.
-                </p>
+                    </div>
+                    <div>
+
+                    </div>
+                <div class="footer-short-text-holder">
+                    <p>
+                        DOM.ba je regionalni Internet portal za oglašavanje nekretnina na području Bosne i Hercegovine. Osnovan je 2015.
+                        godine s vizijom da olakša povezivanje prodavaca i najmodavaca, te kupaca i najmoprimaca nekretnina u regionu.
+                    </p>
+                </div>
+
             </section>
             <section class="footer-general-links">
                 <ul>
@@ -669,21 +817,19 @@
             </section>
             <section class="footer-contact-links">
                 <h4>Kontaktirajte nas</h4>
-                <ul class="phone">
+                <ul>
                     <li>
-                        <a href="#">6523465
+                        <a class="phone-link" href="tel:000">6523465
                         <span>- Savo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">6523465
+                        <a class="phone-link" href="tel:000">6523465
                             <span>- Dragan</span>
                         </a>
                     </li>
-                </ul>
-                <ul class="mail">
                     <li>
-                        <a href="#">office365dom@gmail.com
+                        <a class="mail-link" href="mailto:office365dom@gmail.com">office365dom@gmail.com
                         </a>
                     </li>
                 </ul>
@@ -697,6 +843,39 @@
         </div>
     </div>
 </footer>
+
+<!--    Not logged-in modal
+        section variables: less/my-variables.less
+        variables prefix: @modal-
+        section style: less/modal.less
+-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Obaveštenje</h4>
+            </div>
+            <div class="modal-body">
+                Poštovani, morate biti registrovani korisnik da bi objavili oglas.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-login account-menu-toggle">Prijavite se</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    DEV helper
+        contain links to other html assets
+-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="index-logged-in.html" class="btn">početna stranica kad je korisnik prijavljen</a>
+        </div>
+    </div>
+</div>
 
 <!--build:js js/main.min.js -->
 <script src="components/jquery/dist/jquery.min.js"></script>

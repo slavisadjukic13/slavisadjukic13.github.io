@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $('.nav-toggle').on('click', function () {
         $(this).toggleClass('active');
-        $('.icon-bar').toggleClass('rotated');
+        $('.nav-toggle .icon-bar').toggleClass('rotated');
         $('#main-menu').toggleClass('slideOutUp');
         $('#main-menu').toggleClass('slideInDown');
 
@@ -12,6 +12,21 @@ $(document).ready(function() {
 
         $('#main-menu .main-menu-search-area').toggleClass('fadeInDown');
         $('#main-menu .links-area').toggleClass('fadeInRight');
+
+    });
+
+    $('.account-menu-toggle').on('click', function () {
+        $('#account-menu-toggle').toggleClass('active');
+        $('#account-menu-toggle .icon-bar').toggleClass('rotated');
+        $('#account-menu').toggleClass('slideOutUp');
+        $('#account-menu').toggleClass('slideInDown');
+
+        $('.header .account-menu-toggle .opened').toggleClass('fadeInDown').toggleClass('fadeOut');
+        $('.header .account-menu-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
+
+
+        // $('#account-menu .main-menu-search-area').toggleClass('fadeInDown');
+        // $('#account-menu .links-area').toggleClass('fadeInRight');
 
     });
 
@@ -35,9 +50,6 @@ $(document).ready(function() {
         to: 500,
         postfix: " m&sup2"
     });
-
-
-
 
     $('.partners-list').slick({
         // setting-name: setting-value
@@ -134,7 +146,7 @@ $(document).ready(function() {
                 breakpoint: 1200,
                 settings: {
                     // autoplaySpeed: 5000,
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                     // centerMode: true,
                     // centerPadding: '100px'
@@ -144,7 +156,7 @@ $(document).ready(function() {
                 breakpoint: 992,
                 settings: {
                     autoplaySpeed: 2000,
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1
                 }
             },
@@ -175,8 +187,19 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $(".hero-search-area").position().top - 60
         }, 400);
-    })
+    });
 
+    // $('#account-menu-register').on('show.bs.collapse', function () {
+    //     $('#account-menu').animate({
+    //         scrollTop: $("#account-menu-register").position().top - 60
+    //     }, 400);
+    // });
+    //
+    // $('#account-menu-login').on('show.bs.collapse', function () {
+    //     $('#account-menu').animate({
+    //         scrollTop: $("#account-menu-login").position().top - 60
+    //     }, 400);
+    // });
 
 
     $(window).scroll(function() {

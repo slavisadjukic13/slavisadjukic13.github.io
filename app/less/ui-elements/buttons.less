@@ -8,12 +8,37 @@
 }
 
 .btn-edit {
+  .btn;
+  .btn-primary;
+
   &:after {
     font-family: FontAwesome;
     font-size: inherit;
     margin-left: 10px;
     content: @fa-var-pencil;
   }
+}
+
+.btn-login {
+  .btn;
+  .btn-primary;
+
+  &:after {
+    font-family: FontAwesome;
+    font-size: inherit;
+    margin-left: 10px;
+    content: @fa-var-sign-in;
+  }
+}
+
+.btn-edit-big {
+  .btn-edit;
+  .btn-lg;
+}
+
+.btn-login-big {
+  .btn-login;
+  .btn-lg;
 }
 
 .btn-search {
@@ -44,7 +69,34 @@
   }
 }
 
+.btn-primary-dark {
+  .button-variant(white, @primary-color-dark, @primary-color-dark);
+
+  &.active {
+    .btn-primary-invert;
+    box-shadow: none;
+    outline: none;
+
+    &.active, &:active, &:focus {
+      .btn-primary-invert;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &:active, &:focus {
+    box-shadow: none;
+    outline: none;
+    //.btn-primary-invert;
+  }
+}
+
 .btn-primary-invert {
   .button-variant(@primary-color, white, white);
   .text-center;
 }
+
+.btn-fb {
+  .button-variant(white, @fb-color, @fb-color);
+}
+

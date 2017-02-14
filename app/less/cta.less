@@ -3,6 +3,10 @@
   padding: @grid-gutter-width 0;
   background: @cta-bg;
 
+  @media @xs {
+    padding: @grid-gutter-width/2 0;
+  }
+
   .cta-message {
     .delayed(@cta-time-delay-offset + 0ms);
 
@@ -41,10 +45,7 @@
     .make-md-column(2);
 
     a {
-      .btn;
-      .btn-primary;
-      .btn-lg;
-      color: white;
+
     }
 
     @media @xs {

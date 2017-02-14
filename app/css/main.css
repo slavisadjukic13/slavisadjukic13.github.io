@@ -5844,7 +5844,7 @@ button.close {
   filter: alpha(opacity=50);
 }
 .modal-header {
-  padding: 15px;
+  padding: 15px 15px;
   border-bottom: 1px solid #e5e5e5;
 }
 .modal-header .close {
@@ -6891,7 +6891,8 @@ button.close {
 .transitions,
 .nav-toggle,
 .nav-toggle .icon-bar,
-.login-toggle {
+#account-menu-toggle,
+#account-menu-toggle .icon-bar {
   transition: all 0.2s ease-in-out;
 }
 .transitions-slow {
@@ -9405,11 +9406,483 @@ button.close {
 .btn {
   border-width: 3px;
 }
+.btn-edit {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.btn-edit:focus,
+.btn-edit:active:focus,
+.btn-edit.active:focus,
+.btn-edit.focus,
+.btn-edit:active.focus,
+.btn-edit.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-edit:hover,
+.btn-edit:focus,
+.btn-edit.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn-edit:active,
+.btn-edit.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-edit.disabled,
+.btn-edit[disabled],
+fieldset[disabled] .btn-edit {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.btn-edit.disabled,
+fieldset[disabled] a.btn-edit {
+  pointer-events: none;
+}
+.btn-edit:focus,
+.btn-edit.focus {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #5d0707;
+}
+.btn-edit:hover {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-edit:active,
+.btn-edit.active,
+.open > .dropdown-toggle.btn-edit {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-edit:active:hover,
+.btn-edit.active:hover,
+.open > .dropdown-toggle.btn-edit:hover,
+.btn-edit:active:focus,
+.btn-edit.active:focus,
+.open > .dropdown-toggle.btn-edit:focus,
+.btn-edit:active.focus,
+.btn-edit.active.focus,
+.open > .dropdown-toggle.btn-edit.focus {
+  color: #fff;
+  background-color: #830909;
+  border-color: #5d0707;
+}
+.btn-edit:active,
+.btn-edit.active,
+.open > .dropdown-toggle.btn-edit {
+  background-image: none;
+}
+.btn-edit.disabled:hover,
+.btn-edit[disabled]:hover,
+fieldset[disabled] .btn-edit:hover,
+.btn-edit.disabled:focus,
+.btn-edit[disabled]:focus,
+fieldset[disabled] .btn-edit:focus,
+.btn-edit.disabled.focus,
+.btn-edit[disabled].focus,
+fieldset[disabled] .btn-edit.focus {
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.btn-edit .badge {
+  color: #d40f0f;
+  background-color: #fff;
+}
 .btn-edit:after {
   font-family: FontAwesome;
   font-size: inherit;
   margin-left: 10px;
   content: "\f040";
+}
+.btn-login {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.btn-login:focus,
+.btn-login:active:focus,
+.btn-login.active:focus,
+.btn-login.focus,
+.btn-login:active.focus,
+.btn-login.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-login:hover,
+.btn-login:focus,
+.btn-login.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn-login:active,
+.btn-login.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-login.disabled,
+.btn-login[disabled],
+fieldset[disabled] .btn-login {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.btn-login.disabled,
+fieldset[disabled] a.btn-login {
+  pointer-events: none;
+}
+.btn-login:focus,
+.btn-login.focus {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #5d0707;
+}
+.btn-login:hover {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-login:active,
+.btn-login.active,
+.open > .dropdown-toggle.btn-login {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-login:active:hover,
+.btn-login.active:hover,
+.open > .dropdown-toggle.btn-login:hover,
+.btn-login:active:focus,
+.btn-login.active:focus,
+.open > .dropdown-toggle.btn-login:focus,
+.btn-login:active.focus,
+.btn-login.active.focus,
+.open > .dropdown-toggle.btn-login.focus {
+  color: #fff;
+  background-color: #830909;
+  border-color: #5d0707;
+}
+.btn-login:active,
+.btn-login.active,
+.open > .dropdown-toggle.btn-login {
+  background-image: none;
+}
+.btn-login.disabled:hover,
+.btn-login[disabled]:hover,
+fieldset[disabled] .btn-login:hover,
+.btn-login.disabled:focus,
+.btn-login[disabled]:focus,
+fieldset[disabled] .btn-login:focus,
+.btn-login.disabled.focus,
+.btn-login[disabled].focus,
+fieldset[disabled] .btn-login.focus {
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.btn-login .badge {
+  color: #d40f0f;
+  background-color: #fff;
+}
+.btn-login:after {
+  font-family: FontAwesome;
+  font-size: inherit;
+  margin-left: 10px;
+  content: "\f090";
+}
+.btn-edit-big {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0px;
+}
+.btn-edit-big:focus,
+.btn-edit-big:active:focus,
+.btn-edit-big.active:focus,
+.btn-edit-big.focus,
+.btn-edit-big:active.focus,
+.btn-edit-big.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-edit-big:hover,
+.btn-edit-big:focus,
+.btn-edit-big.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn-edit-big:active,
+.btn-edit-big.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-edit-big.disabled,
+.btn-edit-big[disabled],
+fieldset[disabled] .btn-edit-big {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.btn-edit-big.disabled,
+fieldset[disabled] a.btn-edit-big {
+  pointer-events: none;
+}
+.btn-edit-big:focus,
+.btn-edit-big.focus {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #5d0707;
+}
+.btn-edit-big:hover {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-edit-big:active,
+.btn-edit-big.active,
+.open > .dropdown-toggle.btn-edit-big {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-edit-big:active:hover,
+.btn-edit-big.active:hover,
+.open > .dropdown-toggle.btn-edit-big:hover,
+.btn-edit-big:active:focus,
+.btn-edit-big.active:focus,
+.open > .dropdown-toggle.btn-edit-big:focus,
+.btn-edit-big:active.focus,
+.btn-edit-big.active.focus,
+.open > .dropdown-toggle.btn-edit-big.focus {
+  color: #fff;
+  background-color: #830909;
+  border-color: #5d0707;
+}
+.btn-edit-big:active,
+.btn-edit-big.active,
+.open > .dropdown-toggle.btn-edit-big {
+  background-image: none;
+}
+.btn-edit-big.disabled:hover,
+.btn-edit-big[disabled]:hover,
+fieldset[disabled] .btn-edit-big:hover,
+.btn-edit-big.disabled:focus,
+.btn-edit-big[disabled]:focus,
+fieldset[disabled] .btn-edit-big:focus,
+.btn-edit-big.disabled.focus,
+.btn-edit-big[disabled].focus,
+fieldset[disabled] .btn-edit-big.focus {
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.btn-edit-big .badge {
+  color: #d40f0f;
+  background-color: #fff;
+}
+.btn-edit-big:after {
+  font-family: FontAwesome;
+  font-size: inherit;
+  margin-left: 10px;
+  content: "\f040";
+}
+.btn-login-big {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0px;
+}
+.btn-login-big:focus,
+.btn-login-big:active:focus,
+.btn-login-big.active:focus,
+.btn-login-big.focus,
+.btn-login-big:active.focus,
+.btn-login-big.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-login-big:hover,
+.btn-login-big:focus,
+.btn-login-big.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn-login-big:active,
+.btn-login-big.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-login-big.disabled,
+.btn-login-big[disabled],
+fieldset[disabled] .btn-login-big {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.btn-login-big.disabled,
+fieldset[disabled] a.btn-login-big {
+  pointer-events: none;
+}
+.btn-login-big:focus,
+.btn-login-big.focus {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #5d0707;
+}
+.btn-login-big:hover {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-login-big:active,
+.btn-login-big.active,
+.open > .dropdown-toggle.btn-login-big {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.btn-login-big:active:hover,
+.btn-login-big.active:hover,
+.open > .dropdown-toggle.btn-login-big:hover,
+.btn-login-big:active:focus,
+.btn-login-big.active:focus,
+.open > .dropdown-toggle.btn-login-big:focus,
+.btn-login-big:active.focus,
+.btn-login-big.active.focus,
+.open > .dropdown-toggle.btn-login-big.focus {
+  color: #fff;
+  background-color: #830909;
+  border-color: #5d0707;
+}
+.btn-login-big:active,
+.btn-login-big.active,
+.open > .dropdown-toggle.btn-login-big {
+  background-image: none;
+}
+.btn-login-big.disabled:hover,
+.btn-login-big[disabled]:hover,
+fieldset[disabled] .btn-login-big:hover,
+.btn-login-big.disabled:focus,
+.btn-login-big[disabled]:focus,
+fieldset[disabled] .btn-login-big:focus,
+.btn-login-big.disabled.focus,
+.btn-login-big[disabled].focus,
+fieldset[disabled] .btn-login-big.focus {
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.btn-login-big .badge {
+  color: #d40f0f;
+  background-color: #fff;
+}
+.btn-login-big:after {
+  font-family: FontAwesome;
+  font-size: inherit;
+  margin-left: 10px;
+  content: "\f090";
 }
 .btn-search:after {
   font-family: FontAwesome;
@@ -9537,6 +10010,246 @@ fieldset[disabled] .btn-invert.active.focus {
 .btn-invert:focus {
   box-shadow: none;
 }
+.btn-primary-dark {
+  color: white;
+  background-color: #a40c0c;
+  border-color: #a40c0c;
+}
+.btn-primary-dark:focus,
+.btn-primary-dark.focus {
+  color: white;
+  background-color: #750808;
+  border-color: #2d0303;
+}
+.btn-primary-dark:hover {
+  color: white;
+  background-color: #750808;
+  border-color: #6b0808;
+}
+.btn-primary-dark:active,
+.btn-primary-dark.active,
+.open > .dropdown-toggle.btn-primary-dark {
+  color: white;
+  background-color: #750808;
+  border-color: #6b0808;
+}
+.btn-primary-dark:active:hover,
+.btn-primary-dark.active:hover,
+.open > .dropdown-toggle.btn-primary-dark:hover,
+.btn-primary-dark:active:focus,
+.btn-primary-dark.active:focus,
+.open > .dropdown-toggle.btn-primary-dark:focus,
+.btn-primary-dark:active.focus,
+.btn-primary-dark.active.focus,
+.open > .dropdown-toggle.btn-primary-dark.focus {
+  color: white;
+  background-color: #530606;
+  border-color: #2d0303;
+}
+.btn-primary-dark:active,
+.btn-primary-dark.active,
+.open > .dropdown-toggle.btn-primary-dark {
+  background-image: none;
+}
+.btn-primary-dark.disabled:hover,
+.btn-primary-dark[disabled]:hover,
+fieldset[disabled] .btn-primary-dark:hover,
+.btn-primary-dark.disabled:focus,
+.btn-primary-dark[disabled]:focus,
+fieldset[disabled] .btn-primary-dark:focus,
+.btn-primary-dark.disabled.focus,
+.btn-primary-dark[disabled].focus,
+fieldset[disabled] .btn-primary-dark.focus {
+  background-color: #a40c0c;
+  border-color: #a40c0c;
+}
+.btn-primary-dark .badge {
+  color: #a40c0c;
+  background-color: white;
+}
+.btn-primary-dark.active {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+}
+.btn-primary-dark.active:focus,
+.btn-primary-dark.active.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.btn-primary-dark.active:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.btn-primary-dark.active:active,
+.btn-primary-dark.active.active,
+.open > .dropdown-toggle.btn-primary-dark.active {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.btn-primary-dark.active:active:hover,
+.btn-primary-dark.active.active:hover,
+.open > .dropdown-toggle.btn-primary-dark.active:hover,
+.btn-primary-dark.active:active:focus,
+.btn-primary-dark.active.active:focus,
+.open > .dropdown-toggle.btn-primary-dark.active:focus,
+.btn-primary-dark.active:active.focus,
+.btn-primary-dark.active.active.focus,
+.open > .dropdown-toggle.btn-primary-dark.active.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.btn-primary-dark.active:active,
+.btn-primary-dark.active.active,
+.open > .dropdown-toggle.btn-primary-dark.active {
+  background-image: none;
+}
+.btn-primary-dark.active.disabled:hover,
+.btn-primary-dark.active[disabled]:hover,
+fieldset[disabled] .btn-primary-dark.active:hover,
+.btn-primary-dark.active.disabled:focus,
+.btn-primary-dark.active[disabled]:focus,
+fieldset[disabled] .btn-primary-dark.active:focus,
+.btn-primary-dark.active.disabled.focus,
+.btn-primary-dark.active[disabled].focus,
+fieldset[disabled] .btn-primary-dark.active.focus {
+  background-color: white;
+  border-color: white;
+}
+.btn-primary-dark.active .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.btn-primary-dark.active.active,
+.btn-primary-dark.active:active,
+.btn-primary-dark.active:focus {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+}
+.btn-primary-dark.active.active:focus,
+.btn-primary-dark.active:active:focus,
+.btn-primary-dark.active:focus:focus,
+.btn-primary-dark.active.active.focus,
+.btn-primary-dark.active:active.focus,
+.btn-primary-dark.active:focus.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.btn-primary-dark.active.active:hover,
+.btn-primary-dark.active:active:hover,
+.btn-primary-dark.active:focus:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.btn-primary-dark.active.active:active,
+.btn-primary-dark.active:active:active,
+.btn-primary-dark.active:focus:active,
+.btn-primary-dark.active.active.active,
+.btn-primary-dark.active:active.active,
+.btn-primary-dark.active:focus.active,
+.open > .dropdown-toggle.btn-primary-dark.active.active,
+.open > .dropdown-toggle.btn-primary-dark.active:active,
+.open > .dropdown-toggle.btn-primary-dark.active:focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.btn-primary-dark.active.active:active:hover,
+.btn-primary-dark.active:active:active:hover,
+.btn-primary-dark.active:focus:active:hover,
+.btn-primary-dark.active.active.active:hover,
+.btn-primary-dark.active:active.active:hover,
+.btn-primary-dark.active:focus.active:hover,
+.open > .dropdown-toggle.btn-primary-dark.active.active:hover,
+.open > .dropdown-toggle.btn-primary-dark.active:active:hover,
+.open > .dropdown-toggle.btn-primary-dark.active:focus:hover,
+.btn-primary-dark.active.active:active:focus,
+.btn-primary-dark.active:active:active:focus,
+.btn-primary-dark.active:focus:active:focus,
+.btn-primary-dark.active.active.active:focus,
+.btn-primary-dark.active:active.active:focus,
+.btn-primary-dark.active:focus.active:focus,
+.open > .dropdown-toggle.btn-primary-dark.active.active:focus,
+.open > .dropdown-toggle.btn-primary-dark.active:active:focus,
+.open > .dropdown-toggle.btn-primary-dark.active:focus:focus,
+.btn-primary-dark.active.active:active.focus,
+.btn-primary-dark.active:active:active.focus,
+.btn-primary-dark.active:focus:active.focus,
+.btn-primary-dark.active.active.active.focus,
+.btn-primary-dark.active:active.active.focus,
+.btn-primary-dark.active:focus.active.focus,
+.open > .dropdown-toggle.btn-primary-dark.active.active.focus,
+.open > .dropdown-toggle.btn-primary-dark.active:active.focus,
+.open > .dropdown-toggle.btn-primary-dark.active:focus.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.btn-primary-dark.active.active:active,
+.btn-primary-dark.active:active:active,
+.btn-primary-dark.active:focus:active,
+.btn-primary-dark.active.active.active,
+.btn-primary-dark.active:active.active,
+.btn-primary-dark.active:focus.active,
+.open > .dropdown-toggle.btn-primary-dark.active.active,
+.open > .dropdown-toggle.btn-primary-dark.active:active,
+.open > .dropdown-toggle.btn-primary-dark.active:focus {
+  background-image: none;
+}
+.btn-primary-dark.active.active.disabled:hover,
+.btn-primary-dark.active:active.disabled:hover,
+.btn-primary-dark.active:focus.disabled:hover,
+.btn-primary-dark.active.active[disabled]:hover,
+.btn-primary-dark.active:active[disabled]:hover,
+.btn-primary-dark.active:focus[disabled]:hover,
+fieldset[disabled] .btn-primary-dark.active.active:hover,
+fieldset[disabled] .btn-primary-dark.active:active:hover,
+fieldset[disabled] .btn-primary-dark.active:focus:hover,
+.btn-primary-dark.active.active.disabled:focus,
+.btn-primary-dark.active:active.disabled:focus,
+.btn-primary-dark.active:focus.disabled:focus,
+.btn-primary-dark.active.active[disabled]:focus,
+.btn-primary-dark.active:active[disabled]:focus,
+.btn-primary-dark.active:focus[disabled]:focus,
+fieldset[disabled] .btn-primary-dark.active.active:focus,
+fieldset[disabled] .btn-primary-dark.active:active:focus,
+fieldset[disabled] .btn-primary-dark.active:focus:focus,
+.btn-primary-dark.active.active.disabled.focus,
+.btn-primary-dark.active:active.disabled.focus,
+.btn-primary-dark.active:focus.disabled.focus,
+.btn-primary-dark.active.active[disabled].focus,
+.btn-primary-dark.active:active[disabled].focus,
+.btn-primary-dark.active:focus[disabled].focus,
+fieldset[disabled] .btn-primary-dark.active.active.focus,
+fieldset[disabled] .btn-primary-dark.active:active.focus,
+fieldset[disabled] .btn-primary-dark.active:focus.focus {
+  background-color: white;
+  border-color: white;
+}
+.btn-primary-dark.active.active .badge,
+.btn-primary-dark.active:active .badge,
+.btn-primary-dark.active:focus .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.btn-primary-dark:active,
+.btn-primary-dark:focus {
+  box-shadow: none;
+  outline: none;
+}
 .btn-primary-invert {
   color: #d40f0f;
   background-color: white;
@@ -9594,6 +10307,63 @@ fieldset[disabled] .btn-primary-invert.focus {
 .btn-primary-invert .badge {
   color: white;
   background-color: #d40f0f;
+}
+.btn-fb {
+  color: white;
+  background-color: #4267b2;
+  border-color: #4267b2;
+}
+.btn-fb:focus,
+.btn-fb.focus {
+  color: white;
+  background-color: #34518d;
+  border-color: #203155;
+}
+.btn-fb:hover {
+  color: white;
+  background-color: #34518d;
+  border-color: #314d85;
+}
+.btn-fb:active,
+.btn-fb.active,
+.open > .dropdown-toggle.btn-fb {
+  color: white;
+  background-color: #34518d;
+  border-color: #314d85;
+}
+.btn-fb:active:hover,
+.btn-fb.active:hover,
+.open > .dropdown-toggle.btn-fb:hover,
+.btn-fb:active:focus,
+.btn-fb.active:focus,
+.open > .dropdown-toggle.btn-fb:focus,
+.btn-fb:active.focus,
+.btn-fb.active.focus,
+.open > .dropdown-toggle.btn-fb.focus {
+  color: white;
+  background-color: #2b4273;
+  border-color: #203155;
+}
+.btn-fb:active,
+.btn-fb.active,
+.open > .dropdown-toggle.btn-fb {
+  background-image: none;
+}
+.btn-fb.disabled:hover,
+.btn-fb[disabled]:hover,
+fieldset[disabled] .btn-fb:hover,
+.btn-fb.disabled:focus,
+.btn-fb[disabled]:focus,
+fieldset[disabled] .btn-fb:focus,
+.btn-fb.disabled.focus,
+.btn-fb[disabled].focus,
+fieldset[disabled] .btn-fb.focus {
+  background-color: #4267b2;
+  border-color: #4267b2;
+}
+.btn-fb .badge {
+  color: #4267b2;
+  background-color: white;
 }
 .notshown {
   opacity: 0 !important;
@@ -10043,55 +10813,6 @@ h4 {
   background: transparent;
   padding: 10px;
 }
-.header .logo {
-  height: auto;
-  transition: all 0.2s ease-in-out;
-  position: absolute;
-}
-@media only screen and (min-width: 1200px) {
-  .header .logo {
-    top: 10px;
-    width: 200px;
-    height: 76px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .header .logo {
-    top: 5px;
-    width: 80px;
-    height: 35px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header .logo {
-    top: 5px;
-    width: 120px;
-    height: auto;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .header .logo {
-    top: 5px;
-    width: 80px;
-    height: 35px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .header .logo {
-    top: 5px;
-    width: 80px;
-    height: 35px;
-  }
-}
-.header .logo .fil0 {
-  fill: white;
-}
-.header .logo .fil1 {
-  fill: white;
-}
-.header .logo .fil2 {
-  fill: white;
-}
 .logo-block {
   transition: all 0.2s ease-in-out;
   float: left;
@@ -10104,25 +10825,44 @@ h4 {
   .logo-block {
     width: 100px;
     height: 35px;
+    top: 5px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .logo-block {
-    width: 120px;
-    height: 55px;
+    top: 10px;
+    width: 110px;
+    height: 45px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .logo-block {
-    width: 100px;
-    height: 35px;
+    top: 10px;
+    width: 110px;
+    height: 45px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .logo-block {
-    width: 100px;
-    height: 35px;
+    top: 10px;
+    width: 110px;
+    height: 45px;
   }
+}
+.logo-block .logo {
+  height: auto;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+}
+.logo-block .logo .fil0 {
+  fill: white;
+}
+.logo-block .logo .fil1 {
+  fill: white;
+}
+.logo-block .logo .fil2 {
+  fill: white;
 }
 #main-menu {
   position: fixed;
@@ -10567,7 +11307,7 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
 .nav-toggle {
   position: relative;
   display: inline-block;
-  width: 110px;
+  width: 130px;
   height: 40px;
   border: 0;
   background: #d40f0f;
@@ -10577,6 +11317,9 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   .nav-toggle {
     width: 40px;
   }
+}
+.nav-toggle.active {
+  background: #a40c0c;
 }
 .nav-toggle .icon-bar {
   width: 26px;
@@ -10624,42 +11367,6 @@ fieldset[disabled] .main-menu-tab-selector a.focus {
   }
 }
 .nav-toggle:focus {
-  outline: none;
-}
-.login-toggle {
-  position: relative;
-  display: inline-block;
-  width: 110px;
-  height: 40px;
-  border: 0;
-  background: #d40f0f;
-  z-index: 2000;
-  float: right !important;
-  float: right;
-}
-.login-toggle i {
-  font-size: 32px;
-  color: white;
-}
-@media only screen and (max-width: 767px) {
-  .login-toggle {
-    width: 40px;
-  }
-}
-.login-toggle .text {
-  font-size: 19.2px;
-  color: white;
-  line-height: 40px;
-  position: absolute;
-  top: 0;
-  left: 50px;
-}
-@media only screen and (max-width: 767px) {
-  .login-toggle .text {
-    display: none;
-  }
-}
-.login-toggle:focus {
   outline: none;
 }
 .hero {
@@ -11198,6 +11905,11 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   padding: 30px 0;
   background: lightgrey;
 }
+@media only screen and (max-width: 767px) {
+  .cta {
+    padding: 15px 0;
+  }
+}
 .cta .cta-message {
   animation-delay: 1000ms;
   -webkit-animation-delay: 1000ms;
@@ -11274,122 +11986,6 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
     float: left;
     width: 16.66666667%;
   }
-}
-.cta .cta-btn a {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 16px;
-  line-height: 1.42857143;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-width: 3px;
-  font-family: 'Ubuntu', sans-serif;
-  color: #fff;
-  background-color: #d40f0f;
-  border-color: #d40f0f;
-  padding: 10px 16px;
-  font-size: 20px;
-  line-height: 1.3333333;
-  border-radius: 0px;
-  color: white;
-}
-.cta .cta-btn a:focus,
-.cta .cta-btn a:active:focus,
-.cta .cta-btn a.active:focus,
-.cta .cta-btn a.focus,
-.cta .cta-btn a:active.focus,
-.cta .cta-btn a.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.cta .cta-btn a:hover,
-.cta .cta-btn a:focus,
-.cta .cta-btn a.focus {
-  color: #333;
-  text-decoration: none;
-}
-.cta .cta-btn a:active,
-.cta .cta-btn a.active {
-  outline: 0;
-  background-image: none;
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-.cta .cta-btn a.disabled,
-.cta .cta-btn a[disabled],
-fieldset[disabled] .cta .cta-btn a {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  box-shadow: none;
-}
-a.cta .cta-btn a.disabled,
-fieldset[disabled] a.cta .cta-btn a {
-  pointer-events: none;
-}
-.cta .cta-btn a:focus,
-.cta .cta-btn a.focus {
-  color: #fff;
-  background-color: #a40c0c;
-  border-color: #5d0707;
-}
-.cta .cta-btn a:hover {
-  color: #fff;
-  background-color: #a40c0c;
-  border-color: #9b0b0b;
-}
-.cta .cta-btn a:active,
-.cta .cta-btn a.active,
-.open > .dropdown-toggle.cta .cta-btn a {
-  color: #fff;
-  background-color: #a40c0c;
-  border-color: #9b0b0b;
-}
-.cta .cta-btn a:active:hover,
-.cta .cta-btn a.active:hover,
-.open > .dropdown-toggle.cta .cta-btn a:hover,
-.cta .cta-btn a:active:focus,
-.cta .cta-btn a.active:focus,
-.open > .dropdown-toggle.cta .cta-btn a:focus,
-.cta .cta-btn a:active.focus,
-.cta .cta-btn a.active.focus,
-.open > .dropdown-toggle.cta .cta-btn a.focus {
-  color: #fff;
-  background-color: #830909;
-  border-color: #5d0707;
-}
-.cta .cta-btn a:active,
-.cta .cta-btn a.active,
-.open > .dropdown-toggle.cta .cta-btn a {
-  background-image: none;
-}
-.cta .cta-btn a.disabled:hover,
-.cta .cta-btn a[disabled]:hover,
-fieldset[disabled] .cta .cta-btn a:hover,
-.cta .cta-btn a.disabled:focus,
-.cta .cta-btn a[disabled]:focus,
-fieldset[disabled] .cta .cta-btn a:focus,
-.cta .cta-btn a.disabled.focus,
-.cta .cta-btn a[disabled].focus,
-fieldset[disabled] .cta .cta-btn a.focus {
-  background-color: #d40f0f;
-  border-color: #d40f0f;
-}
-.cta .cta-btn a .badge {
-  color: #d40f0f;
-  background-color: #fff;
 }
 @media only screen and (max-width: 767px) {
   .cta .cta-btn {
@@ -11515,6 +12111,18 @@ fieldset[disabled] .cta .cta-btn a.focus {
     padding-bottom: 30px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .footer {
     padding-top: 30px;
@@ -11523,6 +12131,12 @@ fieldset[disabled] .cta .cta-btn a.focus {
 }
 .footer h4 {
   color: #d40f0f;
+  margin: 0 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .footer h4 {
+    margin: 15px 0 10px 0;
+  }
 }
 .footer a {
   transition: all 0.2s ease-in-out;
@@ -11538,30 +12152,108 @@ fieldset[disabled] .cta .cta-btn a.focus {
   right: 0;
   bottom: 0;
 }
-.footer .footer-logo {
+.footer .footer-intro {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (max-width: 767px) {
-  .footer .footer-logo {
-    display: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .footer .footer-logo {
+@media (min-width: 992px) {
+  .footer .footer-intro {
     float: left;
     width: 25%;
   }
 }
-.footer .footer-logo svg {
+@media (min-width: 768px) {
+  .footer .footer-intro {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-intro {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-intro {
+    float: left;
+    width: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .footer .footer-intro {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer .footer-intro {
+    padding-bottom: 15px;
+  }
+}
+.footer .footer-intro .footer-logo-holder {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .footer .footer-intro .footer-logo-holder {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-intro .footer-logo-holder {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-intro .footer-logo-holder {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.footer .footer-intro .footer-short-text-holder {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .footer .footer-intro .footer-short-text-holder {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-intro .footer-short-text-holder {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-intro .footer-short-text-holder {
+    float: left;
+    width: 100%;
+  }
+}
+.footer .footer-intro svg {
   display: block;
   max-width: 100%;
   height: auto;
   width: 100%;
 }
-.footer .footer-logo p {
+.footer .footer-intro svg .fil2 {
+  fill: white;
+}
+.footer .footer-intro p {
   margin-top: 10px;
   color: white;
   font-size: 12px;
@@ -11574,17 +12266,34 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media (min-width: 768px) {
+  .footer .footer-social-links {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-social-links {
+    float: left;
+    width: 16.66666667%;
+  }
+}
 @media (min-width: 1200px) {
   .footer .footer-social-links {
     float: left;
     width: 16.66666667%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .footer .footer-social-links {
+    text-align: center;
+  }
+}
 .footer .footer-social-links .link-facebook {
   color: white;
 }
 .footer .footer-social-links .link-facebook:hover {
-  color: #4080ff;
+  color: #4267b2;
 }
 .footer .footer-social-links .link-instagram {
   color: white;
@@ -11597,11 +12306,34 @@ fieldset[disabled] .cta .cta-btn a.focus {
 }
 .footer .footer-contact-links {
   float: left;
-  width: 100%;
+  width: 83.33333333%;
+  margin-left: 8.33333333%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .footer .footer-contact-links {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .footer .footer-contact-links {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-contact-links {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-contact-links {
+    margin-left: 4.16666667%;
+  }
 }
 @media (min-width: 1200px) {
   .footer .footer-contact-links {
@@ -11609,31 +12341,105 @@ fieldset[disabled] .cta .cta-btn a.focus {
     width: 25%;
   }
 }
-.footer .footer-contact-links .phone {
-  position: relative;
-  padding: 0 0 0 30px;
-  list-style-type: none;
+@media only screen and (max-width: 767px) {
+  .footer .footer-contact-links h4 {
+    text-align: center;
+  }
 }
-.footer .footer-contact-links .phone:before {
+@media only screen and (max-width: 767px) {
+  .footer .footer-contact-links {
+    text-align: center;
+  }
+}
+.footer .footer-contact-links ul {
+  list-style-type: none;
+  padding: 0 0 0 0;
+}
+.footer .footer-contact-links ul a {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 5px;
+  padding-left: 30px;
+}
+.footer .footer-contact-links ul a:focus,
+.footer .footer-contact-links ul a:active:focus,
+.footer .footer-contact-links ul a.active:focus,
+.footer .footer-contact-links ul a.focus,
+.footer .footer-contact-links ul a:active.focus,
+.footer .footer-contact-links ul a.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.footer .footer-contact-links ul a:hover,
+.footer .footer-contact-links ul a:focus,
+.footer .footer-contact-links ul a.focus {
+  color: #333;
+  text-decoration: none;
+}
+.footer .footer-contact-links ul a:active,
+.footer .footer-contact-links ul a.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.footer .footer-contact-links ul a.disabled,
+.footer .footer-contact-links ul a[disabled],
+fieldset[disabled] .footer .footer-contact-links ul a {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.footer .footer-contact-links ul a.disabled,
+fieldset[disabled] a.footer .footer-contact-links ul a {
+  pointer-events: none;
+}
+.footer .footer-contact-links ul a:hover {
+  color: #d40f0f;
+}
+.footer .footer-contact-links .phone-link {
+  position: relative;
+}
+.footer .footer-contact-links .phone-link:before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
+  line-height: 1;
   font-family: FontAwesome;
-  font-size: 20px;
+  font-size: 30px;
   color: darkgrey;
   content: "\f098";
 }
-.footer .footer-contact-links .mail {
+.footer .footer-contact-links .mail-link {
   position: relative;
-  padding: 0 0 0 30px;
-  list-style-type: none;
 }
-.footer .footer-contact-links .mail:before {
+.footer .footer-contact-links .mail-link:before {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
+  line-height: 1;
   font-family: FontAwesome;
-  font-size: 20px;
+  font-size: 30px;
   color: darkgrey;
   content: "\f199";
 }
@@ -11645,15 +12451,42 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media (min-width: 768px) {
+  .footer .footer-general-links {
+    float: left;
+    width: 37.5%;
+  }
+}
+@media (min-width: 768px) {
+  .footer .footer-general-links {
+    margin-left: 4.16666667%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-general-links {
+    float: left;
+    width: 20%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-general-links {
+    margin-left: 5%;
+  }
+}
 @media (min-width: 1200px) {
   .footer .footer-general-links {
     float: left;
-    width: 25%;
+    width: 16.66666667%;
   }
 }
 @media (min-width: 1200px) {
   .footer .footer-general-links {
     margin-left: 8.33333333%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer .footer-general-links {
+    text-align: center;
   }
 }
 .footer .footer-general-links ul {
@@ -11678,7 +12511,7 @@ fieldset[disabled] .cta .cta-btn a.focus {
 .featured {
   background: #a40c0c;
   position: relative;
-  background: url("/img/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2-blur.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -11724,23 +12557,96 @@ fieldset[disabled] .cta .cta-btn a.focus {
     margin-bottom: 60px;
   }
 }
-.featured-list .featured-list-item {
+.featured-list-item {
   transition: all 0.2s ease-in-out;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding: 15px;
 }
-.featured-list .featured-list-item > div {
+.featured-list-item .ad-details {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.featured-list-item > div {
   background: white;
 }
-.featured-controls {
-  color: white;
+.ad-type {
   position: absolute;
-  top: 20px;
-  right: 15px;
+  top: 0;
+  left: 0;
+  padding: 5px 15px;
+}
+.ad-type.rent {
+  background: #004f14;
+  color: white;
+}
+.ad-type.for-sell {
+  background: #1d4077;
+  color: white;
+}
+.ad-title {
+  position: relative;
+}
+.ad-title h4 {
+  padding: 15px;
+  margin: 0;
+  background: #1d4077;
+  color: #f6f7ff;
+}
+@media only screen and (max-width: 767px) {
+  .ad-title {
+    left: 0;
+  }
+  .ad-title h4 {
+    margin-top: -30px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .ad-title {
+    position: absolute;
+    top: 165px;
+    left: 0;
+  }
+  .ad-title h4 {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ad-details {
+    background: transparent;
+  }
+}
+.ad-short-description {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.2s ease-in-out;
+  display: none;
+}
+.slick-active {
+  position: relative;
+}
+.slick-slide {
+  position: relative;
 }
 .new {
   background: lightgray;
   position: relative;
-  background: url("/img/jumbotron-bg-2.jpg");
+  background: url("/img/jumbotron-bg-2-blur.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -11768,11 +12674,1255 @@ fieldset[disabled] .cta .cta-btn a.focus {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media only screen and (max-width: 767px) {
+  .new-title {
+    margin-bottom: 50px;
+  }
+}
 .new-controls {
   color: black;
   position: absolute;
   top: 20px;
   right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .new-controls {
+    font-size: 10px;
+  }
+}
+#account-menu-toggle {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  background: #d40f0f;
+  z-index: 2000;
+  float: right !important;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  #account-menu-toggle {
+    width: 40px;
+  }
+}
+#account-menu-toggle.active {
+  background: #a40c0c;
+}
+#account-menu-toggle .icon-bar {
+  width: 26px;
+  height: 4px;
+  border-radius: 1px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  margin: 0;
+  left: 7px;
+  top: 18px;
+}
+#account-menu-toggle .icon-bar-1 {
+  transform: translate(0, 9px);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#account-menu-toggle .icon-bar-1.rotated {
+  transform: rotate(-45deg);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+#account-menu-toggle .icon-bar-2 {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(0, -9px);
+}
+#account-menu-toggle .icon-bar-2.rotated {
+  transform: rotate(45deg);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+#account-menu-toggle.active i {
+  font-size: 15px;
+  padding-left: 8px;
+}
+#account-menu-toggle i {
+  font-size: 32px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  float: left !important;
+  float: left;
+}
+#account-menu-toggle .text {
+  font-size: 19.2px;
+  color: white;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+@media only screen and (max-width: 767px) {
+  #account-menu-toggle .text {
+    display: none;
+  }
+}
+#account-menu-toggle:focus {
+  outline: none;
+}
+#account-menu {
+  position: fixed;
+  background: #d40f0f;
+  z-index: 1499;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+  #account-menu {
+    padding-top: 45px;
+    height: 100%;
+  }
+}
+#account-menu.active {
+  top: 0;
+}
+#account-menu .links-area {
+  animation-delay: 400ms;
+  -webkit-animation-delay: 400ms;
+}
+#account-menu.top {
+  padding-top: 60px;
+}
+.account-menu-title {
+  color: white;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .account-menu-title h2 {
+    font-size: 26px;
+  }
+}
+.account-menu-login-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+  margin-bottom: 10px;
+}
+@media (min-width: 1200px) {
+  .account-menu-login-wrapper {
+    float: left;
+    width: 37.5%;
+  }
+}
+@media (min-width: 1200px) {
+  .account-menu-login-wrapper {
+    margin-left: 8.33333333%;
+  }
+}
+.account-menu-login-wrapper > button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0px;
+  transition: all 0.2s ease-in-out;
+}
+.account-menu-login-wrapper > button:focus,
+.account-menu-login-wrapper > button:active:focus,
+.account-menu-login-wrapper > button.active:focus,
+.account-menu-login-wrapper > button.focus,
+.account-menu-login-wrapper > button:active.focus,
+.account-menu-login-wrapper > button.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.account-menu-login-wrapper > button:hover,
+.account-menu-login-wrapper > button:focus,
+.account-menu-login-wrapper > button.focus {
+  color: #333;
+  text-decoration: none;
+}
+.account-menu-login-wrapper > button:active,
+.account-menu-login-wrapper > button.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.account-menu-login-wrapper > button.disabled,
+.account-menu-login-wrapper > button[disabled],
+fieldset[disabled] .account-menu-login-wrapper > button {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.account-menu-login-wrapper > button.disabled,
+fieldset[disabled] a.account-menu-login-wrapper > button {
+  pointer-events: none;
+}
+.account-menu-login-wrapper > button:focus,
+.account-menu-login-wrapper > button.focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button:active,
+.account-menu-login-wrapper > button.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button:active:hover,
+.account-menu-login-wrapper > button.active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:hover,
+.account-menu-login-wrapper > button:active:focus,
+.account-menu-login-wrapper > button.active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:focus,
+.account-menu-login-wrapper > button:active.focus,
+.account-menu-login-wrapper > button.active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button.focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button:active,
+.account-menu-login-wrapper > button.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button {
+  background-image: none;
+}
+.account-menu-login-wrapper > button.disabled:hover,
+.account-menu-login-wrapper > button[disabled]:hover,
+fieldset[disabled] .account-menu-login-wrapper > button:hover,
+.account-menu-login-wrapper > button.disabled:focus,
+.account-menu-login-wrapper > button[disabled]:focus,
+fieldset[disabled] .account-menu-login-wrapper > button:focus,
+.account-menu-login-wrapper > button.disabled.focus,
+.account-menu-login-wrapper > button[disabled].focus,
+fieldset[disabled] .account-menu-login-wrapper > button.focus {
+  background-color: transparent;
+  border-color: white;
+}
+.account-menu-login-wrapper > button .badge {
+  color: transparent;
+  background-color: white;
+}
+.account-menu-login-wrapper > button.active {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+}
+.account-menu-login-wrapper > button.active:focus,
+.account-menu-login-wrapper > button.active.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button.active:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button.active:active,
+.account-menu-login-wrapper > button.active.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button.active {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button.active:active:hover,
+.account-menu-login-wrapper > button.active.active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button.active:hover,
+.account-menu-login-wrapper > button.active:active:focus,
+.account-menu-login-wrapper > button.active.active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button.active:focus,
+.account-menu-login-wrapper > button.active:active.focus,
+.account-menu-login-wrapper > button.active.active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button.active.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button.active:active,
+.account-menu-login-wrapper > button.active.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button.active {
+  background-image: none;
+}
+.account-menu-login-wrapper > button.active.disabled:hover,
+.account-menu-login-wrapper > button.active[disabled]:hover,
+fieldset[disabled] .account-menu-login-wrapper > button.active:hover,
+.account-menu-login-wrapper > button.active.disabled:focus,
+.account-menu-login-wrapper > button.active[disabled]:focus,
+fieldset[disabled] .account-menu-login-wrapper > button.active:focus,
+.account-menu-login-wrapper > button.active.disabled.focus,
+.account-menu-login-wrapper > button.active[disabled].focus,
+fieldset[disabled] .account-menu-login-wrapper > button.active.focus {
+  background-color: white;
+  border-color: white;
+}
+.account-menu-login-wrapper > button.active .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.account-menu-login-wrapper > button:active,
+.account-menu-login-wrapper > button:focus {
+  box-shadow: none;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .account-menu-login-wrapper > button {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .account-menu-login-wrapper > button {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .account-menu-login-wrapper > button {
+    display: none !important;
+  }
+}
+.account-menu-login-wrapper > button:not(.collapsed) {
+  color: white;
+  background-color: #a40c0c;
+  border-color: #a40c0c;
+}
+.account-menu-login-wrapper > button:not(.collapsed):focus,
+.account-menu-login-wrapper > button:not(.collapsed).focus {
+  color: white;
+  background-color: #750808;
+  border-color: #2d0303;
+}
+.account-menu-login-wrapper > button:not(.collapsed):hover {
+  color: white;
+  background-color: #750808;
+  border-color: #6b0808;
+}
+.account-menu-login-wrapper > button:not(.collapsed):active,
+.account-menu-login-wrapper > button:not(.collapsed).active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed) {
+  color: white;
+  background-color: #750808;
+  border-color: #6b0808;
+}
+.account-menu-login-wrapper > button:not(.collapsed):active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed):hover,
+.account-menu-login-wrapper > button:not(.collapsed):active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed):focus,
+.account-menu-login-wrapper > button:not(.collapsed):active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).focus {
+  color: white;
+  background-color: #530606;
+  border-color: #2d0303;
+}
+.account-menu-login-wrapper > button:not(.collapsed):active,
+.account-menu-login-wrapper > button:not(.collapsed).active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed) {
+  background-image: none;
+}
+.account-menu-login-wrapper > button:not(.collapsed).disabled:hover,
+.account-menu-login-wrapper > button:not(.collapsed)[disabled]:hover,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed):hover,
+.account-menu-login-wrapper > button:not(.collapsed).disabled:focus,
+.account-menu-login-wrapper > button:not(.collapsed)[disabled]:focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed):focus,
+.account-menu-login-wrapper > button:not(.collapsed).disabled.focus,
+.account-menu-login-wrapper > button:not(.collapsed)[disabled].focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).focus {
+  background-color: #a40c0c;
+  border-color: #a40c0c;
+}
+.account-menu-login-wrapper > button:not(.collapsed) .badge {
+  color: #a40c0c;
+  background-color: white;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active:active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active.active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active {
+  background-image: none;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.disabled:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active[disabled]:hover,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active.disabled:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active[disabled]:focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.disabled.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active[disabled].focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active.focus {
+  background-color: white;
+  border-color: white;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active,
+.account-menu-login-wrapper > button:not(.collapsed).active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:active,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.active,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.active,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active:active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.active:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active.active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:active:hover,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:focus:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active.active:active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.active:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active.active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:active:focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:focus:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active:active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.active.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active.active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:active.focus,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:focus.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active:active:active,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus:active,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.active,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.active,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:active,
+.open > .dropdown-toggle.account-menu-login-wrapper > button:not(.collapsed).active:focus {
+  background-image: none;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active.disabled:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.disabled:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.disabled:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active.active[disabled]:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:active[disabled]:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus[disabled]:hover,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active.active:hover,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:active:hover,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:focus:hover,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.disabled:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.disabled:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.disabled:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active[disabled]:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active[disabled]:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus[disabled]:focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active.active:focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:active:focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:focus:focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active.disabled.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active.disabled.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus.disabled.focus,
+.account-menu-login-wrapper > button:not(.collapsed).active.active[disabled].focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:active[disabled].focus,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus[disabled].focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active.active.focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:active.focus,
+fieldset[disabled] .account-menu-login-wrapper > button:not(.collapsed).active:focus.focus {
+  background-color: white;
+  border-color: white;
+}
+.account-menu-login-wrapper > button:not(.collapsed).active.active .badge,
+.account-menu-login-wrapper > button:not(.collapsed).active:active .badge,
+.account-menu-login-wrapper > button:not(.collapsed).active:focus .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.account-menu-login-wrapper > button:not(.collapsed):active,
+.account-menu-login-wrapper > button:not(.collapsed):focus {
+  box-shadow: none;
+  outline: none;
+}
+@media only screen and (max-width: 767px) {
+  .account-menu-login-wrapper h3 {
+    display: none !important;
+  }
+}
+.account-menu-login-wrapper a {
+  color: white;
+  float: right !important;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  .account-menu-login-wrapper a {
+    float: left !important;
+    float: left;
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    margin-bottom: 10px;
+  }
+  .account-menu-login-wrapper a:focus,
+  .account-menu-login-wrapper a.focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #bfbfbf;
+  }
+  .account-menu-login-wrapper a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #e0e0e0;
+  }
+  .account-menu-login-wrapper a:active,
+  .account-menu-login-wrapper a.active,
+  .open > .dropdown-toggle.account-menu-login-wrapper a {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #e0e0e0;
+  }
+  .account-menu-login-wrapper a:active:hover,
+  .account-menu-login-wrapper a.active:hover,
+  .open > .dropdown-toggle.account-menu-login-wrapper a:hover,
+  .account-menu-login-wrapper a:active:focus,
+  .account-menu-login-wrapper a.active:focus,
+  .open > .dropdown-toggle.account-menu-login-wrapper a:focus,
+  .account-menu-login-wrapper a:active.focus,
+  .account-menu-login-wrapper a.active.focus,
+  .open > .dropdown-toggle.account-menu-login-wrapper a.focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #bfbfbf;
+  }
+  .account-menu-login-wrapper a:active,
+  .account-menu-login-wrapper a.active,
+  .open > .dropdown-toggle.account-menu-login-wrapper a {
+    background-image: none;
+  }
+  .account-menu-login-wrapper a.disabled:hover,
+  .account-menu-login-wrapper a[disabled]:hover,
+  fieldset[disabled] .account-menu-login-wrapper a:hover,
+  .account-menu-login-wrapper a.disabled:focus,
+  .account-menu-login-wrapper a[disabled]:focus,
+  fieldset[disabled] .account-menu-login-wrapper a:focus,
+  .account-menu-login-wrapper a.disabled.focus,
+  .account-menu-login-wrapper a[disabled].focus,
+  fieldset[disabled] .account-menu-login-wrapper a.focus {
+    background-color: transparent;
+    border-color: white;
+  }
+  .account-menu-login-wrapper a .badge {
+    color: transparent;
+    background-color: white;
+  }
+  .account-menu-login-wrapper a.active {
+    color: #d40f0f;
+    background-color: white;
+    border-color: white;
+    text-align: center;
+    box-shadow: none;
+  }
+  .account-menu-login-wrapper a.active:focus,
+  .account-menu-login-wrapper a.active.focus {
+    color: #d40f0f;
+    background-color: #e6e6e6;
+    border-color: #bfbfbf;
+  }
+  .account-menu-login-wrapper a.active:hover {
+    color: #d40f0f;
+    background-color: #e6e6e6;
+    border-color: #e0e0e0;
+  }
+  .account-menu-login-wrapper a.active:active,
+  .account-menu-login-wrapper a.active.active,
+  .open > .dropdown-toggle.account-menu-login-wrapper a.active {
+    color: #d40f0f;
+    background-color: #e6e6e6;
+    border-color: #e0e0e0;
+  }
+  .account-menu-login-wrapper a.active:active:hover,
+  .account-menu-login-wrapper a.active.active:hover,
+  .open > .dropdown-toggle.account-menu-login-wrapper a.active:hover,
+  .account-menu-login-wrapper a.active:active:focus,
+  .account-menu-login-wrapper a.active.active:focus,
+  .open > .dropdown-toggle.account-menu-login-wrapper a.active:focus,
+  .account-menu-login-wrapper a.active:active.focus,
+  .account-menu-login-wrapper a.active.active.focus,
+  .open > .dropdown-toggle.account-menu-login-wrapper a.active.focus {
+    color: #d40f0f;
+    background-color: #d4d4d4;
+    border-color: #bfbfbf;
+  }
+  .account-menu-login-wrapper a.active:active,
+  .account-menu-login-wrapper a.active.active,
+  .open > .dropdown-toggle.account-menu-login-wrapper a.active {
+    background-image: none;
+  }
+  .account-menu-login-wrapper a.active.disabled:hover,
+  .account-menu-login-wrapper a.active[disabled]:hover,
+  fieldset[disabled] .account-menu-login-wrapper a.active:hover,
+  .account-menu-login-wrapper a.active.disabled:focus,
+  .account-menu-login-wrapper a.active[disabled]:focus,
+  fieldset[disabled] .account-menu-login-wrapper a.active:focus,
+  .account-menu-login-wrapper a.active.disabled.focus,
+  .account-menu-login-wrapper a.active[disabled].focus,
+  fieldset[disabled] .account-menu-login-wrapper a.active.focus {
+    background-color: white;
+    border-color: white;
+  }
+  .account-menu-login-wrapper a.active .badge {
+    color: white;
+    background-color: #d40f0f;
+  }
+  .account-menu-login-wrapper a:active,
+  .account-menu-login-wrapper a:focus {
+    box-shadow: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .account-menu-login {
+    padding: 10px 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .account-menu-login {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .account-menu-login {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .account-menu-login {
+    display: block;
+  }
+}
+.account-menu-register-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+@media (min-width: 1200px) {
+  .account-menu-register-wrapper {
+    float: left;
+    width: 37.5%;
+  }
+}
+@media (min-width: 1200px) {
+  .account-menu-register-wrapper {
+    margin-left: 12.5%;
+  }
+}
+.account-menu-register-wrapper > button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0px;
+  transition: all 0.2s ease-in-out;
+}
+.account-menu-register-wrapper > button:focus,
+.account-menu-register-wrapper > button:active:focus,
+.account-menu-register-wrapper > button.active:focus,
+.account-menu-register-wrapper > button.focus,
+.account-menu-register-wrapper > button:active.focus,
+.account-menu-register-wrapper > button.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.account-menu-register-wrapper > button:hover,
+.account-menu-register-wrapper > button:focus,
+.account-menu-register-wrapper > button.focus {
+  color: #333;
+  text-decoration: none;
+}
+.account-menu-register-wrapper > button:active,
+.account-menu-register-wrapper > button.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.account-menu-register-wrapper > button.disabled,
+.account-menu-register-wrapper > button[disabled],
+fieldset[disabled] .account-menu-register-wrapper > button {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.account-menu-register-wrapper > button.disabled,
+fieldset[disabled] a.account-menu-register-wrapper > button {
+  pointer-events: none;
+}
+.account-menu-register-wrapper > button:focus,
+.account-menu-register-wrapper > button.focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button:active,
+.account-menu-register-wrapper > button.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button:active:hover,
+.account-menu-register-wrapper > button.active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:hover,
+.account-menu-register-wrapper > button:active:focus,
+.account-menu-register-wrapper > button.active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:focus,
+.account-menu-register-wrapper > button:active.focus,
+.account-menu-register-wrapper > button.active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button.focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button:active,
+.account-menu-register-wrapper > button.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button {
+  background-image: none;
+}
+.account-menu-register-wrapper > button.disabled:hover,
+.account-menu-register-wrapper > button[disabled]:hover,
+fieldset[disabled] .account-menu-register-wrapper > button:hover,
+.account-menu-register-wrapper > button.disabled:focus,
+.account-menu-register-wrapper > button[disabled]:focus,
+fieldset[disabled] .account-menu-register-wrapper > button:focus,
+.account-menu-register-wrapper > button.disabled.focus,
+.account-menu-register-wrapper > button[disabled].focus,
+fieldset[disabled] .account-menu-register-wrapper > button.focus {
+  background-color: transparent;
+  border-color: white;
+}
+.account-menu-register-wrapper > button .badge {
+  color: transparent;
+  background-color: white;
+}
+.account-menu-register-wrapper > button.active {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+}
+.account-menu-register-wrapper > button.active:focus,
+.account-menu-register-wrapper > button.active.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button.active:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button.active:active,
+.account-menu-register-wrapper > button.active.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button.active {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button.active:active:hover,
+.account-menu-register-wrapper > button.active.active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button.active:hover,
+.account-menu-register-wrapper > button.active:active:focus,
+.account-menu-register-wrapper > button.active.active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button.active:focus,
+.account-menu-register-wrapper > button.active:active.focus,
+.account-menu-register-wrapper > button.active.active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button.active.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button.active:active,
+.account-menu-register-wrapper > button.active.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button.active {
+  background-image: none;
+}
+.account-menu-register-wrapper > button.active.disabled:hover,
+.account-menu-register-wrapper > button.active[disabled]:hover,
+fieldset[disabled] .account-menu-register-wrapper > button.active:hover,
+.account-menu-register-wrapper > button.active.disabled:focus,
+.account-menu-register-wrapper > button.active[disabled]:focus,
+fieldset[disabled] .account-menu-register-wrapper > button.active:focus,
+.account-menu-register-wrapper > button.active.disabled.focus,
+.account-menu-register-wrapper > button.active[disabled].focus,
+fieldset[disabled] .account-menu-register-wrapper > button.active.focus {
+  background-color: white;
+  border-color: white;
+}
+.account-menu-register-wrapper > button.active .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.account-menu-register-wrapper > button:active,
+.account-menu-register-wrapper > button:focus {
+  box-shadow: none;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .account-menu-register-wrapper > button {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .account-menu-register-wrapper > button {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .account-menu-register-wrapper > button {
+    display: none !important;
+  }
+}
+.account-menu-register-wrapper > button:not(.collapsed) {
+  color: white;
+  background-color: #a40c0c;
+  border-color: #a40c0c;
+}
+.account-menu-register-wrapper > button:not(.collapsed):focus,
+.account-menu-register-wrapper > button:not(.collapsed).focus {
+  color: white;
+  background-color: #750808;
+  border-color: #2d0303;
+}
+.account-menu-register-wrapper > button:not(.collapsed):hover {
+  color: white;
+  background-color: #750808;
+  border-color: #6b0808;
+}
+.account-menu-register-wrapper > button:not(.collapsed):active,
+.account-menu-register-wrapper > button:not(.collapsed).active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed) {
+  color: white;
+  background-color: #750808;
+  border-color: #6b0808;
+}
+.account-menu-register-wrapper > button:not(.collapsed):active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed):hover,
+.account-menu-register-wrapper > button:not(.collapsed):active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed):focus,
+.account-menu-register-wrapper > button:not(.collapsed):active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).focus {
+  color: white;
+  background-color: #530606;
+  border-color: #2d0303;
+}
+.account-menu-register-wrapper > button:not(.collapsed):active,
+.account-menu-register-wrapper > button:not(.collapsed).active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed) {
+  background-image: none;
+}
+.account-menu-register-wrapper > button:not(.collapsed).disabled:hover,
+.account-menu-register-wrapper > button:not(.collapsed)[disabled]:hover,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed):hover,
+.account-menu-register-wrapper > button:not(.collapsed).disabled:focus,
+.account-menu-register-wrapper > button:not(.collapsed)[disabled]:focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed):focus,
+.account-menu-register-wrapper > button:not(.collapsed).disabled.focus,
+.account-menu-register-wrapper > button:not(.collapsed)[disabled].focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).focus {
+  background-color: #a40c0c;
+  border-color: #a40c0c;
+}
+.account-menu-register-wrapper > button:not(.collapsed) .badge {
+  color: #a40c0c;
+  background-color: white;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active:active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active.active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active {
+  background-image: none;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.disabled:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active[disabled]:hover,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active.disabled:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active[disabled]:focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.disabled.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active[disabled].focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active.focus {
+  background-color: white;
+  border-color: white;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active,
+.account-menu-register-wrapper > button:not(.collapsed).active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus {
+  color: #d40f0f;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  box-shadow: none;
+  outline: none;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:hover {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:active,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.active,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.active,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:focus {
+  color: #d40f0f;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active:active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.active:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active.active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:active:hover,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:focus:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active.active:active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.active:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active.active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:active:focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:focus:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active:active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.active.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active.active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:active.focus,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:focus.focus {
+  color: #d40f0f;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active:active:active,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus:active,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.active,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.active,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active.active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:active,
+.open > .dropdown-toggle.account-menu-register-wrapper > button:not(.collapsed).active:focus {
+  background-image: none;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active.disabled:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.disabled:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.disabled:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active.active[disabled]:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:active[disabled]:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus[disabled]:hover,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active.active:hover,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:active:hover,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:focus:hover,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.disabled:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.disabled:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.disabled:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active[disabled]:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active[disabled]:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus[disabled]:focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active.active:focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:active:focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:focus:focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active.disabled.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active.disabled.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus.disabled.focus,
+.account-menu-register-wrapper > button:not(.collapsed).active.active[disabled].focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:active[disabled].focus,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus[disabled].focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active.active.focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:active.focus,
+fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).active:focus.focus {
+  background-color: white;
+  border-color: white;
+}
+.account-menu-register-wrapper > button:not(.collapsed).active.active .badge,
+.account-menu-register-wrapper > button:not(.collapsed).active:active .badge,
+.account-menu-register-wrapper > button:not(.collapsed).active:focus .badge {
+  color: white;
+  background-color: #d40f0f;
+}
+.account-menu-register-wrapper > button:not(.collapsed):active,
+.account-menu-register-wrapper > button:not(.collapsed):focus {
+  box-shadow: none;
+  outline: none;
+}
+@media only screen and (max-width: 767px) {
+  .account-menu-register-wrapper h3 {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .account-menu-register {
+    padding: 10px 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .account-menu-register {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .account-menu-register {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .account-menu-register {
+    display: block;
+  }
+}
+.modal .modal-dialog {
+  margin-top: 60px;
+}
+@media only screen and (min-width: 1200px) {
+  .modal .modal-dialog {
+    margin-top: 150px;
+  }
+}
+.modal .modal-header {
+  background: #d40f0f;
+  color: white;
+  padding: 10px 15px;
+}
+.modal .modal-header .close {
+  font-size: 30px;
+  color: white;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 body {
   overflow-x: hidden;

@@ -68,6 +68,58 @@ $(document).ready(function() {
         postfix: " m&sup2"
     });
 
+
+
+    $('.footer-most-viewed-list').slick({
+        // setting-name: setting-value
+        autoplay: false,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        mobileFirst: this,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    autoplaySpeed: 2000,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    autoplaySpeed: 2000,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    autoplaySpeed: 2000,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+
+            {
+                breakpoint: 0,
+                settings: {
+                    autoplaySpeed: 2000,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                    // centerMode: true,
+                    // centerPadding: '10px'
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
     $('.partners-list').slick({
         // setting-name: setting-value
         autoplay: true,

@@ -89,6 +89,219 @@
     }
   }
 
+  .footer-most-viewed {
+    .make-md-column(3);
+    .make-sm-column(12);
+    .make-md-column(3);
+    .make-lg-column(3);
+    //.hidden-xs;
+
+    @media @sm {
+      padding-bottom: 15px;
+    }
+
+    .footer-most-viewed-list {
+      //.make-xs-column(12);
+      @media @xs {.text-center;}
+    }
+
+    .footer-most-viewed-item {
+      .make-xs-column(12);
+      .make-sm-column(12);
+      .make-md-column(12);
+      overflow: hidden;
+      position: relative;
+
+      > a {
+        overflow: hidden;
+        display: block;
+      }
+
+      &:hover {
+        //.ad-short-description {
+        //  top: 15px;
+        //  .opacity(1);
+        //}
+      }
+
+      .transitions;
+      padding: 15px;
+
+
+
+      .ad-type {
+        position: absolute;
+        top: 0;
+        left: 0;
+        //background: red;
+        padding: 5px 15px;
+        z-index: 1;
+        font-size: 14px;
+
+
+        &.rent {
+          background: @ad-type-rent-bg;
+          color: @ad-type-rent-color;
+        }
+
+        &.for-sell {
+          background: @ad-type-for-sale-bg;
+          color: @ad-type-for-sale-color;
+        }
+
+      }
+
+      .ad-title {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        z-index: 1;
+        background: transparent;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+          background: rgba(0,0,0,0.5);
+          color: white;
+          margin-bottom: 0;
+        }
+
+        @media @md {
+
+          h4 {
+            margin-bottom: 36px;
+          }
+        }
+
+
+        //position: relative;
+
+        //h4 {
+        //  padding: 15px;
+        //  margin: 0;
+        //  background: @ad-title-bg;
+        //  color: @ad-title-color;
+        //}
+        //
+        //@media @xs {
+        //  left: 0;
+        //  h4 {
+        //    padding: 10px 15px;
+        //    font-size: 14px;
+        //  }
+        //}
+        //
+        //
+        //@media @lg {
+        //  position: absolute;
+        //  bottom: 15px;
+        //  left: 15px;
+        //  right: 15px;
+        //  z-index: 1;
+        //  background: transparent;
+        //
+        //  h4 {
+        //    padding: 10px 15px;
+        //    font-size: 16px;
+        //    background: rgba(0,0,0,0.5);
+        //    color: white;
+        //  }
+        //}
+        //@media @md {
+        //  h4 {
+        //    padding: 10px 15px;
+        //    font-size: 16px;
+        //  }
+        //}
+        //@media @sm {
+        //  h4 {
+        //    padding: 10px 15px;
+        //    font-size: 16px;
+        //  }
+        //}
+      }
+
+      .ad-price {
+
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1;
+
+        h4 {
+          padding: 10px 15px;
+          font-size: 16px;
+          background: rgba(0,0,0,0.5);
+          color: white;
+          margin: 0;
+        }
+
+
+
+
+        //@media @xs {
+        //  position: relative;
+        //  left: 0;
+        //
+        //  h4 {
+        //    background: @ad-price-bg-mobile;
+        //    color: @ad-price-color-mobile;
+        //    padding: 10px 15px;
+        //    font-size: 16px;
+        //  }
+        //}
+
+
+        //@media @lg {
+        //  position: absolute;
+        //  top: 15px;
+        //  right: 15px;
+        //  z-index: 1;
+        //
+        //  h4 {
+        //    padding: 10px 15px;
+        //    font-size: 16px;
+        //    background: rgba(0,0,0,0.5);
+        //    color: white;
+        //  }
+        //}
+        //@media @sm {
+        //  position: absolute;
+        //  bottom: 0;
+        //  right: 0;
+        //  z-index: 1;
+        //
+        //  h4 {
+        //    padding: 10px 15px;
+        //    font-size: 16px;
+        //  }
+        //}
+        @media @md {
+          position: relative;
+          top: 0;
+          right: 0;
+          z-index: 1;
+
+          h4 {
+                background: @ad-price-bg-mobile;
+                color: @ad-price-color-mobile;
+                padding: 10px 15px;
+                font-size: 16px;
+
+            padding: 10px 15px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+
   .footer-social-links {
     .make-xs-column(12);
     .make-sm-column(3);

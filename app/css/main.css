@@ -12914,6 +12914,136 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   color: white;
   font-size: 12px;
 }
+.footer .footer-most-viewed {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .footer .footer-most-viewed {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .footer .footer-most-viewed {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-most-viewed {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-most-viewed {
+    float: left;
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer .footer-most-viewed {
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer .footer-most-viewed .footer-most-viewed-list {
+    text-align: center;
+  }
+}
+.footer .footer-most-viewed .footer-most-viewed-item {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .footer .footer-most-viewed .footer-most-viewed-item {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .footer .footer-most-viewed .footer-most-viewed-item {
+    float: left;
+    width: 100%;
+  }
+}
+.footer .footer-most-viewed .footer-most-viewed-item > a {
+  overflow: hidden;
+  display: block;
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 15px;
+  z-index: 1;
+  font-size: 14px;
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-type.rent {
+  background: #004f14;
+  color: white;
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-type.for-sell {
+  background: #1d4077;
+  color: white;
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  z-index: 1;
+  background: transparent;
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-title h4 {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .footer .footer-most-viewed .footer-most-viewed-item .ad-title h4 {
+    margin-bottom: 36px;
+  }
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-price {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+}
+.footer .footer-most-viewed .footer-most-viewed-item .ad-price h4 {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .footer .footer-most-viewed .footer-most-viewed-item .ad-price {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .footer .footer-most-viewed .footer-most-viewed-item .ad-price h4 {
+    background: lightgrey;
+    color: #202123;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
 .footer .footer-social-links {
   float: left;
   width: 100%;

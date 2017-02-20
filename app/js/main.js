@@ -248,6 +248,34 @@ $(document).ready(function() {
 
 
     $(window).scroll(function() {
+        var help = $(window).height();
+        var help2 = $(window).height();
+
+        var amount = $(window).scrollTop();
+        var amount2 = $('.new').offset().top - help;
+
+        var amountcalc = - amount*0.3 ;
+        var amountcalc2 = - amount2*0.3 ;
+        var amountstring = 'center ' + amountcalc + 'px';
+        var amountstring2 = 'center ' + amountcalc2 + 'px';
+        // console.log(amount);
+        // console.log(amountstring);
+
+        console.log(amount2);
+        // console.log(help);
+
+
+        $('.hero').css('background-position',amountstring);
+
+        // $('.new').css('background-position',amountstring);
+
+        if ($(window).scrollTop()>amount2){
+
+            $('.new').css('background-position',amountstring);
+        }
+        else {
+        }
+
         if ($(window).scrollTop()>100){
             $('.header').removeClass('top');
             $('#main-menu').removeClass('top');

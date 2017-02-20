@@ -85,14 +85,58 @@
                             </select>
                         </div>
                         <div class="form-group form-price">
-                            <label class="control-label" for="main-menu-search-price">Cijena</label>
-                            <input class="" type="text" id="main-menu-search-price" name="price" value="" />
+                            <label class="control-label" for="hero-price">Cijena</label>
+
+                            <div class="wrapper">
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Od</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">KM</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Do</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">KM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
                         </div>
 
                         <div class="form-group form-area">
-                            <label class="control-label" for="main-menu-search-area">Površina</label>
-                            <input class="" type="text" id="main-menu-search-area" name="area" value="" />
+                            <label class="control-label" for="hero-area">Površina</label>
+                            <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
+
+                            <div class="wrapper">
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Od</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">m&sup2;</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Do</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">m&sup2;</span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
+
 
 
                         <div class="form-group form-submit">
@@ -145,67 +189,67 @@
         <div class="wrapper">
 
             <!--IF USER FALSE - login/register -->
-            <!--<div class="account-menu-title">-->
-                <!--<h2>-->
-                    <!--Prijavite se ili napravite novi nalog-->
-                <!--</h2>-->
-                <!--<p>-->
-                    <!--Možete se prijaviti na Vaš postojeći dom.ba nalog sa Vašim korisničkim imenom/lozinkom ili uz pomoć Vašeg facebook naloga-->
-                <!--</p>-->
-                <!--<p>-->
-                    <!--Novi ste ovdje? Onda <u>besplatno</u> možete napraviti Vaš dom.ba nalog uz pomoć Vaše email adrese ili facebook naloga.-->
-                <!--</p>-->
-            <!--</div>-->
+            <div class="account-menu-title">
+                <h2>
+                    Prijavite se ili napravite novi nalog
+                </h2>
+                <p>
+                    Možete se prijaviti na Vaš postojeći dom.ba nalog sa Vašim korisničkim imenom/lozinkom ili uz pomoć Vašeg facebook naloga
+                </p>
+                <p>
+                    Novi ste ovdje? Onda <u>besplatno</u> možete napraviti Vaš dom.ba nalog uz pomoć Vaše email adrese ili facebook naloga.
+                </p>
+            </div>
 
-            <!--<div class="account-menu-login-wrapper">-->
-                <!--<button class="collapsed" type="button" data-toggle="collapse" data-target="#account-menu-login" aria-expanded="false" aria-controls="collapseExample">-->
-                    <!--Prijavite se-->
-                    <!--<span class="fa fa-sign-in"></span>-->
-                <!--</button>-->
-                <!--<h3>Prijavite se</h3>-->
-                <!--<div class="account-menu-login collapse" id="account-menu-login">-->
-                    <!--<form>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="sr-only" for="login-email">Vaša e-mail adresa</label>-->
-                            <!--<input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">-->
-                        <!--</div>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="sr-only" for="login-password">Vaša lozinka</label>-->
-                            <!--<input type="password" class="form-control" id="login-password" placeholder="Lozinka">-->
-                        <!--</div>-->
+            <div class="account-menu-login-wrapper">
+                <button class="collapsed" type="button" data-toggle="collapse" data-target="#account-menu-login" aria-expanded="false" aria-controls="collapseExample">
+                    Prijavite se
+                    <span class="fa fa-sign-in"></span>
+                </button>
+                <h3>Prijavite se</h3>
+                <div class="account-menu-login collapse" id="account-menu-login">
+                    <form>
+                        <div class="form-group">
+                            <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
+                            <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="login-password">Vaša lozinka</label>
+                            <input type="password" class="form-control" id="login-password" placeholder="Lozinka">
+                        </div>
                         <!--<div class="checkbox">-->
                             <!--<label>-->
                                 <!--<input type="checkbox"> Zapamtite me-->
                             <!--</label>-->
                         <!--</div>-->
 
-                        <!--<div class="form-group form-submit">-->
-                            <!--<a class="btn" href="#">Zaboravili ste Vašu lozinku?</a>-->
-                            <!--<button type="submit" class="btn btn-login btn-invert">Prijavi se</button>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                    <!--<button class="btn btn-block btn-fb" onclick="loginWithFacebook()">-->
-                        <!--<i class="fa fa-facebook-official" aria-hidden="true"></i>-->
-                        <!--Prijavite se pomoću Facebook-a-->
-                    <!--</button>-->
-                <!--</div>-->
+                        <div class="form-group form-submit">
+                            <a class="btn" href="#">Zaboravili ste Vašu lozinku?</a>
+                            <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
+                        </div>
+                    </form>
+                    <button class="btn btn-block btn-fb" onclick="loginWithFacebook()">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        Prijavite se pomoću Facebook-a
+                    </button>
+                </div>
 
-            <!--</div>-->
+            </div>
 
-            <!--<div class="account-menu-register-wrapper">-->
-                <!--<h3>-->
-                    <!--Napravite novi nalog-->
-                <!--</h3>-->
-                <!--<button class="btn btn-invert btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#account-menu-register" aria-expanded="false" aria-controls="collapseExample">-->
-                    <!--Pretraga nekretnina-->
-                    <!--<span class="fa fa-user-plus"></span>-->
-                <!--</button>-->
-                <!--<div class="account-menu-register collapse" id="account-menu-register">-->
-                    <!--<form>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="sr-only" for="register-username">Vaše korisničko ime</label>-->
-                            <!--<input type="text" class="form-control" id="register-username" placeholder="Korisničko ime">-->
-                        <!--</div>-->
+            <div class="account-menu-register-wrapper">
+                <h3>
+                    Napravite novi nalog
+                </h3>
+                <button class="btn btn-invert btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#account-menu-register" aria-expanded="false" aria-controls="collapseExample">
+                    Pretraga nekretnina
+                    <span class="fa fa-user-plus"></span>
+                </button>
+                <div class="account-menu-register collapse" id="account-menu-register">
+                    <form>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-username">Vaše korisničko ime</label>
+                            <input type="text" class="form-control" id="register-username" placeholder="Korisničko ime">
+                        </div>
                         <!--<div class="form-group user-type">-->
                             <!--<label class="control-label sr-only" for="user-type">Vrsta naloga</label>-->
                             <!--<select id="user-type" class="form-control">-->
@@ -216,30 +260,30 @@
                                 <!--<option>Banka</option>-->
                             <!--</select>-->
                         <!--</div>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="sr-only" for="register-email">Vaša e-mail adresa</label>-->
-                            <!--<input type="email" class="form-control" id="register-email" placeholder="E-mail adresa">-->
-                        <!--</div>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="sr-only" for="register-password">Vaša lozinka</label>-->
-                            <!--<input type="password" class="form-control" id="register-password" placeholder="Lozinka">-->
-                        <!--</div>-->
-                        <!--<div class="form-group">-->
-                            <!--<label class="sr-only" for="register-password-check">Potvrda lozinke</label>-->
-                            <!--<input type="password" class="form-control" id="register-password-check" placeholder="Potvrda lozinke">-->
-                        <!--</div>-->
+                        <div class="form-group">
+                            <label class="sr-only" for="register-email">Vaša e-mail adresa</label>
+                            <input type="email" class="form-control" id="register-email" placeholder="E-mail adresa">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-password">Vaša lozinka</label>
+                            <input type="password" class="form-control" id="register-password" placeholder="Lozinka">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="register-password-check">Potvrda lozinke</label>
+                            <input type="password" class="form-control" id="register-password-check" placeholder="Potvrda lozinke">
+                        </div>
 
-                        <!--<div class="form-group form-submit">-->
-                            <!--<button type="submit" class="btn btn-login btn-invert">Prijavi se</button>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                    <!--<button class="btn btn-block btn-fb" onclick="loginWithFacebook()">-->
-                        <!--<i class="fa fa-facebook-official" aria-hidden="true"></i>-->
-                        <!--Registruj se pomoću Facebook-a-->
-                    <!--</button>-->
-                <!--</div>-->
+                        <div class="form-group form-submit">
+                            <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
+                        </div>
+                    </form>
+                    <button class="btn btn-block btn-fb" onclick="loginWithFacebook()">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        Registruj se pomoću Facebook-a
+                    </button>
+                </div>
 
-            <!--</div>-->
+            </div>
 
             <!--IF USER TRUE - login/register -->
             <div class="account-menu-title">
@@ -355,13 +399,43 @@
                 <span class="opened text animated fadeOut">Zatvori</span>
 
                 <!-- IF user logged in -->
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span class="closed text animated fadeInDown">Moj nalog</span>
+                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
+                <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
 
-                 <!--IF user NOT logged in -->
+                <!--IF user NOT logged in -->
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                <span class="closed text animated fadeInDown">Prijavi se</span>
+            </button>
+
+            <button id="sad-menu-toggle" type="button" class="header-btn" aria-expanded="false">
+                <span class="sr-only">Toggle login/register</span>
+                <span class="icon-bar icon-bar-1"></span>
+                <span class="icon-bar icon-bar-2"></span>
+                <!--<span class="opened text animated fadeOut">Zatvori</span>-->
+
+                <!-- IF user logged in -->
+                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                <span class="closed text animated fadeInDown">Mi tražimo za vas</span>
+
+                <!--IF user NOT logged in -->
                 <!--<i class="fa fa-sign-in" aria-hidden="true"></i>-->
                 <!--<span class="closed text animated fadeInDown">Prijavi se</span>-->
             </button>
+            <button id="menu-toggle" type="button" class="header-btn" aria-expanded="false">
+                <span class="sr-only">Toggle login/register</span>
+                <span class="icon-bar icon-bar-1"></span>
+                <span class="icon-bar icon-bar-2"></span>
+                <!--<span class="opened text animated fadeOut">Zatvori</span>-->
+
+                <!-- IF user logged in -->
+                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
+                <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
+
+                <!--IF user NOT logged in -->
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <span class="closed text animated fadeInDown">Objavi</span>
+            </button>
+
         </div>
 
     </div>
@@ -468,14 +542,55 @@
                         </div>
                         <div class="form-group form-price">
                             <label class="control-label" for="hero-price">Cijena</label>
-                            <input class="" type="text" id="hero-price" name="price" value="" />
+
+                            <div class="wrapper">
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Od</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">KM</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Do</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">KM</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
                         </div>
 
                         <div class="form-group form-area">
                             <label class="control-label" for="hero-area">Površina</label>
-                            <input class="" type="text" id="hero-area" name="area" value="" />
-                        </div>
+                            <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
 
+                            <div class="wrapper">
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Od</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">m&sup2;</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-xs-12 col-sm-6">
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="basic-addon1">Do</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <span class="input-group-addon" id="basic-addon2">m&sup2;</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
 
                         <div class="form-group form-submit">
                             <button type="submit" class="btn search-btn btn-search">Pretraži</button>

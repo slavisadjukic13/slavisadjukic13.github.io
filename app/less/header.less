@@ -13,11 +13,11 @@
   .left-side {.make-xs-column(3);}
 
   .right-side {
-    .make-xs-column(12);
+    .make-xs-column(7);
     .make-sm-column(8);
     .pull-right;
     @media @xs {
-      .pull-left;
+      //.pull-left;
     }
   }
 
@@ -91,8 +91,10 @@
   margin-right: 15px;
 
   @media @xs {
-    //width: 40px;
-    .pull-left;
+    width: 40px;
+    //.pull-left;
+
+
   }
 
   &.active {
@@ -175,7 +177,7 @@
     //left: 50px;
 
     @media @xs {
-      //display: none;
+      display: none;
     }
 
   }

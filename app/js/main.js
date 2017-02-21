@@ -30,49 +30,64 @@ $(document).ready(function() {
 
     });
 
+    $('#wsfy-menu-toggle').on('click', function () {
+        $('#wsfy-menu-toggle').toggleClass('active');
+        $('#wsfy-menu-toggle .icon-bar').toggleClass('rotated');
+        $('#wsfy-menu').toggleClass('slideOutUp');
+        $('#wsfy-menu').toggleClass('slideInDown');
+
+        $('.header #wsfy-menu-toggle .opened').toggleClass('fadeInDown').toggleClass('fadeOut');
+        $('.header #wsfy-menu-toggle .closed').toggleClass('fadeInDown').toggleClass('fadeOut');
+
+
+        // $('#account-menu .main-menu-search-area').toggleClass('fadeInDown');
+        // $('#account-menu .links-area').toggleClass('fadeInRight');
+
+    });
+
     $('.cta-message').removeClass('fadeOut').addClass('fadeInLeft');
     $('.cta-btn').removeClass('fadeOut').addClass('fadeInRight');
     //cta-message
 
-    $("#hero-price").ionRangeSlider({
-        type: "double",
-        min: 100,
-        max: 500000,
-        from: 25000,
-        to: 240000,
-        postfix: " KM"
-    });
-    $("#hero-area").ionRangeSlider({
-        type: "double",
-        min: 20,
-        max: 1000,
-        from: 20,
-        to: 500,
-        postfix: " m&sup2"
-    });
-
-    $("#main-menu-search-price").ionRangeSlider({
-        type: "double",
-        min: 100,
-        max: 500000,
-        from: 25000,
-        to: 240000,
-        postfix: " KM"
-    });
-    $("#main-menu-search-area").ionRangeSlider({
-        type: "double",
-        min: 20,
-        max: 1000,
-        from: 20,
-        to: 500,
-        postfix: " m&sup2"
-    });
+    // $("#hero-price").ionRangeSlider({
+    //     type: "double",
+    //     min: 100,
+    //     max: 500000,
+    //     from: 25000,
+    //     to: 240000,
+    //     postfix: " KM"
+    // });
+    // $("#hero-area").ionRangeSlider({
+    //     type: "double",
+    //     min: 20,
+    //     max: 1000,
+    //     from: 20,
+    //     to: 500,
+    //     postfix: " m&sup2"
+    // });
+    //
+    // $("#main-menu-search-price").ionRangeSlider({
+    //     type: "double",
+    //     min: 100,
+    //     max: 500000,
+    //     from: 25000,
+    //     to: 240000,
+    //     postfix: " KM"
+    // });
+    // $("#main-menu-search-area").ionRangeSlider({
+    //     type: "double",
+    //     min: 20,
+    //     max: 1000,
+    //     from: 20,
+    //     to: 500,
+    //     postfix: " m&sup2"
+    // });
 
 
 
     $('.footer-most-viewed-list').slick({
         // setting-name: setting-value
-        autoplay: false,
+        autoplay: true,
         arrows: false,
         dots: false,
         infinite: true,
@@ -224,8 +239,6 @@ $(document).ready(function() {
             }
         ]
     });
-
-
 
     $('#hero-search-area').on('show.bs.collapse', function () {
 

@@ -13836,8 +13836,8 @@ fieldset[disabled] a.footer .footer-contact-links ul a {
   left: 15px;
   right: 15px;
   padding: 25px 15px 15px 15px;
-  background: white;
-  color: black;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 @media only screen and (min-width: 1200px) {
   .new-list-item.grid .ad-short-description {

@@ -81,6 +81,11 @@
         color: @ad-type-for-sale-color;
       }
 
+      &.demand {
+        background: @ad-type-demand-bg;
+        color: @ad-type-demand-color;
+      }
+
     }
 
     .ad-title {
@@ -194,6 +199,31 @@
 
     .ad-price {
       position: relative;
+
+      &.urgent {
+        h4 {
+          background: @primary-color;
+          color: white;
+
+          .fa {
+            margin-right: 10px;
+            //font-size: 20px;
+          }
+        }
+      }
+
+      &.urgent2 {
+        border: 3px solid @brand-primary;
+        h4 {
+          //background: @primary-color;
+          color: @brand-primary;
+
+          .fa {
+            margin-right: 10px;
+            //font-size: 20px;
+          }
+        }
+      }
 
       h4 {
         padding: 15px;

@@ -401,8 +401,32 @@
                 <div class="account-menu-register collapse" id="account-menu-register">
                     <form>
                         <div class="form-group">
-                            <label class="sr-only" for="register-username">Vaše korisničko ime</label>
-                            <input type="text" class="form-control" id="register-username" placeholder="Korisničko ime">
+                            <div class="input-group">
+                                <label class="sr-only" for="register-username">Vaše korisničko ime</label>
+                                <input type="text" class="form-control" id="register-username" placeholder="Korisničko ime">
+                                <span class="input-group-btn">
+                                    <!--<button class="btn btn-default" type="button" data-toggle="modal" data-target="#nickname-modal"><i class="fa fa-info-circle" aria-hidden="true"></i></button>-->
+                                    <!--<a tabindex="0" class="btn btn-default" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="-->
+                                        <!--Korisničko ime je vaša identifikacija na sajtu i prikazuje se:-->
+                                        <!--kao dio kontakt podataka,-->
+                                        <!--kod komunikacije sa drugim korisnicima,-->
+                                        <!--iznad liste sa vašim oglasima">-->
+                                        <!--<i class="fa fa-info-circle" aria-hidden="true"></i>-->
+                                    <!--</a>-->
+
+                                    <button class="btn btn-default" type="button" data-container="body" data-toggle="popover" data-placement="left" data-content="
+                                        Korisničko ime je vaša identifikacija na sajtu i prikazuje se:
+                                        kao dio kontakt podataka,
+                                        kod komunikacije sa drugim korisnicima,
+                                        iznad liste sa vašim oglasima.
+                                        Ne treba da sadrži povjerljive podatke ili neprimjerene izraze!">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!--<button type="button" class="helper-question-i" data-toggle="modal" data-target="#nickname-modal" data-whatever="@mdo"><i class="fa fa-info-circle" aria-hidden="true"></i></button>-->
+                            <!--<a class="helper-question" href="">Zašto je korisničko ime važno?</a>-->
+                            <!--<a class="helper-question-i" href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>-->
                         </div>
                         <!--<div class="form-group user-type">-->
                         <!--<label class="control-label sr-only" for="user-type">Vrsta naloga</label>-->
@@ -665,7 +689,7 @@
                 <div class="collapse form-holder wrapper" id="hero-search-area">
                     <form>
                         <div class="form-group form-ad-type">
-                            <label class="control-label" for="ad-type">Vrsta oglasa</label>
+                            <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
                             <select id="ad-type" class="form-control">
                                 <option>Izaberite vrstu oglasa</option>
                                 <option>2</option>
@@ -675,7 +699,7 @@
                             </select>
                         </div>
                         <div class="form-group form-object-type">
-                            <label class="control-label" for="object-type">Vrsta objekta</label>
+                            <label class="control-label sr-only" for="object-type">Vrsta objekta</label>
                             <select id="object-type" class="form-control">
                                 <option>Izaberite vrstu objekta</option>
                                 <option>2</option>
@@ -685,7 +709,7 @@
                             </select>
                         </div>
                         <div class="form-group form-city">
-                            <label class="control-label" for="city">Grad</label>
+                            <label class="control-label sr-only" for="city">Grad</label>
                             <select id="city" class="form-control">
                                 <option>Izaberite grad</option>
                                 <option>2</option>
@@ -694,53 +718,53 @@
                                 <option>5</option>
                             </select>
                         </div>
-                        <div class="form-group form-price">
-                            <label class="control-label" for="hero-price">Cijena</label>
+                        <div class="form-price">
+                            <label class="control-label sr-only" for="hero-price">Cijena</label>
 
                             <div class="wrapper">
-                                <div class="form-group col-xs-12 col-sm-6">
+                                <div class="form-group form-price-from">
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">Od</span>
-                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
-                                        <span class="input-group-addon" id="basic-addon2">KM</span>
-                                    </div>
+                                    <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
+                                        <input type="number" class="form-control" placeholder="Cijena od" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
+                                    <!--</div>-->
                                 </div>
 
-                                <div class="form-group col-xs-12 col-sm-6">
+                                <div class="form-group form-price-to">
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">Do</span>
-                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
-                                        <span class="input-group-addon" id="basic-addon2">KM</span>
-                                    </div>
+                                    <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
+                                        <input type="number" class="form-control" placeholder="Cijena do" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
+                                    <!--</div>-->
                                 </div>
                             </div>
 
                             <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
                         </div>
 
-                        <div class="form-group form-area">
-                            <label class="control-label" for="hero-area">Površina</label>
+                        <div class="form-area">
+                            <label class="control-label sr-only" for="hero-area">Površina</label>
                             <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
 
                             <div class="wrapper">
-                                <div class="form-group col-xs-12 col-sm-6">
+                                <div class="form-group form-area-from">
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">Od</span>
-                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
-                                        <span class="input-group-addon" id="basic-addon2">m&sup2;</span>
-                                    </div>
+                                    <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
+                                        <input type="number" class="form-control" placeholder="Površina od" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
+                                    <!--</div>-->
                                 </div>
 
-                                <div class="form-group col-xs-12 col-sm-6">
+                                <div class="form-group form-area-to">
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon" id="basic-addon1">Do</span>
-                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
-                                        <span class="input-group-addon" id="basic-addon2">m&sup2;</span>
-                                    </div>
+                                    <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
+                                        <input type="number" class="form-control" placeholder="Površina do" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
+                                    <!--</div>-->
                                 </div>
                             </div>
 
@@ -885,7 +909,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -913,7 +937,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -941,7 +965,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -969,7 +993,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -997,7 +1021,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -1052,8 +1076,8 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <!--<span class="ad-type rent">Izdaje se</span>-->
-                        <span class="ad-type for-sell">Prodaje se</span>
+                        <!--<span class="ad-type rent">Izdavanje</span>-->
+                        <span class="ad-type for-sell">Prodaja</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -1081,7 +1105,63 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price urgent2"><h4><i class="fa fa-bolt" aria-hidden="true"></i>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type demand">Potražnja</span>
+                        <div class="ad-details">
+                            <div class="wrapper">
+                                <div class="ad-location">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Omarska, Prijedor
+                                </div>
+                                <div class="ad-surface">
+                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                    130 m&sup2;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-price urgent"><h4><i class="fa fa-bolt" aria-hidden="true"></i>234,000.00 KM</h4></div>
+                        <div class="ad-short-description">
+                            <p>
+                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="new-list-item grid">
+                    <a href="#">
+                        <div class="add-image">
+                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
+                        </div>
+                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -1109,7 +1189,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -1137,63 +1217,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <div class="ad-details">
                             <div class="wrapper">
                                 <div class="ad-location">
@@ -1342,7 +1366,7 @@
                                 <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                             </div>
                             <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdaje se</span>
+                            <span class="ad-type rent">Izdavanje</span>
                             <!--<div class="ad-details">-->
                             <!--<div class="wrapper">-->
                             <!--<div class="ad-location">-->
@@ -1369,7 +1393,7 @@
                                 <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                             </div>
                             <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdaje se</span>
+                            <span class="ad-type rent">Izdavanje</span>
                             <!--<div class="ad-details">-->
                             <!--<div class="wrapper">-->
                             <!--<div class="ad-location">-->
@@ -1396,7 +1420,7 @@
                                 <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                             </div>
                             <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdaje se</span>
+                            <span class="ad-type rent">Izdavanje</span>
                             <!--<div class="ad-details">-->
                             <!--<div class="wrapper">-->
                             <!--<div class="ad-location">-->
@@ -1423,7 +1447,7 @@
                                 <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                             </div>
                             <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdaje se</span>
+                            <span class="ad-type rent">Izdavanje</span>
                             <!--<div class="ad-details">-->
                             <!--<div class="wrapper">-->
                             <!--<div class="ad-location">-->
@@ -1449,7 +1473,7 @@
                             <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
                         </div>
                         <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdaje se</span>
+                        <span class="ad-type rent">Izdavanje</span>
                         <!--<div class="ad-details">-->
                         <!--<div class="wrapper">-->
                         <!--<div class="ad-location">-->
@@ -1512,6 +1536,28 @@
 </footer>
 
 <!--    Not logged-in modal
+        section variables: less/my-variables.less
+        variables prefix: @modal-
+        section style: less/modal.less
+-->
+<div class="modal fade" id="nickname-modal" tabindex="-1" role="dialog" aria-labelledby="nickname-modal-label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="nickname-modal-label">Pojašnjenje</h4>
+            </div>
+            <div class="modal-body">
+                Poštovani, morate biti registrovani korisnik da bi objavili oglas.
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn-login account-menu-toggle">Prijavite se</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    Nickname modal
         section variables: less/my-variables.less
         variables prefix: @modal-
         section style: less/modal.less

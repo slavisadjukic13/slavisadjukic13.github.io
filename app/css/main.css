@@ -6015,7 +6015,7 @@ button.close {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1060;
+  z-index: 10060;
   display: none;
   max-width: 276px;
   padding: 1px;
@@ -12561,6 +12561,24 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
     width: 100%;
   }
 }
+.hero .form-price-from {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-right: 5px;
+}
+.hero .form-price-to {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 5px;
+}
 .hero .form-area {
   float: left;
   width: 100%;
@@ -12586,6 +12604,24 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
     float: left;
     width: 100%;
   }
+}
+.hero .form-area-from {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-right: 5px;
+}
+.hero .form-area-to {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 5px;
 }
 .hero .form-submit {
   float: left;
@@ -13769,6 +13805,10 @@ fieldset[disabled] a.footer .footer-contact-links ul a {
   background: #1d4077;
   color: white;
 }
+.new-list-item.grid .ad-type.demand {
+  background: #9e4901;
+  color: white;
+}
 .new-list-item.grid .ad-title {
   position: relative;
 }
@@ -13879,6 +13919,22 @@ fieldset[disabled] a.footer .footer-contact-links ul a {
 }
 .new-list-item.grid .ad-price {
   position: relative;
+}
+.new-list-item.grid .ad-price.urgent h4 {
+  background: #d40f0f;
+  color: white;
+}
+.new-list-item.grid .ad-price.urgent h4 .fa {
+  margin-right: 10px;
+}
+.new-list-item.grid .ad-price.urgent2 {
+  border: 3px solid #d40f0f;
+}
+.new-list-item.grid .ad-price.urgent2 h4 {
+  color: #d40f0f;
+}
+.new-list-item.grid .ad-price.urgent2 h4 .fa {
+  margin-right: 10px;
 }
 .new-list-item.grid .ad-price h4 {
   padding: 15px;
@@ -15634,6 +15690,28 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
     display: block;
   }
 }
+.account-menu-register .helper-question {
+  display: inline-block;
+  margin-top: 5px;
+  color: white;
+}
+.account-menu-register .form-group {
+  position: relative;
+}
+.account-menu-register .form-group .input-group-btn {
+  height: 36px;
+  border: 0;
+}
+.account-menu-register .form-group .input-group-btn .btn-default {
+  border: 1px solid #ccc;
+  color: #d40f0f;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.account-menu-register .form-group .input-group-btn .btn-default i {
+  line-height: 34px;
+  font-size: 24px;
+}
 .account-menu-links {
   position: relative;
   float: left;
@@ -15692,6 +15770,9 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   .account-menu-link .fa {
     margin-left: 10px;
   }
+}
+.modal {
+  z-index: 1600;
 }
 .modal .modal-dialog {
   margin-top: 80px;

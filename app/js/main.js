@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+
     $('.nav-toggle').on('click', function () {
         $(this).toggleClass('active');
         $('.nav-toggle .icon-bar').toggleClass('rotated');

@@ -5,7 +5,7 @@ $(document).ready(function() {
     });
 
     $("#e1").select2({
-        placeholder: "Select a State"
+        placeholder: "Unesite parametre pretrage, npr. Sarajevo, stan, prodaja"
         // minimumInputLength: 2
     });
 

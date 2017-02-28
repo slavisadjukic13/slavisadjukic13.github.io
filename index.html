@@ -688,7 +688,7 @@
                     <form>
                         <div class="form-group form-ad-type">
                             <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
-                            <select id="ad-type" class="form-control">
+                            <select id="ad-type" name="ad-type" class="form-control">
                                 <option>Izaberite vrstu oglasa</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -779,6 +779,31 @@
                 <a href="#" target="_blank">
                     <img src="img/main-banner.jpeg" alt="">
                 </a>
+            </div>
+
+            <div class="hero-new-search">
+                <form action="">
+                    <select name="fullsearch" class="form-control" id="e1" multiple="multiple">
+                        <optgroup label="Tip Oglasa">
+                            <option value="sell">Prodaja</option>
+                            <option value="rent">Izdavanje</option>
+                            <option value="search">Potražnja</option>
+                        </optgroup>
+                        <optgroup label="Vrsta nekretnine">
+                            <option value="sell">Kuća</option>
+                            <option value="rent">Stan</option>
+                            <option value="search">Poslovni prostor</option>
+                        </optgroup>
+                        <optgroup label="Lokacija">
+                            <option value="sell">Banja Luka</option>
+                            <option value="rent">Prijedor</option>
+                            <option value="search">Sarajevo</option>
+                        </optgroup>
+                    </select>
+                    <button type="submit" class="btn btn-primary">
+                        pretraži
+                    </button>
+                </form>
             </div>
         </div>
     </div>

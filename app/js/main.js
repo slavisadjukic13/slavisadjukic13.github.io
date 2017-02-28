@@ -4,6 +4,11 @@ $(document).ready(function() {
         $('[data-toggle="popover"]').popover()
     });
 
+    $("#e1").select2({
+        placeholder: "Select a State"
+        // minimumInputLength: 2
+    });
+
     $('.nav-toggle').on('click', function () {
         $(this).toggleClass('active');
         $('.nav-toggle .icon-bar').toggleClass('rotated');

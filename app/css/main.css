@@ -7418,6 +7418,9 @@ button.close {
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb;
 }
+.select2-container--default .select2-selection--multiple {
+  border-radius: 0;
+}
 .transitions,
 .header-btn,
 .header-btn .icon-bar,
@@ -16428,7 +16431,7 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
 #wsfy-menu.top {
   padding-top: 60px;
 }
-.account-menu-title {
+.wsfy-menu-title {
   color: white;
   position: relative;
   float: left;
@@ -16439,9 +16442,17 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   text-align: center;
 }
 @media only screen and (max-width: 767px) {
-  .account-menu-title h2 {
+  .wsfy-menu-title h2 {
     font-size: 26px;
   }
+}
+.wsfy-menu-form {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
 }
 .account-menu-login-wrapper {
   float: left;

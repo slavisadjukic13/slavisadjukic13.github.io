@@ -4,8 +4,38 @@ $(document).ready(function() {
         $('[data-toggle="popover"]').popover()
     });
 
-    $("#e1").select2({
-        placeholder: "Unesite parametre pretrage, npr. Sarajevo, stan, prodaja"
+    // $("#e1").select2({
+    //     placeholder: "Unesite parametre pretrage, npr. Sarajevo, stan, prodaja"
+    //     // minimumInputLength: 2
+    // });
+
+    $(".hero #location").select2({
+        placeholder: "Lokacija"
+        // minimumInputLength: 2
+    });
+
+    $(".hero #object-type").select2({
+        placeholder: "Vrsta objekta"
+        // minimumInputLength: 2
+    });
+
+    $(".hero #ad-type").select2({
+        placeholder: "Vrsta oglasa"
+        // minimumInputLength: 2
+    });
+
+    $("#wsfy-menu #location").select2({
+        placeholder: "Lokacija"
+        // minimumInputLength: 2
+    });
+
+    $("#wsfy-menu #object-type").select2({
+        placeholder: "Vrsta objekta"
+        // minimumInputLength: 2
+    });
+
+    $("#wsfy-menu #ad-type").select2({
+        placeholder: "Vrsta oglasa"
         // minimumInputLength: 2
     });
 
@@ -309,4 +339,6 @@ $(document).ready(function() {
             $('.logo').removeClass('fadeInDown').addClass('fadeOutUp');
         }
     });
+
+    $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 });

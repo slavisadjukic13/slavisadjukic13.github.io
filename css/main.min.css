@@ -14291,6 +14291,32 @@ fieldset[disabled] a.footer .footer-contact-links ul a {
   padding-left: 15px;
   padding-right: 15px;
 }
+.small-ad {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .small-ad {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .small-ad {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .small-ad {
+    float: left;
+    width: 33.33333333%;
+  }
+}
 .new-list-item {
   overflow: hidden;
   position: relative;
@@ -16431,6 +16457,198 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
 #wsfy-menu.top {
   padding-top: 60px;
 }
+#wsfy-menu .form-ad-type {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #wsfy-menu .form-ad-type {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  #wsfy-menu .form-ad-type {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #wsfy-menu .form-ad-type {
+    float: left;
+    width: 100%;
+  }
+}
+#wsfy-menu .form-object-type {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #wsfy-menu .form-object-type {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  #wsfy-menu .form-object-type {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #wsfy-menu .form-object-type {
+    float: left;
+    width: 100%;
+  }
+}
+#wsfy-menu .form-city {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #wsfy-menu .form-city {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  #wsfy-menu .form-city {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #wsfy-menu .form-city {
+    float: left;
+    width: 100%;
+  }
+}
+#wsfy-menu .form-price {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #wsfy-menu .form-price {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #wsfy-menu .form-price {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #wsfy-menu .form-price {
+    float: left;
+    width: 100%;
+  }
+}
+#wsfy-menu .form-price-from {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-right: 5px;
+}
+#wsfy-menu .form-price-to {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 5px;
+}
+#wsfy-menu .form-area {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #wsfy-menu .form-area {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #wsfy-menu .form-area {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #wsfy-menu .form-area {
+    float: left;
+    width: 100%;
+  }
+}
+#wsfy-menu .form-area-from {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-right: 5px;
+}
+#wsfy-menu .form-area-to {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 5px;
+}
+#wsfy-menu .form-submit {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #wsfy-menu .form-submit {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #wsfy-menu .form-submit {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #wsfy-menu .form-submit {
+    float: left;
+    width: 100%;
+  }
+}
 .wsfy-menu-title {
   color: white;
   position: relative;
@@ -16453,6 +16671,56 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
+}
+.wsfy-menu-contact-form {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .wsfy-menu-contact-form {
+    float: left;
+    width: 50%;
+  }
+}
+.wsfy-menu-search-form {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .wsfy-menu-search-form {
+    float: left;
+    width: 50%;
+  }
+}
+.wsfy-menu-deta-form {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .wsfy-menu-deta-form {
+    float: left;
+    width: 50%;
+  }
+}
+.wsfy-menu-subtitle {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .account-menu-login-wrapper {
   float: left;

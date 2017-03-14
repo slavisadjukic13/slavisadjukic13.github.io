@@ -201,111 +201,151 @@
 
             <div class="wsfy-menu-form">
                 <form>
-                    <div class="form-group form-ad-type">
-                        <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
-                        <select id="ad-type" name="ad-type" class="form-control" multiple="multiple">
-                            <option>Prodaja</option>
-                            <option>Izdavanje</option>
-                            <option>Potražnja</option>
-                        </select>
-                    </div>
-                    <div class="form-group form-object-type">
-                        <label class="control-label sr-only" for="object-type">Vrsta objekta</label>
-                        <select id="object-type" class="form-control" multiple="multiple">
-                            <option>Stan</option>
-                            <option>Kuća</option>
-                            <option>Poslovni prostor</option>
-                        </select>
-                    </div>
-                    <div class="form-group form-city">
-                        <label class="control-label sr-only" for="location">Grad</label>
-                        <select id="location" class="form-control" multiple="multiple">
-                            <optgroup label="Republika Srpska">
-                                <option value='14'>Banjalučka</option>
-                                <option value='15'>Dobojsko-Bijeljinska</option>
-                                <option value='16'>Sarajevsko-Zvornička</option>
-                                <option value='17'>Trebinjsko-Fočanska</option>
-                            </optgroup>
-                            <optgroup label="Federacija BIH">
-                                <option value='9'>Sarajevo</option>
-                                <option value='1'>Unsko-sanski</option>
-                                <option value='2'>Posavski</option>
-                                <option value='3'>Tuzlanski</option>
-                                <option value='4'>Zeničko-dobojski</option>
-                                <option value='5'>Bosansko-podrinjski</option>
-                                <option value='6'>Srednjobosanski</option>
-                                <option value='7'>Hercegovačko-neretvanski</option>
-                                <option value='8'>Zapadno-hercegovački</option>
-                                <option value='10'>Livanjski</option>
-                            </optgroup>
-                            <option value='12'  >Distrikt Brčko</option>
-                        </select>
-                    </div>
-                    <div class="form-price">
-                        <label class="control-label sr-only" for="hero-price">Cijena</label>
 
-                        <div class="wrapper">
-                            <div class="form-group form-price-from">
-
-                                <!--<div class="input-group">-->
-                                <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
-                                <input type="number" class="form-control" placeholder="Cijena od" aria-describedby="basic-addon2">
-                                <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
-                                <!--</div>-->
+                    <div class="wrapper">
+                        <div class="wsfy-menu-contact-form">
+                            <div class="wsfy-menu-subtitle">
+                                <h3>
+                                    Kontakt informacije:
+                                </h3>
                             </div>
 
-                            <div class="form-group form-price-to">
-
-                                <!--<div class="input-group">-->
-                                <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
-                                <input type="number" class="form-control" placeholder="Cijena do" aria-describedby="basic-addon2">
-                                <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
-                                <!--</div>-->
+                            <div class="form-group">
+                                <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
+                                <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
                             </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="login-password">Vaša lozinka</label>
+                                <input type="password" class="form-control" id="login-password" placeholder="Lozinka">
+                            </div>
+
+
                         </div>
 
-                        <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
-                    </div>
-                    <div class="form-area">
-                        <label class="control-label sr-only" for="hero-area">Površina</label>
-                        <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
 
-                        <div class="wrapper">
-                            <div class="form-group form-area-from">
+                        <div class="wsfy-menu-search-form">
+                            <div class="wsfy-menu-subtitle">
+                                <h3>
+                                    Parametri pretrage:
+                                </h3>
+                            </div>
+                            <div class="form-group form-ad-type">
+                                <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
+                                <select id="ad-type" name="ad-type" class="form-control" multiple="multiple">
+                                    <option>Prodaja</option>
+                                    <option>Izdavanje</option>
+                                    <option>Potražnja</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-object-type">
+                                <label class="control-label sr-only" for="object-type">Vrsta objekta</label>
+                                <select id="object-type" class="form-control" multiple="multiple">
+                                    <option>Stan</option>
+                                    <option>Kuća</option>
+                                    <option>Poslovni prostor</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-city">
+                                <label class="control-label sr-only" for="location">Grad</label>
+                                <select id="location" class="form-control" multiple="multiple">
+                                    <optgroup label="Republika Srpska">
+                                        <option value='14'>Banjalučka</option>
+                                        <option value='15'>Dobojsko-Bijeljinska</option>
+                                        <option value='16'>Sarajevsko-Zvornička</option>
+                                        <option value='17'>Trebinjsko-Fočanska</option>
+                                    </optgroup>
+                                    <optgroup label="Federacija BIH">
+                                        <option value='9'>Sarajevo</option>
+                                        <option value='1'>Unsko-sanski</option>
+                                        <option value='2'>Posavski</option>
+                                        <option value='3'>Tuzlanski</option>
+                                        <option value='4'>Zeničko-dobojski</option>
+                                        <option value='5'>Bosansko-podrinjski</option>
+                                        <option value='6'>Srednjobosanski</option>
+                                        <option value='7'>Hercegovačko-neretvanski</option>
+                                        <option value='8'>Zapadno-hercegovački</option>
+                                        <option value='10'>Livanjski</option>
+                                    </optgroup>
+                                    <option value='12'  >Distrikt Brčko</option>
+                                </select>
+                            </div>
+                            <div class="form-price">
+                                <label class="control-label sr-only" for="hero-price">Cijena</label>
 
-                                <!--<div class="input-group">-->
-                                <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
-                                <input type="number" class="form-control" placeholder="Površina od" aria-describedby="basic-addon2">
-                                <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
-                                <!--</div>-->
+                                <div class="wrapper">
+                                    <div class="form-group form-price-from">
+
+                                        <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
+                                        <input type="number" class="form-control" placeholder="Cijena od" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
+                                        <!--</div>-->
+                                    </div>
+
+                                    <div class="form-group form-price-to">
+
+                                        <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
+                                        <input type="number" class="form-control" placeholder="Cijena do" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+                                <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
+                            </div>
+                            <div class="form-area">
+                                <label class="control-label sr-only" for="hero-area">Površina</label>
+                                <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
+
+                                <div class="wrapper">
+                                    <div class="form-group form-area-from">
+
+                                        <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
+                                        <input type="number" class="form-control" placeholder="Površina od" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
+                                        <!--</div>-->
+                                    </div>
+
+                                    <div class="form-group form-area-to">
+
+                                        <!--<div class="input-group">-->
+                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
+                                        <input type="number" class="form-control" placeholder="Površina do" aria-describedby="basic-addon2">
+                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group form-submit">
+                                <button type="submit" class="btn search-btn btn-search">Pošaljite zahtjev</button>
                             </div>
 
-                            <div class="form-group form-area-to">
-
-                                <!--<div class="input-group">-->
-                                <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
-                                <input type="number" class="form-control" placeholder="Površina do" aria-describedby="basic-addon2">
-                                <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
-                                <!--</div>-->
-                            </div>
                         </div>
 
+                        <div class="wsfy-menu-details-form">
+
+                        </div>
                     </div>
-                    <div class="form-group form-submit">
-                        <button type="submit" class="btn search-btn btn-search">Pošaljite zahtjev</button>
-                    </div>
+
                 </form>
             </div>
 
-            <div class="wsfy-menu-contact-form">
 
-            </div>
             <div class="wsfy-menu-search-form">
 
 
 
-            </div>
+                </form>
 
+            </div>
+            <div class="wsfy-menu-details-form">
+
+
+
+            </div>
 
 
         </div>
@@ -670,9 +710,9 @@
                         <div class="form-group form-ad-type">
                             <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
                             <select id="ad-type" name="ad-type" class="form-control" multiple="multiple">
-                                <option>Prodaja</option>
-                                <option>Izdavanje</option>
-                                <option>Potražnja</option>
+                                <option value="1">Prodaja</option>
+                                <option value="2">Izdavanje</option>
+                                <option value="3">Potražnja</option>
                             </select>
                         </div>
                         <div class="form-group form-object-type">
@@ -1111,6 +1151,10 @@
                             </p>
                         </div>
                     </a>
+                </article>
+
+                <article class="small-ad-2">
+
                 </article>
 
                 <article class="new-list-item grid">

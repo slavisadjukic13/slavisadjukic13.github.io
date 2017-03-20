@@ -23,6 +23,7 @@
     "ion.rangeSlider": "ionrangeslider#^2.1.6",
     "font-awesome": "4.6.1",
     "slick-carousel": "git://github.com/kenwheeler/slick#1.5.9",
-    "select2": "^4.0.3"
+    "select2": "^4.0.3",
+    "bootstrap-validator": "^0.11.9"
   }
 }

@@ -383,10 +383,12 @@
                 </button>
                 <h3>Prijavite se</h3>
                 <div class="account-menu-login collapse" id="account-menu-login">
-                    <form>
+                    <form id="login-form" role="form" data-toggle="validator">
                         <div class="form-group">
                             <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
-                            <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
+                            <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa" required="required" data-error="Morate unijeti validnu e-mail adresu">
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="login-password">Vaša lozinka</label>
@@ -862,7 +864,7 @@
 
                 <!--    IF user NOT logged in
                         triggers modal about user status: "Not logged modal" -->
-                <button type="button" class="btn-edit-big" data-toggle="modal" data-target="#myModal">Objavite oglas</button>
+                <button type="button" class="btn-edit-big" data-toggle="modal" data-target="#noUserModal">Objavite oglas</button>
                 <!-- END IF user NOT logged in -->
             </div>
         </div>
@@ -1622,7 +1624,7 @@
         variables prefix: @modal-
         section style: less/modal.less
 -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="noUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1633,7 +1635,7 @@
                 Poštovani, morate biti registrovani korisnik da bi objavili oglas.
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-login account-menu-toggle">Prijavite se</button>
+                <button type="button" class="btn-login account-menu-toggle" data-toggle="modal" data-target="#noUserModal">Prijavite se</button>
             </div>
         </div>
     </div>
@@ -1655,8 +1657,9 @@
 <script src="components/jquery/dist/jquery.min.js"></script>
 <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="components/slick-carousel/slick/slick.min.js"></script>
-<script src="components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+<!--<script src="components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>-->
 <script src="components/select2/dist/js/select2.full.min.js"></script>
+<script src="components/bootstrap-validator/dist/validator.min.js"></script>
 
 <script src="js/main.js"></script>
 <!-- endbuild -->

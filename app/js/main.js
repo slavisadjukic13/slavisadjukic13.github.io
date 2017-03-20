@@ -4,6 +4,15 @@ $(document).ready(function() {
         $('[data-toggle="popover"]').popover()
     });
 
+    // $('#login-form').validator(
+    //     disable: false
+    //     // feedback: {
+    //     //     success: 'glyphicon-ok',
+    //     //     error: 'glyphicon-remove'
+    //     // }
+    // );
+    
+    
     // $("#e1").select2({
     //     placeholder: "Unesite parametre pretrage, npr. Sarajevo, stan, prodaja"
     //     // minimumInputLength: 2
@@ -67,6 +76,12 @@ $(document).ready(function() {
         // $('#account-menu .main-menu-search-area').toggleClass('fadeInDown');
         // $('#account-menu .links-area').toggleClass('fadeInRight');
 
+    });
+
+    $('#noUserModal .account-menu-toggle').on('click', function () {
+        console.log('asd');
+
+        
     });
 
     $('#wsfy-menu-toggle').on('click', function () {
@@ -336,6 +351,8 @@ $(document).ready(function() {
             scrollTop: $("#account-menu-login").position().top - 60
         }, 400);
     });
+
+
 
 
     $(window).scroll(function() {

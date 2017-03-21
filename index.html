@@ -209,124 +209,35 @@
                                     Kontakt informacije:
                                 </h3>
                             </div>
-
+                            <div class="form-group">
+                                <label class="sr-only" for="login-email">Vaše ime</label>
+                                <input type="text" class="form-control" id="login-email" placeholder="Ime">
+                            </div>
                             <div class="form-group">
                                 <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
                                 <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="login-password">Vaša lozinka</label>
-                                <input type="password" class="form-control" id="login-password" placeholder="Lozinka">
+                                <label class="sr-only" for="login-password">Vaš broj telefona</label>
+                                <input type="tel" class="form-control" id="login-password" placeholder="Lozinka">
                             </div>
 
-
-                        </div>
-
-
-                        <div class="wsfy-menu-search-form">
-                            <div class="wsfy-menu-subtitle">
-                                <h3>
-                                    Parametri pretrage:
-                                </h3>
-                            </div>
-                            <div class="form-group form-ad-type">
-                                <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
-                                <select id="ad-type" name="ad-type" class="form-control" multiple="multiple">
-                                    <option>Prodaja</option>
-                                    <option>Izdavanje</option>
-                                    <option>Potražnja</option>
-                                </select>
-                            </div>
-                            <div class="form-group form-object-type">
-                                <label class="control-label sr-only" for="object-type">Vrsta objekta</label>
-                                <select id="object-type" class="form-control" multiple="multiple">
-                                    <option>Stan</option>
-                                    <option>Kuća</option>
-                                    <option>Poslovni prostor</option>
-                                </select>
-                            </div>
-                            <div class="form-group form-city">
-                                <label class="control-label sr-only" for="location">Grad</label>
-                                <select id="location" class="form-control" multiple="multiple">
-                                    <optgroup label="Republika Srpska">
-                                        <option value='14'>Banjalučka</option>
-                                        <option value='15'>Dobojsko-Bijeljinska</option>
-                                        <option value='16'>Sarajevsko-Zvornička</option>
-                                        <option value='17'>Trebinjsko-Fočanska</option>
-                                    </optgroup>
-                                    <optgroup label="Federacija BIH">
-                                        <option value='9'>Sarajevo</option>
-                                        <option value='1'>Unsko-sanski</option>
-                                        <option value='2'>Posavski</option>
-                                        <option value='3'>Tuzlanski</option>
-                                        <option value='4'>Zeničko-dobojski</option>
-                                        <option value='5'>Bosansko-podrinjski</option>
-                                        <option value='6'>Srednjobosanski</option>
-                                        <option value='7'>Hercegovačko-neretvanski</option>
-                                        <option value='8'>Zapadno-hercegovački</option>
-                                        <option value='10'>Livanjski</option>
-                                    </optgroup>
-                                    <option value='12'  >Distrikt Brčko</option>
-                                </select>
-                            </div>
-                            <div class="form-price">
-                                <label class="control-label sr-only" for="hero-price">Cijena</label>
-
-                                <div class="wrapper">
-                                    <div class="form-group form-price-from">
-
-                                        <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
-                                        <input type="number" class="form-control" placeholder="Cijena od" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
-                                        <!--</div>-->
-                                    </div>
-
-                                    <div class="form-group form-price-to">
-
-                                        <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
-                                        <input type="number" class="form-control" placeholder="Cijena do" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
-                                        <!--</div>-->
-                                    </div>
-                                </div>
-
-                                <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
-                            </div>
-                            <div class="form-area">
-                                <label class="control-label sr-only" for="hero-area">Površina</label>
-                                <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
-
-                                <div class="wrapper">
-                                    <div class="form-group form-area-from">
-
-                                        <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
-                                        <input type="number" class="form-control" placeholder="Površina od" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
-                                        <!--</div>-->
-                                    </div>
-
-                                    <div class="form-group form-area-to">
-
-                                        <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
-                                        <input type="number" class="form-control" placeholder="Površina do" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
-                                        <!--</div>-->
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="form-group form-submit">
-                                <button type="submit" class="btn search-btn btn-search">Pošaljite zahtjev</button>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
                             </div>
 
                         </div>
 
                         <div class="wsfy-menu-details-form">
-
+                            <div class="wsfy-menu-subtitle">
+                                <h3>
+                                    Opišite ono šta Vam je potrebno:
+                                </h3>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
+                                <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
+                            </div>
                         </div>
                     </div>
 
@@ -334,18 +245,6 @@
             </div>
 
 
-            <div class="wsfy-menu-search-form">
-
-
-
-                </form>
-
-            </div>
-            <div class="wsfy-menu-details-form">
-
-
-
-            </div>
 
 
         </div>
@@ -422,10 +321,10 @@
                 <div class="account-menu-register collapse" id="account-menu-register">
                     <form>
                         <div class="form-group">
-                            <div class="input-group">
+                            <!--<div class="input-group">-->
                                 <label class="sr-only" for="register-username">Vaše korisničko ime</label>
                                 <input type="text" class="form-control" id="register-username" placeholder="Korisničko ime">
-                                <span class="input-group-btn">
+                                <!--<span class="input-group-btn">-->
                                     <!--<button class="btn btn-default" type="button" data-toggle="modal" data-target="#nickname-modal"><i class="fa fa-info-circle" aria-hidden="true"></i></button>-->
                                     <!--<a tabindex="0" class="btn btn-default" role="button" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="-->
                                         <!--Korisničko ime je vaša identifikacija na sajtu i prikazuje se:-->
@@ -435,16 +334,16 @@
                                         <!--<i class="fa fa-info-circle" aria-hidden="true"></i>-->
                                     <!--</a>-->
 
-                                    <button class="btn btn-default" type="button" data-container="body" data-toggle="popover" data-placement="left" data-content="
-                                        Korisničko ime je vaša identifikacija na sajtu i prikazuje se:
-                                        kao dio kontakt podataka,
-                                        kod komunikacije sa drugim korisnicima,
-                                        iznad liste sa vašim oglasima.
-                                        Ne treba da sadrži povjerljive podatke ili neprimjerene izraze!">
-                                        <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                    </button>
-                                </span>
-                            </div>
+                                    <!--<button class="btn btn-default" type="button" data-container="body" data-toggle="popover" data-placement="left" data-content="-->
+                                        <!--Korisničko ime je vaša identifikacija na sajtu i prikazuje se:-->
+                                        <!--kao dio kontakt podataka,-->
+                                        <!--kod komunikacije sa drugim korisnicima,-->
+                                        <!--iznad liste sa vašim oglasima.-->
+                                        <!--Ne treba da sadrži povjerljive podatke ili neprimjerene izraze!">-->
+                                        <!--<i class="fa fa-info-circle" aria-hidden="true"></i>-->
+                                    <!--</button>-->
+                                <!--</span>-->
+                            <!--</div>-->
                             <!--<button type="button" class="helper-question-i" data-toggle="modal" data-target="#nickname-modal" data-whatever="@mdo"><i class="fa fa-info-circle" aria-hidden="true"></i></button>-->
                             <!--<a class="helper-question" href="">Zašto je korisničko ime važno?</a>-->
                             <!--<a class="helper-question-i" href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>-->

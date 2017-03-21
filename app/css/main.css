@@ -16686,7 +16686,7 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
     width: 50%;
   }
 }
-.wsfy-menu-search-form {
+.wsfy-menu-details-form {
   float: left;
   width: 100%;
   min-height: 1px;
@@ -16695,21 +16695,7 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   position: relative;
 }
 @media (min-width: 1200px) {
-  .wsfy-menu-search-form {
-    float: left;
-    width: 50%;
-  }
-}
-.wsfy-menu-deta-form {
-  float: left;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-@media (min-width: 1200px) {
-  .wsfy-menu-deta-form {
+  .wsfy-menu-details-form {
     float: left;
     width: 50%;
   }

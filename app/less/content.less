@@ -1,19 +1,25 @@
 .content {
-  background: @hero-small-background;
+  background: @content-background;
   background-position: center 0px;
   background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
 
   position: relative;
+  padding-top: @grid-gutter-width;
   padding-bottom: @grid-gutter-width;
 
   .overlay {
-    background: @hero-small-overlay;
+    background: @content-overlay;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+  }
+
+  .content-subtitle {
+    .make-xs-column(12);
+    .make-lg-column(12);
   }
 }

@@ -13199,6 +13199,7 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   background-size: cover;
   position: relative;
   padding-bottom: 30px;
+  padding-top: 100px;
 }
 .hero-small .overlay {
   background: rgba(0, 0, 0, 0.6);
@@ -13207,6 +13208,16 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.hero-small .hero-small-title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  color: white;
 }
 .cta {
   padding: 45px 0;
@@ -16688,6 +16699,10 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   padding-right: 15px;
   position: relative;
 }
+.wsfy-menu-form .checkbox,
+.wsfy-menu-form .checkbox-inline {
+  color: white;
+}
 .wsfy-menu-contact-form {
   float: left;
   width: 100%;
@@ -16699,12 +16714,12 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
 @media (min-width: 1200px) {
   .wsfy-menu-contact-form {
     float: left;
-    width: 29.16666667%;
+    width: 33.33333333%;
   }
 }
 @media (min-width: 1200px) {
   .wsfy-menu-contact-form {
-    margin-left: 16.66666667%;
+    margin-left: 8.33333333%;
   }
 }
 .wsfy-menu-details-form {
@@ -16718,8 +16733,18 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
 @media (min-width: 1200px) {
   .wsfy-menu-details-form {
     float: left;
-    width: 37.5%;
+    width: 45.83333333%;
   }
+}
+@media (min-width: 1200px) {
+  .wsfy-menu-details-form {
+    margin-left: 4.16666667%;
+  }
+}
+.wsfy-submit {
+  float: right !important;
+  float: right;
+  margin-top: 10px;
 }
 .wsfy-menu-subtitle {
   position: relative;
@@ -18052,15 +18077,72 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   background-attachment: fixed;
   background-size: cover;
   position: relative;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .content .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+.content .content-subtitle {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .content .content-subtitle {
+    float: left;
+    width: 100%;
+  }
+}
+.help-accordion {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .help-accordion {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.help-faq {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .help-faq {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.help-faq-list {
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .help-faq-list {
+    float: left;
+    width: 100%;
+  }
 }
 body {
   overflow-x: hidden;

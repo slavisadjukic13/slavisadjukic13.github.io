@@ -13192,6 +13192,22 @@ fieldset[disabled] .hero .hero-search-area .search-btn.focus {
   right: 0;
   bottom: 0;
 }
+.hero-small {
+  background: url("/img/jumbotron-bg-2.jpg");
+  background-position: center 0px;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 30px;
+}
+.hero-small .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .cta {
   padding: 45px 0;
   background: #e1e1e1;
@@ -18029,6 +18045,22 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   .account-menu-link .fa {
     margin-left: 10px;
   }
+}
+.content {
+  background: url("/img/jumbotron-bg-2.jpg");
+  background-position: center 0px;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 30px;
+}
+.content .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 body {
   overflow-x: hidden;

@@ -16683,7 +16683,12 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
 @media (min-width: 1200px) {
   .wsfy-menu-contact-form {
     float: left;
-    width: 50%;
+    width: 29.16666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .wsfy-menu-contact-form {
+    margin-left: 16.66666667%;
   }
 }
 .wsfy-menu-details-form {
@@ -16697,7 +16702,7 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
 @media (min-width: 1200px) {
   .wsfy-menu-details-form {
     float: left;
-    width: 50%;
+    width: 37.5%;
   }
 }
 .wsfy-menu-subtitle {
@@ -16707,6 +16712,8 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  color: white;
+  padding: 0;
 }
 .account-menu-login-wrapper {
   float: left;

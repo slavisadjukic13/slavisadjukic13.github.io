@@ -4,6 +4,10 @@ $(document).ready(function() {
         $('[data-toggle="popover"]').popover()
     });
 
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
     // $('#login-form').validator(
     //     disable: false
     //     // feedback: {
@@ -387,12 +391,12 @@ $(document).ready(function() {
         if ($(window).scrollTop()>100){
             $('.header').removeClass('top');
             $('#main-menu').removeClass('top');
-            $('.logo').removeClass('fadeOutUp').addClass('fadeInDown');
+            // $('.logo').removeClass('fadeOutUp').addClass('fadeInDown');
         }
         else {
             $('.header').addClass('top');
             $('#main-menu').addClass('top');
-            $('.logo').removeClass('fadeInDown').addClass('fadeOutUp');
+            // $('.logo').removeClass('fadeInDown').addClass('fadeOutUp');
         }
     });
 

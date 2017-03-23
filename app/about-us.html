@@ -29,11 +29,12 @@
     <meta property="og:description" content="Portal DOM.ba! Idealno mjesto za unos, pregled i prodaju vaših nekretnina.">
     <meta property="og:image" content="http://dom.ba/img/fb-logo.jpg" />
 
-    <link rel="stylesheet" href="css/main.min.css">
+    <!--build:css css/main.min.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 
 </head>
 <body>
-
 <!--    Main menu
         section variables: less/my-variables.less
         variables prefix: @main-menu-
@@ -585,13 +586,6 @@
         variables prefix: @hero-
         section style: less/jumbotron.less
 -->
-
-<!--    Hero section
-        section variables: less/my-variables.less
-        variables prefix: @hero-
-        section style: less/jumbotron.less
--->
-
 <section class="hero-small">
     <div class="overlay"></div>
     <div class="wrapper-outer">
@@ -920,7 +914,15 @@
     </div>
 </div>
 
-<script src="js/main.min.js"></script>
+<!--build:js js/main.min.js -->
+<script src="components/jquery/dist/jquery.min.js"></script>
+<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="components/slick-carousel/slick/slick.min.js"></script>
+<script src="components/select2/dist/js/select2.full.min.js"></script>
+<script src="components/bootstrap-validator/dist/validator.min.js"></script>
+
+<script src="js/main.js"></script>
+<!-- endbuild -->
 
 </body>
 </html>

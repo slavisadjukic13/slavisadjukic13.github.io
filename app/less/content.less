@@ -9,6 +9,11 @@
   padding-top: @grid-gutter-width;
   padding-bottom: @grid-gutter-width;
 
+  @media @lg {
+    padding-top: @grid-gutter-width*2;
+    padding-bottom: @grid-gutter-width*3;
+  }
+
   .overlay {
     background: @content-overlay;
     position: absolute;
@@ -21,5 +26,13 @@
   .content-subtitle {
     .make-xs-column(12);
     .make-lg-column(12);
+  }
+
+  .content-main {
+    .make-lg-column(8);
+  }
+
+  .content-sidebar {
+    .make-lg-column(4);
   }
 }

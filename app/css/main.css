@@ -18266,6 +18266,9 @@ fieldset[disabled] .account-menu-register-wrapper > button:not(.collapsed).activ
     margin-left: 16.66666667%;
   }
 }
+.content .text-bold {
+  font-weight: 700;
+}
 .help-accordion {
   float: left;
   width: 100%;

@@ -179,7 +179,7 @@
   .make-md-column(3.5);
   .make-md-column-offset(0.5);
   .make-lg-column(2);
-  .make-lg-column-offset(3.5);
+  .make-lg-column-offset(1.0);
 
   @media @md {
     padding-top: 20px;
@@ -187,6 +187,10 @@
 
   a + a {
     margin-left: 15px;
+  }
+
+  @media @lg {
+    padding-top: 30px;
   }
 }
 
@@ -202,6 +206,10 @@
 
   @media @md {
     padding-top: 20px;
+  }
+
+  @media @lg {
+    padding-top: 30px;
   }
 
   ul {

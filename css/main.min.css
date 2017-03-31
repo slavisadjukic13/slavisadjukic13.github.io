@@ -11561,6 +11561,21 @@ h4 {
     width: 33.33333333%;
   }
 }
+.single-ad {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1200px) {
+  .single-ad {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.single-ad .panel-heading {
+  padding: 0;
+}
 .header {
   position: fixed;
   z-index: 2000;
@@ -12363,7 +12378,7 @@ fieldset[disabled] .main-menu-links-section a.active.focus {
 }
 @media (min-width: 1200px) {
   .main-menu-social-section {
-    margin-left: 29.16666667%;
+    margin-left: 8.33333333%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -12373,6 +12388,11 @@ fieldset[disabled] .main-menu-links-section a.active.focus {
 }
 .main-menu-social-section a + a {
   margin-left: 15px;
+}
+@media only screen and (min-width: 1200px) {
+  .main-menu-social-section {
+    padding-top: 30px;
+  }
 }
 .main-menu-contact-section {
   float: left;
@@ -12419,6 +12439,11 @@ fieldset[disabled] .main-menu-links-section a.active.focus {
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .main-menu-contact-section {
     padding-top: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-menu-contact-section {
+    padding-top: 30px;
   }
 }
 .main-menu-contact-section ul {

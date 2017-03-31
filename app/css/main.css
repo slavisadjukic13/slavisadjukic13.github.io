@@ -11615,7 +11615,7 @@ h4 {
 }
 .header .right-side {
   float: left;
-  width: 58.33333333%;
+  width: 75%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -11721,6 +11721,7 @@ h4 {
   float: right !important;
   float: right;
   padding-right: 15px;
+  padding-left: 15px;
   margin-right: 15px;
 }
 @media only screen and (max-width: 767px) {

@@ -5942,7 +5942,7 @@ button.close {
   padding: 3px 8px;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #750808;
   border-radius: 0px;
 }
 .tooltip-arrow {
@@ -5957,56 +5957,56 @@ button.close {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #750808;
 }
 .tooltip.top-left .tooltip-arrow {
   bottom: 0;
   right: 5px;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #750808;
 }
 .tooltip.top-right .tooltip-arrow {
   bottom: 0;
   left: 5px;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #750808;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #000;
+  border-right-color: #750808;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #000;
+  border-left-color: #750808;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #750808;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
   right: 5px;
   margin-top: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #750808;
 }
 .tooltip.bottom-right .tooltip-arrow {
   top: 0;
   left: 5px;
   margin-top: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #750808;
 }
 .popover {
   position: absolute;
@@ -11573,8 +11573,258 @@ h4 {
     width: 33.33333333%;
   }
 }
+.single-ad .panel {
+  border: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: scale(0.95);
+}
+.single-ad .panel:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transform: scale(1);
+}
+.single-ad .panel:hover .img-alternative {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.single-ad .panel:hover .social-status {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.single-ad .panel:hover .btn-more-info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
 .single-ad .panel-heading {
+  position: relative;
   padding: 0;
+  border: 0;
+}
+.single-ad .panel-body {
+  border: 0;
+  position: relative;
+}
+.single-ad .panel-body p {
+  position: relative;
+  z-index: 2;
+}
+.single-ad .panel-body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 32px;
+  background: white;
+  top: -15px;
+  left: 0;
+  transform: skewX(0) skewY(-5deg);
+}
+.single-ad .panel-body .btn-more-info {
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: absolute;
+  z-index: 2;
+  top: -45px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.single-ad .panel-body .btn-more-info:focus,
+.single-ad .panel-body .btn-more-info:active:focus,
+.single-ad .panel-body .btn-more-info.active:focus,
+.single-ad .panel-body .btn-more-info.focus,
+.single-ad .panel-body .btn-more-info:active.focus,
+.single-ad .panel-body .btn-more-info.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.single-ad .panel-body .btn-more-info:hover,
+.single-ad .panel-body .btn-more-info:focus,
+.single-ad .panel-body .btn-more-info.focus {
+  color: #333;
+  text-decoration: none;
+}
+.single-ad .panel-body .btn-more-info:active,
+.single-ad .panel-body .btn-more-info.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.single-ad .panel-body .btn-more-info.disabled,
+.single-ad .panel-body .btn-more-info[disabled],
+fieldset[disabled] .single-ad .panel-body .btn-more-info {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.single-ad .panel-body .btn-more-info.disabled,
+fieldset[disabled] a.single-ad .panel-body .btn-more-info {
+  pointer-events: none;
+}
+.single-ad .panel-body .btn-more-info:focus,
+.single-ad .panel-body .btn-more-info.focus {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #5d0707;
+}
+.single-ad .panel-body .btn-more-info:hover {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.single-ad .panel-body .btn-more-info:active,
+.single-ad .panel-body .btn-more-info.active,
+.open > .dropdown-toggle.single-ad .panel-body .btn-more-info {
+  color: #fff;
+  background-color: #a40c0c;
+  border-color: #9b0b0b;
+}
+.single-ad .panel-body .btn-more-info:active:hover,
+.single-ad .panel-body .btn-more-info.active:hover,
+.open > .dropdown-toggle.single-ad .panel-body .btn-more-info:hover,
+.single-ad .panel-body .btn-more-info:active:focus,
+.single-ad .panel-body .btn-more-info.active:focus,
+.open > .dropdown-toggle.single-ad .panel-body .btn-more-info:focus,
+.single-ad .panel-body .btn-more-info:active.focus,
+.single-ad .panel-body .btn-more-info.active.focus,
+.open > .dropdown-toggle.single-ad .panel-body .btn-more-info.focus {
+  color: #fff;
+  background-color: #830909;
+  border-color: #5d0707;
+}
+.single-ad .panel-body .btn-more-info:active,
+.single-ad .panel-body .btn-more-info.active,
+.open > .dropdown-toggle.single-ad .panel-body .btn-more-info {
+  background-image: none;
+}
+.single-ad .panel-body .btn-more-info.disabled:hover,
+.single-ad .panel-body .btn-more-info[disabled]:hover,
+fieldset[disabled] .single-ad .panel-body .btn-more-info:hover,
+.single-ad .panel-body .btn-more-info.disabled:focus,
+.single-ad .panel-body .btn-more-info[disabled]:focus,
+fieldset[disabled] .single-ad .panel-body .btn-more-info:focus,
+.single-ad .panel-body .btn-more-info.disabled.focus,
+.single-ad .panel-body .btn-more-info[disabled].focus,
+fieldset[disabled] .single-ad .panel-body .btn-more-info.focus {
+  background-color: #d40f0f;
+  border-color: #d40f0f;
+}
+.single-ad .panel-body .btn-more-info .badge {
+  color: #d40f0f;
+  background-color: #fff;
+}
+.single-ad .panel-body .btn-more-info .fa {
+  line-height: 44px;
+  font-size: 26px;
+}
+.single-ad .panel-body .btn-more-info:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.single-ad .social-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=0);
+}
+.single-ad .social-status a {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 3px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.single-ad .social-status a:focus,
+.single-ad .social-status a:active:focus,
+.single-ad .social-status a.active:focus,
+.single-ad .social-status a.focus,
+.single-ad .social-status a:active.focus,
+.single-ad .social-status a.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.single-ad .social-status a:hover,
+.single-ad .social-status a:focus,
+.single-ad .social-status a.focus {
+  color: #333;
+  text-decoration: none;
+}
+.single-ad .social-status a:active,
+.single-ad .social-status a.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.single-ad .social-status a.disabled,
+.single-ad .social-status a[disabled],
+fieldset[disabled] .single-ad .social-status a {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+a.single-ad .social-status a.disabled,
+fieldset[disabled] a.single-ad .social-status a {
+  pointer-events: none;
+}
+.single-ad .img-alternative {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
 }
 .header {
   position: fixed;

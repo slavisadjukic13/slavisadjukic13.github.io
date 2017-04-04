@@ -1,0 +1,48 @@
+.new2 {
+  background: lightgray;
+  position: relative;
+
+  padding: @grid-gutter-width*2 0;
+  @media @xs {
+    padding: @grid-gutter-width/2 0;
+  }
+
+  .wrapper {position: relative;}
+
+  background: @new-background-2;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .overlay {
+    background: @new-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.new2-title {
+  .make-xs-column(4);
+  //margin-bottom: 50px;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  @media @xs {
+    //margin-bottom: 20px;
+  }
+}
+
+
+.new-list {
+  .make-xs-column(12);
+}

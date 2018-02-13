@@ -1,1739 +1,253 @@
-<!DOCTYPE html>
-<html lang="bs">
+﻿<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>DOM.ba - Portal za nekretnine</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <meta name="description" content="Portal DOM.ba! Idealno mjesto za unos, pregled i prodaju vaših nekretnina.">
-    <meta name="keywords" content="dom.ba, nekretnine, prodaja, iznajmljivanje, , izdavanje, oglasi, stambeni objekti, stan, kuca, poslovni prostor, ugostiteljski objekat, garsonjera, garaza, plac, apartmani, kompanije, vikendice">
-    <meta name="language" content="Bosnian ">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="1 days">
-
-    <!-- FAV icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/img/fav/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/fav/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/img/fav/manifest.json">
-    <link rel="mask-icon" href="/img/fav/safari-pinned-tab.svg" color="#d40f0f">
-    <link rel="shortcut icon" href="/img/fav/favicon.ico">
-    <meta name="msapplication-config" content="/img/fav/browserconfig.xml">
-    <meta name="theme-color" content="#d40f0f">
-
-    <!-- Open Graph data -->
-    <meta property="fb:app_id" content="1505931683046243">
-    <meta property="og:url" content="http://www.dom.ba/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="DOM.ba - Portal za nekretnine">
-    <meta property="og:description" content="Portal DOM.ba! Idealno mjesto za unos, pregled i prodaju vaših nekretnina.">
-    <meta property="og:image" content="http://dom.ba/img/fb-logo.jpg" />
-
-    <link rel="stylesheet" href="css/main.min.css">
-
+     <meta charset="UTF-8">
+     <title>test pursa</title>
 </head>
 <body>
+<input type="text" name="jib" id="jib-input">
+<button type="button" onclick="makeCorsRequest()">podaciNaOsnovuJIBa</button>
+<script type="text/javascript" charset="UTF-8">
+
+// function fillFormUsingJIB(){
+
+  // Pokupi JIB sa forme:
+//   //var requestJIB = Xrm.Page.data.entity.attributes.get("zzz_jib").getValue();
+//   var requestJIB = "slavisa.djukic.prointer@gmail.com";
+
+//   console.log("Saljemo zahtjev za jib:", requestJIB);
+
+//   //url na koji saljemo zahtjev
+//   var url = "http://www.webservicex.net";
+//   //var url = "http://10.2.2.2:8022/RegistarWebService.asmx?WSDL";
+//   //var url = "http://10.2.2.2:8022/RegistarWebService.asmx";
+
+//   // metod zahtjeva
+//   var method = "POST";
+    
+
+//   //
+//   //  TODO: probati obe verzije request package-a --- prvi salje sve podatke, drugi samo jib
+//   //
+//   var requestPackage = '<?xml version="1.0" encoding="utf-8"?>'+
+//     '<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">'+
+//       '<soap12:Body>'+
+//         '<IsValidEmail xmlns="http://www.webservicex.net">'+
+//           '<Email>' + requestJIB + '</Email>'+
+//         '</IsValidEmail>'+
+//       '</soap12:Body>'+
+//     '</soap12:Envelope>';
+
+
+
+//   var xhr = new XMLHttpRequest();
+
+//   if ("withCredentials" in xhr) {
+//     // XHR for Chrome/Firefox/Opera/Safari.
+//     xhr.open(method, url, true);
+//   } else if (typeof XDomainRequest != "undefined") {
+//     // XDomainRequest for IE.
+//     xhr = new XDomainRequest();
+//     xhr.open(method, url);
+//   } else {
+//     // CORS not supported.
+//     xhr = null;
+//   }
+
+//   if (!xhr) {
+//     alert('CORS not supported');
+//     return;
+//   }
+
+//   xhr.onload = function() {
+
+//     if (xhr.readyState === xhr.DONE) {
+//       if (xhr.status === 200) {
+
+//         var dataReceived = xhr.response;
+ 
+//         console.log(dataReceived);
+
+//         //	ocisti response od nepotrebnih elemenata - dodanih SOAPom
+//         // var start = dataReceived.indexOf('<Obveznik');
+//         // var end = dataReceived.indexOf('</Podaci>');
+//         // dataReceived = dataReceived.substring(start, end);
+
+//         // // ocisti preostale tagove od nepotrebnih atributa
+//         // dataReceived = dataReceived.replace(/\<.*?\>/g, function(string){
+//         //   if (string.indexOf(' ')>0) {
+//         //     var start = string.indexOf(' ');
+//         //     //console.log(start);
+//         //     string = string.substring(0, start);
+//         //     string += ">";
+//         //   }
+//         //   return string;
+//         // })
+
+//         // parser = new DOMParser();
+//         // dataReceivedXML = parser.parseFromString(dataReceived,"text/xml");
+
+//         // //
+//         // // punjenje forme 
+//         // //
+//         // // podaci o poslodavcu
+//         // //
+//         // var ObveznikWrapper = dataReceivedXML.getElementsByTagName("Obveznik")[0];
+
+//         // var ObveznikNazivObveznika =  ObveznikWrapper.getElementsByTagName("NazivObveznika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_nazivposlodavca").setValue(ObveznikNazivObveznika);
+//         // console.log("naziv poslodavca:",ObveznikNazivObveznika);
 
-<!--    Main menu
-        section variables: less/my-variables.less
-        variables prefix: @main-menu-
-        section style: less/main-menu.less
--->
-<nav id="main-menu" class="animated slideOutUp top">
-    <div class="container">
-        <div class="row">
-            <div class="main-menu-links-section animated">
-                <ul>
-                    <li><a href="about-us.html">O nama</a></li>
-                    <li><a href="help.html">Pomoć</a></li>
-                    <li><a href="agents-list.html">Agenti</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="terms.html">Uslovi korištenja</a></li>
-                </ul>
-            </div>
-
-            <div class="main-menu-social-section animated">
-                <h3>Pratite nas</h3>
-                <a class="link-facebook" href="#"><span class="fa fa-3x fa-facebook"></span></a>
-                <a class="link-instagram" href="#"><span class="fa fa-3x fa-instagram"></span></a>
-            </div>
-
-            <div class="main-menu-contact-section animated">
-                <h3>Kontaktirajte nas</h3>
-                <ul>
-                    <li>
-                        <a class="phone-link" href="tel:000">6523465
-                            <span>- Dragan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="mail-link" href="mailto:office365dom@gmail.com">office365dom@gmail.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<!--    Account menu (login/my account)
-        section variables: less/my-variables.less
-        variables prefix: @account-menu-
-        section style: less/account-menu.less
--->
-<section id="wsfy-menu" class="animated slideOutUp top">
-    <div class="container">
-        <div class="wrapper">
-
-            <!--IF USER FALSE - login/register -->
-            <div class="wsfy-menu-title">
-                <h2>
-                    Mi tražimo za Vas
-                </h2>
-                <p>
-                    Recite nam kakva Vam je nekretnina potrebna i mi ćemo se potruditi da je za Vas nađemo.
-                </p>
-                <p>
-                    Sve što nam je potrebno je opis nekretnine i Vaše kontakt informacije.
-                </p>
-            </div>
-
-            <div class="wsfy-menu-form">
-                <form>
-
-                    <div class="wrapper">
-                        <div class="wsfy-menu-contact-form">
-                            <div class="wsfy-menu-subtitle">
-                                <h3>
-                                    Kontakt informacije:
-                                </h3>
-                                <p>
-                                    Trebate nam dati Vaše podatke kako bih Vas mogli kontaktirati. Vaše podatke nećemo djeliti nikome.
-                                </p>
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="login-email">Vaše ime</label>
-                                <input type="text" class="form-control" id="login-email" placeholder="Ime">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
-                                <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="login-password">Vaš broj telefona</label>
-                                <input type="tel" class="form-control" id="login-password" placeholder="Broj telefona">
-                            </div>
-
-
-
-                        </div>
-
-                        <div class="wsfy-menu-details-form">
-                            <div class="wsfy-menu-subtitle">
-                                <h3>
-                                    Opišite ono šta Vam je potrebno:
-                                </h3>
-                                <p>
-                                    Npr. Sarajevo, dvosoban stan do trećeg sprata, do 60 kvadrata...
-                                </p>
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
-                                <textarea class="form-control" rows="7" placeholder="Opišite nekretninu koja Vam je potrebna"></textarea>
-                            </div>
-                            <div class="wsfy-menu-subtitle">
-                                <h3>
-                                    Kako da Vas kontaktiramo:
-                                </h3>
-                            </div>
-                            <div class="form-group">
-                                <div class="checkbox-inline">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        Putem E-maila
-                                    </label>
-                                </div>
-                                <div class="checkbox-inline">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        Na telefon
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group wsfy-submit">
-                                <button type="submit" class="btn btn-login btn-invert">Pošaljite upit</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-
-
-
-
-        </div>
-    </div>
-</section>
-
-<!--    "We search for you" menu (form)
-        section variables: less/my-variables.less
-        variables prefix: @wsfy-
-        section style: less/wfys.less
--->
-<section id="account-menu" class="animated slideOutUp top">
-    <div class="container">
-        <div class="wrapper">
-
-            <!--IF USER FALSE - login/register -->
-            <div class="account-menu-title">
-                <h2>
-                    Prijavite se ili napravite novi nalog
-                </h2>
-                <p>
-                    Možete se prijaviti na Vaš postojeći dom.ba nalog sa Vašim korisničkim imenom/lozinkom ili uz pomoć Vašeg facebook naloga
-                </p>
-                <p>
-                    Novi ste ovdje? Onda <u>besplatno</u> možete napraviti Vaš dom.ba nalog uz pomoć Vaše email adrese ili facebook naloga.
-                </p>
-            </div>
-
-            <div class="account-menu-login-wrapper">
-                <button class="collapsed" type="button" data-toggle="collapse" data-target="#account-menu-login" aria-expanded="false" aria-controls="collapseExample">
-                    Prijavite se
-                    <span class="fa fa-sign-in"></span>
-                </button>
-                <h3>Prijavite se</h3>
-                <div class="account-menu-login collapse" id="account-menu-login">
-                    <form id="login-form" role="form" data-toggle="validator">
-                        <div class="form-group">
-                            <label class="sr-only" for="login-email">Vaša e-mail adresa</label>
-                            <input type="email" class="form-control" id="login-email" placeholder="E-mail adresa" required="required" data-error="Morate unijeti validnu e-mail adresu" data-toggle="tooltip" title="
-                                        Unesite vašu važeću e-mail pomoću koje ste se registrovali">
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="login-password">Vaša lozinka</label>
-                            <input type="password" class="form-control" id="login-password" placeholder="Lozinka" data-toggle="tooltip" title="
-                                        Unesite vašu lozinku">
-                        </div>
-                        <!--<div class="checkbox">-->
-                        <!--<label>-->
-                        <!--<input type="checkbox"> Zapamtite me-->
-                        <!--</label>-->
-                        <!--</div>-->
-
-                        <div class="form-group form-submit">
-                            <a class="btn" href="#">Zaboravili ste Vašu lozinku?</a>
-                            <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
-                        </div>
-                    </form>
-                    <h4>
-                        Prijavite se pomoću:
-                    </h4>
-                    <button class="btn btn-fb btn-lg" onclick="loginWithFacebook()">
-                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
-                    </button>
-                    <button class="btn btn-tw btn-lg" onclick="loginWithFacebook()">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </button>
-                    <button class="btn btn-gm btn-lg" onclick="loginWithFacebook()">
-                        <i class="fa fa-google-plus" aria-hidden="true"></i>
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="account-menu-register-wrapper">
-                <h3>
-                    Napravite novi nalog
-                </h3>
-                <button class="btn btn-invert btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#account-menu-register" aria-expanded="false" aria-controls="collapseExample">
-                    Pretraga nekretnina
-                    <span class="fa fa-user-plus"></span>
-                </button>
-                <div class="account-menu-register collapse" id="account-menu-register">
-                    <form>
-                        <div class="form-group">
-                            <!--<div class="input-group">-->
-                                <label class="sr-only" for="register-username">Vaše korisničko ime</label>
-                                <input type="text" class="form-control" id="register-username" placeholder="Korisničko ime" data-toggle="tooltip" title="                                        Korisničko ime je vaša identifikacija na sajtu i prikazuje se:
-                                        kao dio kontakt podataka,
-                                        kod komunikacije sa drugim korisnicima,
-                                        iznad liste sa vašim oglasima">
-
-
-                            <!--</div>-->
-                            <!--<button type="button" class="helper-question-i" data-toggle="modal" data-target="#nickname-modal" data-whatever="@mdo"><i class="fa fa-info-circle" aria-hidden="true"></i></button>-->
-                            <!--<a class="helper-question" href="">Zašto je korisničko ime važno?</a>-->
-                            <!--<a class="helper-question-i" href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>-->
-                        </div>
-                        <!--<div class="form-group user-type">-->
-                        <!--<label class="control-label sr-only" for="user-type">Vrsta naloga</label>-->
-                        <!--<select id="user-type" class="form-control">-->
-                        <!--<option>Izaberite vrstu Naloga</option>-->
-                        <!--<option>Javni korisnik</option>-->
-                        <!--<option>Agent</option>-->
-                        <!--<option>Notar</option>-->
-                        <!--<option>Banka</option>-->
-                        <!--</select>-->
-                        <!--</div>-->
-                        <div class="form-group">
-                            <label class="sr-only" for="register-email">Vaša e-mail adresa</label>
-                            <input type="email" class="form-control" id="register-email" placeholder="E-mail adresa" data-toggle="tooltip" title="
-                                        Unesite vašu važeću e-mail adresu tako da možemo verikikovati vaš nalog. Ista e-mail adresa će vam poslužiti ako zaboravite lozinku">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="register-password">Vaša lozinka</label>
-                            <input type="password" class="form-control" id="register-password" placeholder="Lozinka" data-toggle="tooltip" title="
-                                        Lozinka mora minimalno sadržavati 8 karaktera">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="register-password-check">Potvrda lozinke</label>
-                            <input type="password" class="form-control" id="register-password-check" placeholder="Potvrda lozinke" data-toggle="tooltip" title="
-                                        Ponovite opet istu lozinku tako da ste sigurni da ste je pravilno unijeli">
-                        </div>
-
-                        <div class="form-group form-submit">
-                            <button type="submit" class="btn btn-login btn-invert">Prijavi se</button>
-                        </div>
-                    </form>
-                    <h4>
-                        Registrujte se pomoću:
-                    </h4>
-                    <button class="btn btn-fb btn-lg" onclick="loginWithFacebook()">
-                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
-                    </button>
-                    <button class="btn btn-tw btn-lg" onclick="loginWithFacebook()">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </button>
-                    <button class="btn btn-gm btn-lg" onclick="loginWithFacebook()">
-                        <i class="fa fa-google-plus" aria-hidden="true"></i>
-                    </button>
-                </div>
-
-            </div>
-
-            <!--IF USER TRUE - login/register -->
-            <!--<div class="account-menu-title">-->
-                <!--<h2>-->
-                    <!--Pregled Vašeg naloga - podešavanja-->
-                <!--</h2>-->
-                <!--<p>-->
-                    <!--Ovdje imate uvid u Vaše oglase, podešavanja Vašeg profila, takođe možete se odjaviti sa trenutnog naloga.-->
-                <!--</p>-->
-            <!--</div>-->
-            <!--<div class="account-menu-links">-->
-                <!--<div class="wrapper">-->
-                    <!--<div class="account-menu-link animated">-->
-                        <!--&lt;!&ndash; Link to list of user's ads &ndash;&gt;-->
-                        <!--<a class="btn btn-invert btn-block" href="#">-->
-                            <!--Moji oglasi-->
-                            <!--<i class="fa fa-home" aria-hidden="true"></i>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="account-menu-link animated">-->
-                        <!--&lt;!&ndash; Link to "add new ad" &ndash;&gt;-->
-                        <!--<a class="btn btn-invert btn-block" href="#">-->
-                            <!--Objavi novi oglas-->
-                            <!--<i class="fa fa-pencil" aria-hidden="true"></i>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="account-menu-link animated">-->
-                        <!--&lt;!&ndash; Link to user settings &ndash;&gt;-->
-                        <!--<a class="btn btn-invert btn-block" href="#">-->
-                            <!--Podešavanja naloga-->
-                            <!--<i class="fa fa-wrench" aria-hidden="true"></i>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="account-menu-link animated">-->
-                        <!--&lt;!&ndash; log out button &ndash;&gt;-->
-                        <!--<a class="btn btn-invert btn-block" href="#">-->
-                            <!--Odjavite se-->
-                            <!--<i class="fa fa-sign-out" aria-hidden="true"></i>-->
-                        <!--</a>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-
-            <!--</div>-->
-
-        </div>
-    </div>
-</section>
-
-<!--    Header
-        section variables: less/my-variables.less
-        variables prefix: @header-
-        section style: less/header.less
--->
-<header class="header container-fluid top">
-    <div class="wrapper">
-        <div class="left-side">
-            <button type="button" class="nav-toggle" aria-expanded="false">
-                <span class="sr-only">Toggle main menu</span>
-                <span class="icon-bar icon-bar-1"></span>
-                <span class="icon-bar icon-bar-2"></span>
-                <span class="icon-bar icon-bar-3"></span>
-                <span class="opened text animated fadeOut">Zatvori</span>
-                <span class="closed text animated fadeInDown">Meni</span>
-            </button>
-        </div>
-
-        <!--<div class="logo-block">-->
-                <!--<a href="index.html">-->
-                    <!--<?xml version="1.0" encoding="UTF-8"?>-->
-                    <!--&lt;!&ndash;<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">&ndash;&gt;-->
-                    <!--<svg class="logo animated fadeInDown" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 3474 1219"-->
-                 <!--xmlns:xlink="http://www.w3.org/1999/xlink">-->
-                 <!--<defs>-->
-                  <!--<style type="text/css">-->
-                   <!--<![CDATA[-->
-                    <!--.fil1 {fill:#CF3034}-->
-                   <!--.fil2 {fill:#525151}-->
-                   <!--.fil0 {fill:#ED3237;fill-rule:nonzero}-->
-                   <!--]]>-->
-                  <!--</style>-->
-                 <!--</defs>-->
-                 <!--<g id="Layer_x0020_1">-->
-                  <!--<metadata id="CorelCorpID_0Corel-Layer"/>-->
-                  <!--<path class="fil0" d="M189 1029c-25,-26 -38,-57 -38,-93 0,-36 13,-67 38,-93 26,-26 57,-39 94,-39 36,0 67,13 93,39 26,26 38,57 38,93 0,36 -12,67 -38,93 -26,26 -57,39 -93,39 -37,0 -68,-13 -94,-39zm-189 152c0,10 4,19 11,27 8,7 16,11 27,11 10,0 19,-4 26,-11l101 -101c35,24 74,36 118,36 28,0 54,-5 80,-16 26,-11 48,-26 66,-44 19,-19 34,-41 44,-66 11,-26 17,-53 17,-81 0,-28 -6,-55 -17,-80 -10,-26 -25,-48 -44,-67 -18,-18 -40,-33 -66,-44 -26,-11 -52,-16 -80,-16 -28,0 -55,5 -81,16 -26,11 -48,26 -66,44 -19,19 -33,41 -44,67 -11,25 -17,52 -17,80 0,43 12,82 37,118l-101 100c-7,8 -11,17 -11,27z"/>-->
-                  <!--<path class="fil1" d="M1245 569c140,1 281,1 421,1 206,1 185,3 370,-88 314,-155 629,-310 943,-465 -286,50 -571,101 -857,152 -337,164 -515,250 -877,400z"/>-->
-                  <!--<path class="fil1" d="M963 73c80,71 161,143 241,214 99,86 79,67 212,67 75,0 150,0 225,0 128,-61 255,-122 382,-183 -135,-12 -269,-25 -403,-37 0,12 0,24 0,36 -60,0 -121,0 -181,0 0,-17 0,-35 0,-53 -159,-14 -318,-29 -476,-44z"/>-->
-                  <!--<polygon class="fil1" points="638,569 948,456 947,570 "/>-->
-                  <!--<polygon class="fil2" points="2551,465 2697,465 2697,591 2551,591 "/>-->
-                  <!--<polygon class="fil2" points="2748,465 2895,465 2895,591 2748,591 "/>-->
-                  <!--<path class="fil2" d="M2616 300l15 0c36,0 66,30 66,66l0 70 -146 -1 0 -70c0,-36 29,-66 65,-65z"/>-->
-                  <!--<path class="fil2" d="M2814 300l15 0c36,0 65,30 65,66l0 70 -146 -1 0 -70c0,-36 30,-65 66,-65z"/>-->
-                  <!--<polygon class="fil2" points="1461,0 1598,0 1598,147 1461,147 "/>-->
-                  <!--<polygon class="fil2" points="981,367 1044,366 1044,435 981,436 "/>-->
-                  <!--<polygon class="fil2" points="1066,366 1129,365 1129,434 1066,435 "/>-->
-                  <!--<path class="fil2" d="M1012 275l2 0c16,0 30,13 30,30l0 45 -63 0 0 -45c0,-16 14,-30 31,-30z"/>-->
-                  <!--<path class="fil2" d="M1097 274l1 0c17,0 31,13 31,30l0 45 -63 0 0 -45c0,-16 14,-30 31,-30z"/>-->
-                  <!--<path class="fil1" d="M2716 928l105 0c15,0 28,12 28,27l0 80c0,15 -13,28 -28,28l-105 0c-15,0 -27,-13 -27,-28l0 -80c0,-15 12,-27 27,-27zm-27 -284l-129 0 0 415c0,27 9,51 27,71 11,13 25,23 41,29 18,6 38,8 57,8l171 0c10,-2 21,-3 31,-5 17,-4 38,-9 52,-17 12,-8 22,-18 28,-31 6,-14 8,-31 8,-46l0 -146c-1,-30 -10,-56 -31,-77 -10,-9 -21,-16 -35,-20 -15,-4 -33,-5 -49,-5l-73 0c-11,0 -21,1 -31,3 -9,2 -18,5 -27,9l-1 1c-5,2 -11,5 -15,8 -3,3 -6,5 -9,7l-15 11 0 -215zm523 285l105 0c15,0 27,12 27,28l0 79c0,15 -12,28 -27,28l-105 0c-15,0 -28,-13 -28,-28l0 -79c0,-16 13,-28 28,-28zm107 206c2,-3 4,-7 6,-11l8 -13 9 13c2,2 4,5 5,7 5,7 12,15 19,20 7,5 15,9 22,12 7,3 15,4 22,4 21,0 43,0 64,0 0,-20 0,-41 0,-61l-1 -209 0 -57c0,-12 -10,-22 -22,-22l-107 0c0,8 0,15 0,23l0 24 -17 -17c-3,-2 -5,-5 -7,-7 -2,-4 -7,-9 -11,-11l0 -1 -1 0c-5,-4 -11,-7 -18,-9 -7,-2 -16,-2 -24,-2 -39,0 -77,0 -116,0 -9,0 -19,1 -28,6 -11,5 -22,12 -31,20 -12,10 -20,23 -26,37 -6,15 -9,31 -9,47 0,44 0,88 0,132 0,14 2,29 8,42 7,13 16,24 27,34 11,10 23,19 36,24 13,5 27,7 41,7 30,0 61,0 92,0 17,0 32,-5 45,-16 5,-4 10,-10 14,-16z"/>-->
-                  <!--<polygon class="fil1" points="2465,1043 2321,1043 2321,1167 2465,1167 "/>-->
-                  <!--<path class="fil2" d="M2241 646l-84 260 -75 -261 -228 1 0 521 144 0 1 -368 16 62 101 306 83 0 122 -369 0 222 144 0 0 -353c0,-11 -10,-21 -22,-21l-202 0zm-629 0l-230 0c-23,0 -45,3 -65,13 -20,9 -35,24 -48,42 -9,13 -15,27 -19,42 -3,14 -5,29 -5,44l0 236c0,23 3,46 10,69 6,16 14,34 27,45 10,8 21,17 32,22 11,5 23,7 34,7l295 0c39,0 70,-16 95,-47 19,-22 30,-47 30,-76l0 -268c0,-19 -2,-38 -9,-55 -6,-17 -18,-31 -31,-43 -17,-16 -46,-23 -69,-27 -15,-2 -31,-3 -47,-4zm-177 122l142 0c23,0 42,19 42,42l0 192c0,23 -19,41 -42,41l-142 0c-23,0 -41,-18 -41,-41l0 -192c0,-23 18,-42 41,-42zm-788 -122l0 521 389 0c40,0 71,-16 95,-47 19,-22 30,-47 30,-76l0 -269c0,-18 -2,-38 -9,-55 -6,-17 -17,-31 -30,-43 -18,-16 -47,-24 -70,-27 -15,-3 -31,-3 -47,-4l-358 0zm144 123l185 0c23,0 41,19 41,41l0 192c0,23 -18,42 -41,42l-185 0 0 -275z"/>-->
-                  <!--<path class="fil2" d="M3007 45c3,3 6,6 8,10l400 592 -130 0c-25,0 -59,-20 -76,-45l-325 -483 123 -74z"/>-->
-                  <!--<path class="fil2" d="M936 87c-1,2 -3,4 -5,6l-207 303 104 0c16,0 38,-13 50,-29l137 -202 -79 -78z"/>-->
-                 <!--</g>-->
-                <!--</svg>-->
-                <!--</a>-->
-        <!--</div>-->
-
-        <div class="right-side">
-
-            <button id="account-menu-toggle" type="button" class="account-menu-toggle" aria-expanded="false">
-                <span class="sr-only">Toggle login/register</span>
-                <span class="icon-bar icon-bar-1"></span>
-                <span class="icon-bar icon-bar-2"></span>
-                <span class="opened text animated fadeOut">Zatvori</span>
-
-                <!-- IF user logged in -->
-                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
-                <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
-
-                <!--IF user NOT logged in -->
-                <i class="fa fa-sign-in" aria-hidden="true"></i>
-                <span class="closed text animated fadeInDown">Prijavi se</span>
-            </button>
-
-            <button id="wsfy-menu-toggle" type="button" class="header-btn" aria-expanded="false">
-                <span class="sr-only">Toggle login/register</span>
-                <span class="icon-bar icon-bar-1"></span>
-                <span class="icon-bar icon-bar-2"></span>
-                <!--<span class="opened text animated fadeOut">Zatvori</span>-->
-
-                <!-- IF user logged in -->
-                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                <span class="closed text animated fadeInDown">Mi tražimo za vas</span>
-
-                <!--IF user NOT logged in -->
-                <!--<i class="fa fa-sign-in" aria-hidden="true"></i>-->
-                <!--<span class="closed text animated fadeInDown">Prijavi se</span>-->
-            </button>
-            <button id="menu-toggle" type="button" class="header-btn" aria-expanded="false">
-                <span class="sr-only">Toggle login/register</span>
-                <span class="icon-bar icon-bar-1"></span>
-                <span class="icon-bar icon-bar-2"></span>
-                <!--<span class="opened text animated fadeOut">Zatvori</span>-->
-
-                <!-- IF user logged in -->
-                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
-                <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
-
-                <!--IF user NOT logged in -->
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                <span class="closed text animated fadeInDown">Objavi</span>
-            </button>
-            <a href="index.html" id="menu-toggle" type="button" class="header-btn" aria-expanded="false">
-                <span class="sr-only">Back to home page</span>
-                <span class="icon-bar icon-bar-1"></span>
-                <span class="icon-bar icon-bar-2"></span>
-                <!--<span class="opened text animated fadeOut">Zatvori</span>-->
-
-                <!-- IF user logged in -->
-                <!--<i class="fa fa-user" aria-hidden="true"></i>-->
-                <!--<span class="closed text animated fadeInDown">Moj nalog</span>-->
-
-                <!--IF user NOT logged in -->
-                <i class="fa fa-home" aria-hidden="true"></i>
-                <span class="closed text animated fadeInDown">Početna</span>
-            </a>
-
-
-        </div>
-
-    </div>
-
-
-</header>
-
-<!--    Hero section
-        section variables: less/my-variables.less
-        variables prefix: @hero-
-        section style: less/jumbotron.less
--->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="wrapper-outer">
-        <div class="wrapper">
-
-            <div class="hero-area">
-                <div class="wrapper">
-                    <div class="hero-logo">
-
-                        <!--<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">-->
-                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"viewBox="0 0 3474 1219"
-                         xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <defs>
-                          <style type="text/css">
-                           <![CDATA[
-                            .fil1 {fill:#CF3034}
-                           .fil2 {fill:#525151}
-                           .fil0 {fill:#ED3237;fill-rule:nonzero}
-                           ]]>
-                          </style>
-                         </defs>
-                         <g id="Layer_x0020_1">
-                          <metadata id="CorelCorpID_0Corel-Layer"/>
-                          <path class="fil0" d="M189 1029c-25,-26 -38,-57 -38,-93 0,-36 13,-67 38,-93 26,-26 57,-39 94,-39 36,0 67,13 93,39 26,26 38,57 38,93 0,36 -12,67 -38,93 -26,26 -57,39 -93,39 -37,0 -68,-13 -94,-39zm-189 152c0,10 4,19 11,27 8,7 16,11 27,11 10,0 19,-4 26,-11l101 -101c35,24 74,36 118,36 28,0 54,-5 80,-16 26,-11 48,-26 66,-44 19,-19 34,-41 44,-66 11,-26 17,-53 17,-81 0,-28 -6,-55 -17,-80 -10,-26 -25,-48 -44,-67 -18,-18 -40,-33 -66,-44 -26,-11 -52,-16 -80,-16 -28,0 -55,5 -81,16 -26,11 -48,26 -66,44 -19,19 -33,41 -44,67 -11,25 -17,52 -17,80 0,43 12,82 37,118l-101 100c-7,8 -11,17 -11,27z"/>
-                          <path class="fil1" d="M1245 569c140,1 281,1 421,1 206,1 185,3 370,-88 314,-155 629,-310 943,-465 -286,50 -571,101 -857,152 -337,164 -515,250 -877,400z"/>
-                          <path class="fil1" d="M963 73c80,71 161,143 241,214 99,86 79,67 212,67 75,0 150,0 225,0 128,-61 255,-122 382,-183 -135,-12 -269,-25 -403,-37 0,12 0,24 0,36 -60,0 -121,0 -181,0 0,-17 0,-35 0,-53 -159,-14 -318,-29 -476,-44z"/>
-                          <polygon class="fil1" points="638,569 948,456 947,570 "/>
-                          <polygon class="fil2" points="2551,465 2697,465 2697,591 2551,591 "/>
-                          <polygon class="fil2" points="2748,465 2895,465 2895,591 2748,591 "/>
-                          <path class="fil2" d="M2616 300l15 0c36,0 66,30 66,66l0 70 -146 -1 0 -70c0,-36 29,-66 65,-65z"/>
-                          <path class="fil2" d="M2814 300l15 0c36,0 65,30 65,66l0 70 -146 -1 0 -70c0,-36 30,-65 66,-65z"/>
-                          <polygon class="fil2" points="1461,0 1598,0 1598,147 1461,147 "/>
-                          <polygon class="fil2" points="981,367 1044,366 1044,435 981,436 "/>
-                          <polygon class="fil2" points="1066,366 1129,365 1129,434 1066,435 "/>
-                          <path class="fil2" d="M1012 275l2 0c16,0 30,13 30,30l0 45 -63 0 0 -45c0,-16 14,-30 31,-30z"/>
-                          <path class="fil2" d="M1097 274l1 0c17,0 31,13 31,30l0 45 -63 0 0 -45c0,-16 14,-30 31,-30z"/>
-                          <path class="fil1" d="M2716 928l105 0c15,0 28,12 28,27l0 80c0,15 -13,28 -28,28l-105 0c-15,0 -27,-13 -27,-28l0 -80c0,-15 12,-27 27,-27zm-27 -284l-129 0 0 415c0,27 9,51 27,71 11,13 25,23 41,29 18,6 38,8 57,8l171 0c10,-2 21,-3 31,-5 17,-4 38,-9 52,-17 12,-8 22,-18 28,-31 6,-14 8,-31 8,-46l0 -146c-1,-30 -10,-56 -31,-77 -10,-9 -21,-16 -35,-20 -15,-4 -33,-5 -49,-5l-73 0c-11,0 -21,1 -31,3 -9,2 -18,5 -27,9l-1 1c-5,2 -11,5 -15,8 -3,3 -6,5 -9,7l-15 11 0 -215zm523 285l105 0c15,0 27,12 27,28l0 79c0,15 -12,28 -27,28l-105 0c-15,0 -28,-13 -28,-28l0 -79c0,-16 13,-28 28,-28zm107 206c2,-3 4,-7 6,-11l8 -13 9 13c2,2 4,5 5,7 5,7 12,15 19,20 7,5 15,9 22,12 7,3 15,4 22,4 21,0 43,0 64,0 0,-20 0,-41 0,-61l-1 -209 0 -57c0,-12 -10,-22 -22,-22l-107 0c0,8 0,15 0,23l0 24 -17 -17c-3,-2 -5,-5 -7,-7 -2,-4 -7,-9 -11,-11l0 -1 -1 0c-5,-4 -11,-7 -18,-9 -7,-2 -16,-2 -24,-2 -39,0 -77,0 -116,0 -9,0 -19,1 -28,6 -11,5 -22,12 -31,20 -12,10 -20,23 -26,37 -6,15 -9,31 -9,47 0,44 0,88 0,132 0,14 2,29 8,42 7,13 16,24 27,34 11,10 23,19 36,24 13,5 27,7 41,7 30,0 61,0 92,0 17,0 32,-5 45,-16 5,-4 10,-10 14,-16z"/>
-                          <polygon class="fil1" points="2465,1043 2321,1043 2321,1167 2465,1167 "/>
-                          <path class="fil2" d="M2241 646l-84 260 -75 -261 -228 1 0 521 144 0 1 -368 16 62 101 306 83 0 122 -369 0 222 144 0 0 -353c0,-11 -10,-21 -22,-21l-202 0zm-629 0l-230 0c-23,0 -45,3 -65,13 -20,9 -35,24 -48,42 -9,13 -15,27 -19,42 -3,14 -5,29 -5,44l0 236c0,23 3,46 10,69 6,16 14,34 27,45 10,8 21,17 32,22 11,5 23,7 34,7l295 0c39,0 70,-16 95,-47 19,-22 30,-47 30,-76l0 -268c0,-19 -2,-38 -9,-55 -6,-17 -18,-31 -31,-43 -17,-16 -46,-23 -69,-27 -15,-2 -31,-3 -47,-4zm-177 122l142 0c23,0 42,19 42,42l0 192c0,23 -19,41 -42,41l-142 0c-23,0 -41,-18 -41,-41l0 -192c0,-23 18,-42 41,-42zm-788 -122l0 521 389 0c40,0 71,-16 95,-47 19,-22 30,-47 30,-76l0 -269c0,-18 -2,-38 -9,-55 -6,-17 -17,-31 -30,-43 -18,-16 -47,-24 -70,-27 -15,-3 -31,-3 -47,-4l-358 0zm144 123l185 0c23,0 41,19 41,41l0 192c0,23 -18,42 -41,42l-185 0 0 -275z"/>
-                          <path class="fil2" d="M3007 45c3,3 6,6 8,10l400 592 -130 0c-25,0 -59,-20 -76,-45l-325 -483 123 -74z"/>
-                          <path class="fil2" d="M936 87c-1,2 -3,4 -5,6l-207 303 104 0c16,0 38,-13 50,-29l137 -202 -79 -78z"/>
-                         </g>
-                        </svg>
-                    </div>
-                    <div class="hero-text">
-                        <p>Dobrodošli na vodeći portal za prodaju/izdavanje nekretnina u BIH</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-search-area">
-
-                <div class="hero-search-area-title">
-                    <h3>Pretražite oglase</h3>
-                </div>
-
-                <button class="open-search-btn btn btn-primary btn-lg btn-block collapsed" type="button" data-toggle="collapse" data-target="#hero-search-area" aria-expanded="false" aria-controls="collapseExample">
-                    Pretraga nekretnina
-                    <span class="fa fa-plus"></span>
-                </button>
-                <div class="collapse form-holder wrapper" id="hero-search-area">
-                    <form>
-                        <div class="form-group form-ad-type">
-                            <label class="control-label sr-only" for="ad-type">Vrsta oglasa</label>
-                            <select id="ad-type" name="ad-type" class="form-control" multiple="multiple">
-                                <option value="1">Prodaja</option>
-                                <option value="2">Izdavanje</option>
-                                <option value="3">Potražnja</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-object-type">
-                            <label class="control-label sr-only" for="object-type">Vrsta objekta</label>
-                            <select id="object-type" class="form-control" multiple="multiple">
-                                <option>Stan</option>
-                                <option>Kuća</option>
-                                <option>Poslovni prostor</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-city">
-                            <label class="control-label sr-only" for="location">Grad</label>
-                            <select id="location" class="form-control" multiple="multiple">
-                                <optgroup label="Republika Srpska">
-                                    <option value='14'>Banjalučka</option>
-                                    <option value='15'>Dobojsko-Bijeljinska</option>
-                                    <option value='16'>Sarajevsko-Zvornička</option>
-                                    <option value='17'>Trebinjsko-Fočanska</option>
-                                </optgroup>
-                                <optgroup label="Federacija BIH">
-                                    <option value='9'>Sarajevo</option>
-                                    <option value='1'>Unsko-sanski</option>
-                                    <option value='2'>Posavski</option>
-                                    <option value='3'>Tuzlanski</option>
-                                    <option value='4'>Zeničko-dobojski</option>
-                                    <option value='5'>Bosansko-podrinjski</option>
-                                    <option value='6'>Srednjobosanski</option>
-                                    <option value='7'>Hercegovačko-neretvanski</option>
-                                    <option value='8'>Zapadno-hercegovački</option>
-                                    <option value='10'>Livanjski</option>
-                                </optgroup>
-                                <option value='12'  >Distrikt Brčko</option>
-                            </select>
-                        </div>
-                        <div class="form-price">
-                            <label class="control-label sr-only" for="hero-price">Cijena</label>
-
-                            <div class="wrapper">
-                                <div class="form-group form-price-from">
-
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
-                                        <input type="number" class="form-control" placeholder="Cijena od" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
-                                    <!--</div>-->
-                                </div>
-
-                                <div class="form-group form-price-to">
-
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
-                                        <input type="number" class="form-control" placeholder="Cijena do" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">KM</span>-->
-                                    <!--</div>-->
-                                </div>
-                            </div>
-
-                            <!--<input class="" type="text" id="hero-price" name="price" value="" />-->
-                        </div>
-
-                        <div class="form-area">
-                            <label class="control-label sr-only" for="hero-area">Površina</label>
-                            <!--<input class="" type="text" id="hero-area" name="area" value="" />-->
-
-                            <div class="wrapper">
-                                <div class="form-group form-area-from">
-
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Od</span>-->
-                                        <input type="number" class="form-control" placeholder="Površina od" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
-                                    <!--</div>-->
-                                </div>
-
-                                <div class="form-group form-area-to">
-
-                                    <!--<div class="input-group">-->
-                                        <!--<span class="input-group-addon" id="basic-addon1">Do</span>-->
-                                        <input type="number" class="form-control" placeholder="Površina do" aria-describedby="basic-addon2">
-                                        <!--<span class="input-group-addon" id="basic-addon2">m&sup2;</span>-->
-                                    <!--</div>-->
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="form-group form-submit">
-                            <button type="submit" class="btn search-btn btn-search">Pretraži</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="hero-ad-area">
-                <a href="#" target="_blank">
-                    <img src="img/main-banner.jpeg" alt="">
-                </a>
-            </div>
-
-            <!--<div class="hero-new-search">-->
-                <!--<form action="">-->
-                    <!--<select name="fullsearch" class="form-control" id="e1" multiple="multiple">-->
-                        <!--<optgroup label="Tip Oglasa">-->
-                            <!--<option value="sell">Prodaja</option>-->
-                            <!--<option value="rent">Izdavanje</option>-->
-                            <!--<option value="search">Potražnja</option>-->
-                        <!--</optgroup>-->
-                        <!--<optgroup label="Vrsta nekretnine">-->
-                            <!--<option value="sell">Kuća</option>-->
-                            <!--<option value="rent">Stan</option>-->
-                            <!--<option value="search">Poslovni prostor</option>-->
-                        <!--</optgroup>-->
-                        <!--<optgroup label="Lokacija">-->
-                            <!--<option value="sell">Banja Luka</option>-->
-                            <!--<option value="rent">Prijedor</option>-->
-                            <!--<option value="search">Sarajevo</option>-->
-                        <!--</optgroup>-->
-                    <!--</select>-->
-                    <!--<button type="submit" class="btn btn-primary">-->
-                        <!--pretraži-->
-                    <!--</button>-->
-                <!--</form>-->
-            <!--</div>-->
-        </div>
-    </div>
-</section>
-
-<!--    Call to action section
-        section variables: less/my-variables.less
-        variables prefix: @cta-
-        section style: less/cta.less
--->
-<section class="cta">
-    <div class="wrapper-outer">
-        <div class="wrapper">
-            <div class="cta-message animated fadeOut">
-                <p>Ukoliko prodajete ili izdajete nekretnine - postavite svoj oglas potpuno besplatno!</p>
-            </div>
-            <div class="cta-btn animated fadeOut">
-
-                <!--    IF user logged in
-                        redirects to "new ad" page -->
-                <!--<a href="#" class="btn-edit-big"></span>Objavite oglas</a>-->
-                <!-- END IF user logged in -->
-
-                <!--    IF user NOT logged in
-                        triggers modal about user status: "Not logged modal" -->
-                <button type="button" class="btn-edit-big" data-toggle="modal" data-target="#noUserModal">Objavite oglas</button>
-                <!-- END IF user NOT logged in -->
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<!--    Partners section
-        section variables: less/my-variables.less
-        variables prefix: @partners-
-        section style: less/partners.less
--->
-<section class="partners">
-    <div class="wrapper-outer">
-        <div class="wrapper">
-            <div class="partners-title">
-                <h1>Naši partneri</h1>
-            </div>
-            <div class="partners-list">
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-1.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-2.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-3.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-4.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-1.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-2.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-3.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div class="image-wrapper">
-                        <a href="#" target="_blank">
-                            <img class="img-responsive" src="img/partners/partner-4.jpg" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<!--    Featured ads section
-        section variables: less/my-variables.less
-        variables prefix: @featured-
-        section style: less/featured.less
--->
-<section class="featured">
-    <div class="overlay"></div>
-    <div class="wrapper-outer">
-        <div class="wrapper">
-            <div class="featured-title">
-                <h1>Izdvojeni oglasi</h1>
-            </div>
-            <div class="featured-list">
-
-                <!-- Featured ads - single ad -->
-                <article class="featured-list-item">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="featured-list-item">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="featured-list-item">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="featured-list-item">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="featured-list-item">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--    New ads section
-        section variables: less/my-variables.less
-        variables prefix: @new-
-        section style: less/new.less
--->
-<section class="new">
-    <div class="overlay"></div>
-    <div class="wrapper-outer">
-        <div class="wrapper">
-            <div class="new-title">
-                <h1>Najnoviji oglasi</h1>
-            </div>
-
-
-
-            <!-- TODO: grid controls -->
-            <!--<div class="new-controls">-->
-                <!--<div class="btn-group">-->
-                <!--<a href="#" data-controls="grid" class="btn btn-primary btn-lg active"><span class="fa fa-th-large"></span></a>-->
-                <!--<a href="#" data-controls="list" class="btn btn-primary btn-lg"><span class="fa fa-th-list"></span></a>-->
-                <!--</div>-->
-            <!--</div>-->
-
-
-
-            <div class="new-list">
-
-
-                <article class="new-list-item grid">
-                    <a href="public-user.html">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <!--<span class="ad-type rent">Izdavanje</span>-->
-                        <span class="ad-type for-sell">Prodaja</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="public-user.html">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price urgent2"><h4><i class="fa fa-bolt" aria-hidden="true"></i>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type demand">Potražnja</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price urgent"><h4><i class="fa fa-bolt" aria-hidden="true"></i>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="new-list-item grid">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <div class="ad-details">
-                            <div class="wrapper">
-                                <div class="ad-location">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Omarska, Prijedor
-                                </div>
-                                <div class="ad-surface">
-                                    <i class="fa fa-area-chart" aria-hidden="true"></i>
-                                    130 m&sup2;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <div class="ad-short-description">
-                            <p>
-                                Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-
-
-
-            </div>
-
-            <div class="new-load-more">
-                <!--<a href="#">-->
-                    <!--Prikaži još oglasa-->
-                    <!--<i class="fa fa-chevron-down" aria-hidden="true"></i>-->
-                <!--</a>-->
-
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-<!--    Footer 2 - with "most viewed ads"
-        section variables: less/my-variables.less
-        variables prefix: @footer-
-        section style: less/footer.less
--->
-
-<section class="new2">
-    <div class="overlay"></div>
-    <div class="wrapper-outer">
-        <div class="wrapper">
-            <div class="new2-title">
-                <h1>Najnoviji oglasi</h1>
-                <p>
-                    Pogledajte neke od najnovijih oglasa naših korisnika, možda nađete baš ono što Vama treba.
-                </p>
-            </div>
-
-            <article class="single-ad">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <!--<h4 class="panel-title">-->
-                        <!--asd-->
-                        <!--</h4>-->
-
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        <img class="img-responsive img-alternative" src="img/featured/1-2.jpg" alt="">
-
-                        <div class="social-status">
-                            <span href="#" data-toggle="tooltip" data-placement="right" title="Broj pregleda">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                <span class="badge">42</span>
-                            </span>
-                            <span href="#" data-toggle="tooltip" data-placement="right" title="Broj sviđanja">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <span class="badge">42</span>
-                            </span>
-                            <span data-toggle="tooltip" data-placement="right" title="Broj Djeljenja">
-                                <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                <span class="badge">42</span>
-                            </span>
-                        </div>
-
-                        <div class="title">
-                            <h4>
-                                Kuća u Omarskoj, Prijedor
-                            </h4>
-                            <p class="status sell">
-                                prodaja
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="panel-body">
-                        <a href="#" class="btn-more-info" data-toggle="tooltip" title="Pogledaj oglas">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-
-                        <div class="small-block" data-toggle="tooltip" title="Lokacija Nekretnine">
-                            <div class="small-block-icon">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            </div>
-                            <div class="small-block-content">
-                                <!--<p class="small-block-label">-->
-                                    <!--Lokacija-->
-                                <!--</p>-->
-                                <p class="small-block-text">
-                                    Omarska, Prijedor
-                                </p>
-                            </div>
-
-                        </div>
-
-                        <div class="small-block" data-toggle="tooltip" title="Površina Nekretnine">
-                            <div class="small-block-icon">
-                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                            </div>
-                            <div class="small-block-content">
-                                <!--<p class="small-block-label">-->
-                                    <!--Površina-->
-                                <!--</p>-->
-                                <p class="small-block-text">
-                                    123 m&sup2;
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="small-block" data-toggle="tooltip" title="Broj soba">
-                            <div class="small-block-icon">
-                                <i class="fa fa-bed" aria-hidden="true"></i>
-                            </div>
-                            <div class="small-block-content">
-                                <!--<p class="small-block-label">-->
-                                <!--Površina-->
-                                <!--</p>-->
-                                <p class="small-block-text">
-                                    3
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="small-block" data-toggle="tooltip" title="Broj kupatila">
-                            <div class="small-block-icon">
-                                <i class="fa fa-bath" aria-hidden="true"></i>
-                            </div>
-                            <div class="small-block-content">
-                                <!--<p class="small-block-label">-->
-                                <!--Površina-->
-                                <!--</p>-->
-                                <p class="small-block-text">
-                                    2
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="panel-footer">
-                        sd
-                    </div>
-                </div>
-            </article>
-
-            <article class="single-ad">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <!--<h4 class="panel-title">-->
-                        <!--asd-->
-                        <!--</h4>-->
-
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        <img class="img-responsive img-alternative" src="img/featured/1-2.jpg" alt="">
-
-                        <div class="social-status">
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj pregleda">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj sviđanja">
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span data-toggle="tooltip" data-placement="right" title="Broj Djeljenja">
-                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                        </div>
-
-                    </div>
-                    <div class="panel-body">
-                        <a href="#" class="btn-more-info" data-toggle="tooltip" title="Pogledaj oglas">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-
-                        <p>asdasd</p>
-
-                    </div>
-                    <div class="panel-footer">
-                        sd
-                    </div>
-                </div>
-            </article>
-
-            <article class="single-ad">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <!--<h4 class="panel-title">-->
-                        <!--asd-->
-                        <!--</h4>-->
-
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        <img class="img-responsive img-alternative" src="img/featured/1-2.jpg" alt="">
-
-                        <div class="social-status">
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj pregleda">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj sviđanja">
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span data-toggle="tooltip" data-placement="right" title="Broj Djeljenja">
-                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                        </div>
-
-                    </div>
-                    <div class="panel-body">
-                        <a href="#" class="btn-more-info" data-toggle="tooltip" title="Pogledaj oglas">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-
-                        <p>asdasd</p>
-
-                    </div>
-                    <div class="panel-footer">
-                        sd
-                    </div>
-                </div>
-            </article>
-
-            <article class="single-ad">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <!--<h4 class="panel-title">-->
-                        <!--asd-->
-                        <!--</h4>-->
-
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        <img class="img-responsive img-alternative" src="img/featured/1-2.jpg" alt="">
-
-                        <div class="social-status">
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj pregleda">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj sviđanja">
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span data-toggle="tooltip" data-placement="right" title="Broj Djeljenja">
-                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                        </div>
-
-                    </div>
-                    <div class="panel-body">
-                        <a href="#" class="btn-more-info" data-toggle="tooltip" title="Pogledaj oglas">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-
-                        <p>asdasd</p>
-
-                    </div>
-                    <div class="panel-footer">
-                        sd
-                    </div>
-                </div>
-            </article>
-
-            <article class="single-ad">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <!--<h4 class="panel-title">-->
-                        <!--asd-->
-                        <!--</h4>-->
-
-                        <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        <img class="img-responsive img-alternative" src="img/featured/1-2.jpg" alt="">
-
-                        <div class="social-status">
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj pregleda">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span href="#" data-toggle="tooltip" data-placement="right" title="Broj sviđanja">
-                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                                <span data-toggle="tooltip" data-placement="right" title="Broj Djeljenja">
-                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                    <span class="badge">42</span>
-                                </span>
-                        </div>
-
-                    </div>
-                    <div class="panel-body">
-                        <a href="#" class="btn-more-info" data-toggle="tooltip" title="Pogledaj oglas">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </a>
-
-                        <p>asdasd</p>
-
-                    </div>
-                    <div class="panel-footer">
-                        sd
-                    </div>
-                </div>
-            </article>
-
-            <div class="new-load-more">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="overlay"></div>
-    <div class="wrapper-outer">
-        <div class="wrapper">
-            <section class="footer-most-viewed">
-                <h4>Najgledaniji oglasi</h4>
-                <div class="footer-most-viewed-list">
-                    <article class="footer-most-viewed-item">
-                        <a href="#">
-                            <div class="add-image">
-                                <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                            </div>
-                            <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdavanje</span>
-                            <!--<div class="ad-details">-->
-                            <!--<div class="wrapper">-->
-                            <!--<div class="ad-location">-->
-                            <!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
-                            <!--Omarska, Prijedor-->
-                            <!--</div>-->
-                            <!--<div class="ad-surface">-->
-                            <!--<i class="fa fa-area-chart" aria-hidden="true"></i>-->
-                            <!--130 m&sup2;-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                            <!--<div class="ad-short-description">-->
-                            <!--<p>-->
-                            <!--Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.-->
-                            <!--</p>-->
-                            <!--</div>-->
-                        </a>
-                    </article>
-                    <article class="footer-most-viewed-item">
-                        <a href="#">
-                            <div class="add-image">
-                                <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                            </div>
-                            <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdavanje</span>
-                            <!--<div class="ad-details">-->
-                            <!--<div class="wrapper">-->
-                            <!--<div class="ad-location">-->
-                            <!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
-                            <!--Omarska, Prijedor-->
-                            <!--</div>-->
-                            <!--<div class="ad-surface">-->
-                            <!--<i class="fa fa-area-chart" aria-hidden="true"></i>-->
-                            <!--130 m&sup2;-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                            <!--<div class="ad-short-description">-->
-                            <!--<p>-->
-                            <!--Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.-->
-                            <!--</p>-->
-                            <!--</div>-->
-                        </a>
-                    </article>
-                    <article class="footer-most-viewed-item">
-                        <a href="#">
-                            <div class="add-image">
-                                <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                            </div>
-                            <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdavanje</span>
-                            <!--<div class="ad-details">-->
-                            <!--<div class="wrapper">-->
-                            <!--<div class="ad-location">-->
-                            <!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
-                            <!--Omarska, Prijedor-->
-                            <!--</div>-->
-                            <!--<div class="ad-surface">-->
-                            <!--<i class="fa fa-area-chart" aria-hidden="true"></i>-->
-                            <!--130 m&sup2;-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                            <!--<div class="ad-short-description">-->
-                            <!--<p>-->
-                            <!--Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.-->
-                            <!--</p>-->
-                            <!--</div>-->
-                        </a>
-                    </article>
-                    <article class="footer-most-viewed-item">
-                        <a href="#">
-                            <div class="add-image">
-                                <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                            </div>
-                            <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                            <span class="ad-type rent">Izdavanje</span>
-                            <!--<div class="ad-details">-->
-                            <!--<div class="wrapper">-->
-                            <!--<div class="ad-location">-->
-                            <!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
-                            <!--Omarska, Prijedor-->
-                            <!--</div>-->
-                            <!--<div class="ad-surface">-->
-                            <!--<i class="fa fa-area-chart" aria-hidden="true"></i>-->
-                            <!--130 m&sup2;-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                            <!--<div class="ad-short-description">-->
-                            <!--<p>-->
-                            <!--Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.-->
-                            <!--</p>-->
-                            <!--</div>-->
-                        </a>
-                    </article>                    <article class="footer-most-viewed-item">
-                    <a href="#">
-                        <div class="add-image">
-                            <img class="img-responsive" src="img/featured/1-1.jpg" alt="">
-                        </div>
-                        <div class="ad-title"><h4>Kuća u Omarskoj, Prijedor</h4></div>
-                        <span class="ad-type rent">Izdavanje</span>
-                        <!--<div class="ad-details">-->
-                        <!--<div class="wrapper">-->
-                        <!--<div class="ad-location">-->
-                        <!--<i class="fa fa-map-marker" aria-hidden="true"></i>-->
-                        <!--Omarska, Prijedor-->
-                        <!--</div>-->
-                        <!--<div class="ad-surface">-->
-                        <!--<i class="fa fa-area-chart" aria-hidden="true"></i>-->
-                        <!--130 m&sup2;-->
-                        <!--</div>-->
-                        <!--</div>-->
-                        <!--</div>-->
-                        <div class="ad-price"><h4>234,000.00 KM</h4></div>
-                        <!--<div class="ad-short-description">-->
-                        <!--<p>-->
-                        <!--Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.Za vas izdvajamo oazu mira koja se nalazi u naselju Omarska kod Prijedora.Udaljenost od grada je 15 km.-->
-                        <!--</p>-->
-                        <!--</div>-->
-                    </a>
-                </article>
-
-                </div>
-
-            </section>
-            <section class="footer-general-links">
-                <ul>
-                    <li><a href="#">O nama</a></li>
-                    <li><a href="help.html">Pomoć</a></li>
-                    <li><a href="#">Agenti</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Uslovi korištenja</a></li>
-                </ul>
-            </section>
-            <section class="footer-contact-links">
-                <h4>Kontaktirajte nas</h4>
-                <ul>
-                    <li>
-                        <a class="phone-link" href="tel:000">6523465
-                            <span>- Savo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="phone-link" href="tel:000">6523465
-                            <span>- Dragan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="mail-link" href="mailto:office365dom@gmail.com">office365dom@gmail.com
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="footer-social-links">
-                <h4>Pratite nas</h4>
-                <a class="link-facebook" href="#"><span class="fa fa-3x fa-facebook"></span></a>
-                <a class="link-instagram" href="#"><span class="fa fa-3x fa-instagram"></span></a>
-            </section>
-
-        </div>
-    </div>
-</footer>
-
-<!--    Not logged-in modal
-        section variables: less/my-variables.less
-        variables prefix: @modal-
-        section style: less/modal.less
--->
-<div class="modal fade" id="nickname-modal" tabindex="-1" role="dialog" aria-labelledby="nickname-modal-label">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="nickname-modal-label">Pojašnjenje</h4>
-            </div>
-            <div class="modal-body">
-                Poštovani, morate biti registrovani korisnik da bi objavili oglas.
-            </div>
-            <div class="modal-footer">
-                <!--<button type="button" class="btn-login account-menu-toggle">Prijavite se</button>-->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--    Nickname modal
-        section variables: less/my-variables.less
-        variables prefix: @modal-
-        section style: less/modal.less
--->
-<div class="modal fade" id="noUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Obaveštenje</h4>
-            </div>
-            <div class="modal-body">
-                Poštovani, morate biti registrovani korisnik da bi objavili oglas.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn-login account-menu-toggle" data-toggle="modal" data-target="#noUserModal">Prijavite se</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--    DEV helper
-        contain links to other html assets
--->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12">
-            <a href="index-no-user.html" class="btn btn-primary btn-block">početna kad korisnik nije prijavljen</a>
-            <a href="public-user.html" class="btn btn-primary btn-block">profil javnog korisnika</a>
-            <a href="help.html" class="btn btn-primary btn-block">help</a>
-            <a href="agents-user.html" class="btn btn-primary btn-block">agencija profil</a>
-        </div>
-    </div>
-</div>
-
-<script src="js/main.min.js"></script>
+//         // var ObveznikStatusObveznika = ObveznikWrapper.getElementsByTagName("NazivStatusaObveznika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_statusposlodavca").setValue(ObveznikStatusObveznika);
+//         // console.log("status poslodavca:",ObveznikStatusObveznika);
+
+//         // var ObveznikSifraOpstine = ObveznikWrapper.getElementsByTagName("SifraOpstine")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_sifraopstine").setValue(ObveznikSifraOpstine);
+//         // console.log("sifra opstine poslodavca:",ObveznikSifraOpstine);
+
+//         // var ObveznikNazivOpstine = ObveznikWrapper.getElementsByTagName("NazivOpstine")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_nazivopstine").setValue(ObveznikNazivOpstine);
+//         // console.log("naziv opstine poslodavca:",ObveznikNazivOpstine);
+
+//         // var ObveznikAdresaObveznika = ObveznikWrapper.getElementsByTagName("AdresaObveznika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_adresa").setValue(ObveznikAdresaObveznika);
+//         // console.log("adresa poslodavca:",ObveznikAdresaObveznika);
+
+//         // var ObveznikMjestoObveznika = ObveznikWrapper.getElementsByTagName("MjestoObveznika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_mjesto").setValue(ObveznikMjestoObveznika);
+//         // console.log("mjesto poslodavca:",ObveznikMjestoObveznika);
+
+//         // //
+//         // //  podaci o ovlastenom licu
+//         // //
+//         // var OvlastenoLiceWrapper = dataReceivedXML.getElementsByTagName("OvlastenoLice")[0];
+
+//         // var OvlastenoLiceJMBG = OvlastenoLiceWrapper.getElementsByTagName("JMBGOvlastenogLica")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_jmbovlastenoglica").setValue(OvlastenoLiceJMBG);
+//         // console.log("ovlasteno lice - jmbg:",OvlastenoLiceJMBG);
+
+//         // var OvlastenoLiceImePrezime = OvlastenoLiceWrapper.getElementsByTagName("OvlastenoLice")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_imeiprezimeovlastenoglica").setValue(OvlastenoLiceImePrezime);
+//         // console.log("ovlasteno lice - ime i prezime:",OvlastenoLiceImePrezime);
+
+//         // var OvlastenoLiceSifraOpstine = OvlastenoLiceWrapper.getElementsByTagName("SifraOpstineOvlastenogLica")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_sifraopstineovlastenoglica").setValue(OvlastenoLiceSifraOpstine);
+//         // console.log("ovlasteno lice - sifra opstine:",OvlastenoLiceSifraOpstine);
+
+//         // var OvlastenoLiceNazivOpstine = OvlastenoLiceWrapper.getElementsByTagName("NazivOpstineOvlastenogLica")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_nazivopstineovlastenoglica").setValue(OvlastenoLiceNazivOpstine);
+//         // console.log("ovlasteno lice - naziv opstine:",OvlastenoLiceNazivOpstine);
+
+//         // var OvlastenoLiceMjesto = OvlastenoLiceWrapper.getElementsByTagName("MjestoOvlastenogLica")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_mjestoovlastenoglica").setValue(OvlastenoLiceMjesto);
+//         // console.log("ovlasteno lice - mjesto:",OvlastenoLiceMjesto);
+
+//         // var OvlastenoLiceAdresa = OvlastenoLiceWrapper.getElementsByTagName("AdresaOvlastenoglica")[0].childNodes[0].nodeValue;
+//         // //  Xrm.Page.data.entity.attributes.get("zzz_adresaovlastenoglica").setValue(OvlastenoLiceAdresa);
+//         // console.log("ovlasteno lice - adresa:",OvlastenoLiceAdresa);
+
+//         // //
+//         // //  podaci o vlasniku
+//         // //
+//         // var VlasnikWrapper = dataReceivedXML.getElementsByTagName("Vlasnik")[0];
+
+//         // var VlasnikJMBG = VlasnikWrapper.getElementsByTagName("JmbgJibVlasnika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_jmbvlasnika").setValue(VlasnikJMBG);
+//         // console.log("vlasnik - jib/jmbg:",VlasnikJMBG);
+
+//         // var VlasnikImePrezime = VlasnikWrapper.getElementsByTagName("NazivVlasnik")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_imeiprezimevlasnika").setValue(VlasnikImePrezime);
+//         // console.log("vlasnik - ime i prezime:",VlasnikImePrezime);
+
+//         // var VlasnikSifraOpstine = VlasnikWrapper.getElementsByTagName("SifraOpstineVlasnika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_sifraopstinevlasnika").setValue(VlasnikSifraOpstine);
+//         // console.log("vlasnik - sifra opstine:",VlasnikSifraOpstine);
+
+//         // var VlasnikNazivOpstine = VlasnikWrapper.getElementsByTagName("NazivOpstineVlasnika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_nazivopstinevlasnika").setValue(vlasnikNazivOpstine);
+//         // console.log("vlasnik - naziv opstine:",VlasnikNazivOpstine);
+
+//         // var VlasnikMjesto = VlasnikWrapper.getElementsByTagName("MjestoVlasnika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_mjestovlasnika").setValue(VlasnikMjesto);
+//         // console.log("vlasnik - mjesto:",VlasnikMjesto);
+
+//         // var VlasnikAdresa = VlasnikWrapper.getElementsByTagName("AdresaVlasnika")[0].childNodes[0].nodeValue;
+//         // //Xrm.Page.data.entity.attributes.get("zzz_adresavlasnika").setValue(vlasnikAdresa);
+//         // console.log("vlasnik - adresa:",VlasnikAdresa);
+
+//       }
+//     }
+
+//   };
+
+//   xhr.onerror = function() {
+//     alert('Došlo je do greške tokom slanja zahtjeva.');
+//   };
+
+
+//   // set necessary headers in req
+//   xhr.withCredentials = true;
+
+//   //xhr.setRequestHeader("SOAPAction", "/ValidateEmail.asmx"); 
+//   xhr.setRequestHeader("Content-Type", "application/soap+xml; charset=utf-8");
+
+//   xhr.send(requestPackage);
+
+// }
+
+
+// Create the XHR object.
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+// Helper method to parse the title tag from the response.
+function getTitle(text) {
+  return text.match('<title>(.*)?</title>')[1];
+}
+
+// Make the actual CORS request.
+function makeCorsRequest() {
+  // This is a sample server that supports CORS.
+  var url = 'http://www.webservicex.net/ValidateEmail.asmx/IsValidEmail';
+
+  var xhr = createCORSRequest('POST', url);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+
+  // Response handlers.
+  xhr.onload = function() {
+    var text = xhr.responseText;
+    var title = getTitle(text);
+    alert('Response from CORS request to ' + url + ': ' + title);
+  };
+
+  xhr.onerror = function() {
+    alert('Woops, there was an error making the request.');
+  };
+
+  xhr.setRequestHeader("Content-Type", "application/soap+xml; charset=utf-8");
+
+  xhr.send("Email=string");
+}
+
+
+</script>
 
 </body>
 </html>

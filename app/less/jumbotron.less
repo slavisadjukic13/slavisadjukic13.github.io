@@ -1,0 +1,28 @@
+.jumbotron-apeiron {
+  position: absolute;
+  z-index: 100;
+
+  left: 0;
+  right: 0;
+
+  @media @xs {top: 80px;}
+  @media @sm {top:200px;}
+  @media @md {top:200px;}
+  @media @lg {top:400px;}
+
+  .jumbotron {
+    background: rgba(0,0,0,0.4);
+    color: white;
+
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  .btn-jumbotron {
+    @media @lg {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+    }
+  }
+}

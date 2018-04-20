@@ -13,9 +13,12 @@
   .jumbotron {
     background: rgba(0,0,0,0.4);
     color: white;
+    position: relative;
 
     padding-top: 1px;
-    padding-bottom: 1px;
+    padding-bottom: 15px;
+
+    @media @xs { text-align: center; }
   }
 
   .btn-jumbotron {
@@ -23,6 +26,13 @@
       position: absolute;
       bottom: 30px;
       right: 40px;
+    }
+
+    @media @xs {
+      position: relative;
+      top: 0;
+      left: 0;
+      .btn-block;
     }
   }
 }
